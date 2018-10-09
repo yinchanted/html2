@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>gpi API</title>
+  <title>Tracker API V1</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="UTF-8" />
@@ -740,7 +740,8 @@ margin-bottom: 20px;
       "$ref" : "#/definitions/PaymentsPartyType1Code"
     }
   },
-  "description" : "Specifies one or more agents involved in a transaction, with their role."
+  "description" : "Specifies one or more agents involved in a transaction, with their role.",
+  "additionalProperties" : { }
 };
             defs.AmountType1 = {
   "type" : "object",
@@ -765,7 +766,8 @@ margin-bottom: 20px;
       "maxLength" : 19
     }
   },
-  "description" : "Specifies ranged amounts, for a specific currency and type of amount."
+  "description" : "Specifies ranged amounts, for a specific currency and type of amount.",
+  "additionalProperties" : { }
 };
             defs.camt.a01.001.02 = {
   "type" : "object",
@@ -796,7 +798,8 @@ margin-bottom: 20px;
         }
       }
     }
-  }
+  },
+  "additionalProperties" : { }
 };
             defs.camt.a01.002.02 = {
   "type" : "object",
@@ -811,7 +814,8 @@ margin-bottom: 20px;
     "update_payment_status_response" : {
       "network_reference" : "CCLABEB0XXX-2017-05-18T10:26:05.424-00000001"
     }
-  }
+  },
+  "additionalProperties" : { }
 };
             defs.camt.a02.001.02 = {
   "type" : "object",
@@ -827,7 +831,8 @@ margin-bottom: 20px;
       "my_institution" : [ "CCLABEB0" ],
       "transaction_identification" : "a2949d20-53d6-4999-85f5-f4a0dd9adf40"
     }
-  }
+  },
+  "additionalProperties" : { }
 };
             defs.camt.a02.002.02 = {
   "type" : "object",
@@ -908,7 +913,8 @@ margin-bottom: 20px;
         "last_update_time" : "2017-04-13T09:44:07.356+0000"
       } ]
     }
-  }
+  },
+  "additionalProperties" : { }
 };
             defs.camt.a03.001.02 = {
   "type" : "object",
@@ -929,7 +935,8 @@ margin-bottom: 20px;
       "event" : "RCCA",
       "maximum_number" : "10"
     }
-  }
+  },
+  "additionalProperties" : { }
 };
             defs.camt.a03.002.02 = {
   "type" : "object",
@@ -1260,7 +1267,8 @@ margin-bottom: 20px;
       "total_number" : "10",
       "more" : "Yj1QUVZCQkVMQSZkPTIwMTctMDYtMTgmdD0yMDE3LTA2LTE4VDA5OjQ1OjE2LjA1OCZ1PSZjPTIwMTctMDYtMTZUMTU6NDI6MjIuMDAwJmU9MDRkYzM0OWUtZDFjOS00MGIyLThmM2ItZDlhMGU3MWM2YmY1Jmk9UFFWQkJFTEEmaD1QOE53b1k3OGxyV0V4SWN2S0s3UmMrNXRFWE5GNU0wS0U4M1d4M2M0dVJrPQ=="
     }
-  }
+  },
+  "additionalProperties" : { }
 };
             defs.camt.a04.001.02 = {
   "type" : "object",
@@ -1276,7 +1284,8 @@ margin-bottom: 20px;
       "my_institution" : [ "CCLABEB0" ],
       "start_time" : "2017-05-25T09:24:41.174Z"
     }
-  }
+  },
+  "additionalProperties" : { }
 };
             defs.camt.a04.002.02 = {
   "type" : "object",
@@ -1387,7 +1396,8 @@ margin-bottom: 20px;
         } ]
       } ]
     }
-  }
+  },
+  "additionalProperties" : { }
 };
             defs.camt.a05.001.02 = {
   "type" : "object",
@@ -1404,7 +1414,8 @@ margin-bottom: 20px;
       "from_date_time" : "2017-05-25T09:00:00.000Z",
       "to_date_time" : "2017-05-25T17:30:00.000Z"
     }
-  }
+  },
+  "additionalProperties" : { }
 };
             defs.camt.a05.002.02 = {
   "type" : "object",
@@ -1459,7 +1470,8 @@ margin-bottom: 20px;
         "invalidity_reason" : "INVA/X002"
       } ]
     }
-  }
+  },
+  "additionalProperties" : { }
 };
             defs.ChargeBearerType3Code = {
   "type" : "string",
@@ -1477,7 +1489,8 @@ margin-bottom: 20px;
       "type" : "string"
     }
   },
-  "description" : "Time span defined by a start date and time, and an end date and time."
+  "description" : "Time span defined by a start date and time, and an end date and time.",
+  "additionalProperties" : { }
 };
             defs.ErrorCode = {
   "type" : "object",
@@ -1521,7 +1534,8 @@ margin-bottom: 20px;
       "description" : "Rate expressed as a decimal, eg, 0.7 is 7/10 and 70%."
     }
   },
-  "description" : "Information needed to process a currency exchange or conversion."
+  "description" : "Information needed to process a currency exchange or conversion.",
+  "additionalProperties" : { }
 };
             defs.GetChangedPaymentTransactionsRequest = {
   "type" : "object",
@@ -1547,7 +1561,8 @@ margin-bottom: 20px;
       "maxLength" : 350
     }
   },
-  "description" : "This API is a delta query to get all payment update information starting from a given date and time. This API allows synchronization of a local database with the tracker database. [CR][LF]All use cases applicable for the get and search of payment transactions apply also for this API. [CR][LF]The use of the API to get the last changed payment transactions is driven by an architectural choice to feed a local database and to optimise the flow between the tracker and the API caller.[CR][LF]"
+  "description" : "This API is a delta query to get all payment update information starting from a given date and time. This API allows synchronization of a local database with the tracker database. [CR][LF]All use cases applicable for the get and search of payment transactions apply also for this API. [CR][LF]The use of the API to get the last changed payment transactions is driven by an architectural choice to feed a local database and to optimise the flow between the tracker and the API caller.[CR][LF]",
+  "additionalProperties" : { }
 };
             defs.GetChangedPaymentTransactionsResponse = {
   "type" : "object",
@@ -1566,7 +1581,8 @@ margin-bottom: 20px;
       "maxLength" : 350
     }
   },
-  "description" : "This API is the response to a delta query to get all payment update information starting from a given date and time. This API allows synchronization of a local database with the tracker database. [CR][LF]All use cases applicable for the get and search of payment transactions apply also for this API. [CR][LF]The use of the API to get the last changed payment transactions is driven by an architectural choice to feed a local database and to optimise the flow between the tracker and the API caller.[CR][LF]"
+  "description" : "This API is the response to a delta query to get all payment update information starting from a given date and time. This API allows synchronization of a local database with the tracker database. [CR][LF]All use cases applicable for the get and search of payment transactions apply also for this API. [CR][LF]The use of the API to get the last changed payment transactions is driven by an architectural choice to feed a local database and to optimise the flow between the tracker and the API caller.[CR][LF]",
+  "additionalProperties" : { }
 };
             defs.GetInvalidEventsRequest = {
   "type" : "object",
@@ -1590,7 +1606,8 @@ margin-bottom: 20px;
       "description" : "Date and time at which the range ends."
     }
   },
-  "description" : "This API is a payment events query to get invalid events for payment transactions within a given time frame. An event is either a payment or a status confirmation.[CR][LF]The API is typically used for support or audit purposes, where all invalid messages sent or received are retrievable by one API call.[CR][LF]"
+  "description" : "This API is a payment events query to get invalid events for payment transactions within a given time frame. An event is either a payment or a status confirmation.[CR][LF]The API is typically used for support or audit purposes, where all invalid messages sent or received are retrievable by one API call.[CR][LF]",
+  "additionalProperties" : { }
 };
             defs.GetInvalidEventsResponse = {
   "type" : "object",
@@ -1604,7 +1621,8 @@ margin-bottom: 20px;
       }
     }
   },
-  "description" : "This API is a payment events response to a query to get invalid events for payment transactions within a given time frame. An event is either a payment or a status confirmation.[CR][LF]The API is typically used for support or audit purposes, where all invalid messages sent or received are retrievable by one API call.[CR][LF]"
+  "description" : "This API is a payment events response to a query to get invalid events for payment transactions within a given time frame. An event is either a payment or a status confirmation.[CR][LF]The API is typically used for support or audit purposes, where all invalid messages sent or received are retrievable by one API call.[CR][LF]",
+  "additionalProperties" : { }
 };
             defs.GetPaymentTransactionDetailsRequest = {
   "type" : "object",
@@ -1626,7 +1644,8 @@ margin-bottom: 20px;
       "maxLength" : 40
     }
   },
-  "description" : "This API is a payment query to get detailed information regarding a given payment transaction. It requires the UETR to be known.[CR][LF]Examples of use cases are:[CR][LF]•[TAB]Debtor status check - debtor's agent or debtor wants to see the status[CR][LF]•[TAB]Creditor status check - creditor's agent or creditor wants to see the status[CR][LF]"
+  "description" : "This API is a payment query to get detailed information regarding a given payment transaction. It requires the UETR to be known.[CR][LF]Examples of use cases are:[CR][LF]•[TAB]Debtor status check - debtor's agent or debtor wants to see the status[CR][LF]•[TAB]Creditor status check - creditor's agent or creditor wants to see the status[CR][LF]",
+  "additionalProperties" : { }
 };
             defs.GetPaymentTransactionDetailsResponse = {
   "type" : "object",
@@ -1661,7 +1680,8 @@ margin-bottom: 20px;
       }
     }
   },
-  "description" : "This API is the response to a payment query to get detailed information regarding a given payment transaction.[CR][LF]Examples of use cases are:[CR][LF]•[TAB]Debtor status check - debtor's agent or debtor wants to see the status[CR][LF]•[TAB]Creditor status check - creditor's agent or creditor wants to see the status[CR][LF]"
+  "description" : "This API is the response to a payment query to get detailed information regarding a given payment transaction.[CR][LF]Examples of use cases are:[CR][LF]•[TAB]Debtor status check - debtor's agent or debtor wants to see the status[CR][LF]•[TAB]Creditor status check - creditor's agent or creditor wants to see the status[CR][LF]",
+  "additionalProperties" : { }
 };
             defs.GetPaymentTransactionsRequest = {
   "type" : "object",
@@ -1717,7 +1737,8 @@ margin-bottom: 20px;
       "maxLength" : 350
     }
   },
-  "description" : "This API is a payment transaction search to get transaction-level information regarding all payments that match the search criteria. To have full information of a given payment transaction, the GetPaymentTransactionDetailsRequest can be used.[CR][LF]Examples of use cases are:[CR][LF]•[TAB]Investigation by a participating institution based on criteria given by a customer, such as instructed amount, time of initiation[CR][LF]•[TAB]Flow monitoring, for instance to find payments that are \"stuck\" for which the institution is the beneficiary institution[CR][LF]•[TAB]Feed a dashboard - give all payment transactions with their last status[CR][LF]"
+  "description" : "This API is a payment transaction search to get transaction-level information regarding all payments that match the search criteria. To have full information of a given payment transaction, the GetPaymentTransactionDetailsRequest can be used.[CR][LF]Examples of use cases are:[CR][LF]•[TAB]Investigation by a participating institution based on criteria given by a customer, such as instructed amount, time of initiation[CR][LF]•[TAB]Flow monitoring, for instance to find payments that are \"stuck\" for which the institution is the beneficiary institution[CR][LF]•[TAB]Feed a dashboard - give all payment transactions with their last status[CR][LF]",
+  "additionalProperties" : { }
 };
             defs.GetPaymentTransactionsResponse = {
   "type" : "object",
@@ -1742,7 +1763,8 @@ margin-bottom: 20px;
       "maxLength" : 350
     }
   },
-  "description" : "This API is the response to a payment transaction search to get transaction-level information regarding all payments that match the search criteria.[CR][LF]Examples of use cases are:[CR][LF]•[TAB]Investigation by a participating institution based on criteria given by a customer, such as instructed amount, time of initiation[CR][LF]•[TAB]Flow monitoring, for instance to find payments that are \"stuck\" for which the institution is the beneficiary institution[CR][LF]•[TAB]Feed a dashboard - give all payment transactions with their last status[CR][LF]"
+  "description" : "This API is the response to a payment transaction search to get transaction-level information regarding all payments that match the search criteria.[CR][LF]Examples of use cases are:[CR][LF]•[TAB]Investigation by a participating institution based on criteria given by a customer, such as instructed amount, time of initiation[CR][LF]•[TAB]Flow monitoring, for instance to find payments that are \"stuck\" for which the institution is the beneficiary institution[CR][LF]•[TAB]Feed a dashboard - give all payment transactions with their last status[CR][LF]",
+  "additionalProperties" : { }
 };
             defs.Location1Code = {
   "type" : "string",
@@ -1890,7 +1912,8 @@ margin-bottom: 20px;
       "description" : "Last date and time at which the status of this Payment event was updated."
     }
   },
-  "description" : "Contains information coming from the related MT 199 or MT 103, or the StatusConfirmationUpdate."
+  "description" : "Contains information coming from the related MT 199 or MT 103, or the StatusConfirmationUpdate.",
+  "additionalProperties" : { }
 };
             defs.PaymentEvent2 = {
   "type" : "object",
@@ -1919,7 +1942,8 @@ margin-bottom: 20px;
       "description" : "Indicates whether a payment has been received or not."
     }
   },
-  "description" : "Contains elements identifying an event belonging to the transaction."
+  "description" : "Contains elements identifying an event belonging to the transaction.",
+  "additionalProperties" : { }
 };
             defs.PaymentEvent3 = {
   "type" : "object",
@@ -1974,7 +1998,8 @@ margin-bottom: 20px;
       "description" : "Specifies the reason why the event is invalid."
     }
   },
-  "description" : "Contains the details of an invalid payment event."
+  "description" : "Contains the details of an invalid payment event.",
+  "additionalProperties" : { }
 };
             defs.PaymentReason1Code = {
   "type" : "string",
@@ -1992,7 +2017,8 @@ margin-bottom: 20px;
       "$ref" : "#/definitions/PaymentReason1Code"
     }
   },
-  "description" : "Indicates the payment transaction status and optionally the reason for that status."
+  "description" : "Indicates the payment transaction status and optionally the reason for that status.",
+  "additionalProperties" : { }
 };
             defs.PaymentStatusType1Choice = {
   "type" : "object",
@@ -2007,7 +2033,8 @@ margin-bottom: 20px;
       "$ref" : "#/definitions/StatusDetails1"
     }
   },
-  "description" : "Contains the status of the payment, either as a raw status, or as a detailed status."
+  "description" : "Contains the status of the payment, either as a raw status, or as a detailed status.",
+  "additionalProperties" : { }
 };
             defs.PaymentTransaction72 = {
   "type" : "object",
@@ -2067,7 +2094,8 @@ margin-bottom: 20px;
       "description" : "Last date and time at which the status of this transaction was updated."
     }
   },
-  "description" : "Contains details on the payment transaction."
+  "description" : "Contains details on the payment transaction.",
+  "additionalProperties" : { }
 };
             defs.PaymentTransaction73 = {
   "type" : "object",
@@ -2102,7 +2130,8 @@ margin-bottom: 20px;
       }
     }
   },
-  "description" : "Contains details on the payment transaction."
+  "description" : "Contains details on the payment transaction.",
+  "additionalProperties" : { }
 };
             defs.PaymentTransactionState1Code = {
   "type" : "string",
@@ -2154,7 +2183,8 @@ margin-bottom: 20px;
       }
     }
   },
-  "description" : "Contains details on the status of a payment."
+  "description" : "Contains details on the status of a payment.",
+  "additionalProperties" : { }
 };
             defs.TransactionIndividualStatus4Code = {
   "type" : "string",
@@ -2197,7 +2227,8 @@ margin-bottom: 20px;
       "$ref" : "#/definitions/PaymentStatusType1Choice"
     }
   },
-  "description" : "This API is a status confirmation update to inform the tracker about the updated status of a given payment."
+  "description" : "This API is a status confirmation update to inform the tracker about the updated status of a given payment.",
+  "additionalProperties" : { }
 };
             defs.UpdatePaymentStatusResponse = {
   "type" : "object",
@@ -2215,7 +2246,8 @@ margin-bottom: 20px;
     "update_payment_status_response" : {
       "network_reference" : "CCLABEB0XXX-2017-05-18T10:26:05.424-00000001"
     }
-  }
+  },
+  "additionalProperties" : { }
 };
   </script>
 
@@ -2259,14 +2291,14 @@ margin-bottom: 20px;
       <div id="content">
         <div id="project">
           <div class="pull-left">
-            <h1>gpi API</h1>
+            <h1>Tracker API V1</h1>
           </div>
           <div class="clearfix"></div>
         </div>
         <div id="header">
           <div id="api-_">
             <h2 id="welcome-to-apidoc">API and SDK Documentation</h2>
-              <div class="app-desc">Version: 1.2.36</div>
+              <div class="app-desc">Version: 1.2.37</div>
             <hr>
             <div>Move your app forward with the gpi API</div>
           </div>
@@ -2306,7 +2338,7 @@ margin-bottom: 20px;
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-GetChangedPaymentTransactions-getChangedPaymentTransactionsPost-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://local-api-domain/swift-apitracker-pilot/v1/get_changed_payment_transactions"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://sandbox.swift.com/swift-apitracker-pilot/v1/get_changed_payment_transactions"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-GetChangedPaymentTransactions-getChangedPaymentTransactionsPost-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -2328,9 +2360,12 @@ public class GetChangedPaymentTransactionsApiExample {
         String lAURequestNonce = lAURequestNonce_example; // String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response
         String lAUSigned = lAUSigned_example; // String | service specific HTTP headers
         String lAUSignature = lAUSignature_example; // String | contains the LAU signature, base64 ecoded
+        String accept = accept_example; // String | 
+        String xApiKey = xApiKey_example; // String | an api key given to your application
+        String xRecord = xRecord_example; // String | a type of API response to get from API Sandbox
         Camt.a04.001.02 requestBody = ; // Camt.a04.001.02 | Last Changed Payment Transactions Request
         try {
-            camt.a04.002.02 result = apiInstance.getChangedPaymentTransactionsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, requestBody);
+            camt.a04.002.02 result = apiInstance.getChangedPaymentTransactionsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, accept, xApiKey, xRecord, requestBody);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling GetChangedPaymentTransactionsApi#getChangedPaymentTransactionsPost");
@@ -2353,9 +2388,12 @@ public class GetChangedPaymentTransactionsApiExample {
         String lAURequestNonce = lAURequestNonce_example; // String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response
         String lAUSigned = lAUSigned_example; // String | service specific HTTP headers
         String lAUSignature = lAUSignature_example; // String | contains the LAU signature, base64 ecoded
+        String accept = accept_example; // String | 
+        String xApiKey = xApiKey_example; // String | an api key given to your application
+        String xRecord = xRecord_example; // String | a type of API response to get from API Sandbox
         Camt.a04.001.02 requestBody = ; // Camt.a04.001.02 | Last Changed Payment Transactions Request
         try {
-            camt.a04.002.02 result = apiInstance.getChangedPaymentTransactionsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, requestBody);
+            camt.a04.002.02 result = apiInstance.getChangedPaymentTransactionsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, accept, xApiKey, xRecord, requestBody);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling GetChangedPaymentTransactionsApi#getChangedPaymentTransactionsPost");
@@ -2369,12 +2407,15 @@ public class GetChangedPaymentTransactionsApiExample {
   <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
   </div> -->
                             <div class="tab-pane" id="examples-GetChangedPaymentTransactions-getChangedPaymentTransactionsPost-0-objc">
-                              <pre class="prettyprint"><code class="language-cpp">String *lAUApplicationID = lAUApplicationID_example; // ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys
-String *lAUVersion = lAUVersion_example; // version of the LAUSigned header. Mandatory. "1.0" for this first release
-String *lAUCallTime = lAUCallTime_example; // timestamp in UTC of the API call in the format YYYY-MM-DDTHH:MM:SS.sssZ
-String *lAURequestNonce = lAURequestNonce_example; // a random value generated by the client. Provided with the request and copied by the gpi Connector on the response
-String *lAUSigned = lAUSigned_example; // service specific HTTP headers
-String *lAUSignature = lAUSignature_example; // contains the LAU signature, base64 ecoded
+                              <pre class="prettyprint"><code class="language-cpp">String *lAUApplicationID = lAUApplicationID_example; // ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys (default to 001)
+String *lAUVersion = lAUVersion_example; // version of the LAUSigned header. Mandatory. "1.0" for this first release (default to 1.0)
+String *lAUCallTime = lAUCallTime_example; // timestamp in UTC of the API call in the format YYYY-MM-DDTHH:MM:SS.sssZ (default to 2018-03-23T15:56:26.728Z)
+String *lAURequestNonce = lAURequestNonce_example; // a random value generated by the client. Provided with the request and copied by the gpi Connector on the response (default to e802ab96-bb3a-4965-9139-5214b9f0f074)
+String *lAUSigned = lAUSigned_example; // service specific HTTP headers (default to (ApplAPIKey=yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B),(RBACRole=[FullViewer/Scope/cclabeb0]))
+String *lAUSignature = lAUSignature_example; // contains the LAU signature, base64 ecoded (default to U1khA8h9Lm1PqzB99fG6uw==)
+String *accept = accept_example; //  (default to application/json)
+String *xApiKey = xApiKey_example; // an api key given to your application (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
+String *xRecord = xRecord_example; // a type of API response to get from API Sandbox (default to 0)
 Camt.a04.001.02 *requestBody = ; // Last Changed Payment Transactions Request
 
 GetChangedPaymentTransactionsApi *apiInstance = [[GetChangedPaymentTransactionsApi alloc] init];
@@ -2386,6 +2427,9 @@ GetChangedPaymentTransactionsApi *apiInstance = [[GetChangedPaymentTransactionsA
     lAURequestNonce:lAURequestNonce
     lAUSigned:lAUSigned
     lAUSignature:lAUSignature
+    accept:accept
+    xApiKey:xApiKey
+    xRecord:xRecord
     requestBody:requestBody
               completionHandler: ^(camt.a04.002.02 output, NSError* error) {
                             if (output) {
@@ -2399,9 +2443,9 @@ GetChangedPaymentTransactionsApi *apiInstance = [[GetChangedPaymentTransactionsA
                             </div>
 
                             <div class="tab-pane" id="examples-GetChangedPaymentTransactions-getChangedPaymentTransactionsPost-0-javascript">
-                              <pre class="prettyprint"><code class="language-js">var GpiApi = require('gpi_api');
+                              <pre class="prettyprint"><code class="language-js">var TrackerApiV1 = require('tracker_api_v1');
 
-var api = new GpiApi.GetChangedPaymentTransactionsApi()
+var api = new TrackerApiV1.GetChangedPaymentTransactionsApi()
 
 var lAUApplicationID = lAUApplicationID_example; // {String} ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys
 
@@ -2415,6 +2459,12 @@ var lAUSigned = lAUSigned_example; // {String} service specific HTTP headers
 
 var lAUSignature = lAUSignature_example; // {String} contains the LAU signature, base64 ecoded
 
+var accept = accept_example; // {String} 
+
+var xApiKey = xApiKey_example; // {String} an api key given to your application
+
+var xRecord = xRecord_example; // {String} a type of API response to get from API Sandbox
+
 var requestBody = ; // {Camt.a04.001.02} Last Changed Payment Transactions Request
 
 
@@ -2425,7 +2475,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.getChangedPaymentTransactionsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, requestBody, callback);
+api.getChangedPaymentTransactionsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, accept, xApiKey, xRecord, requestBody, callback);
 </code></pre>
                             </div>
 
@@ -2447,18 +2497,21 @@ namespace Example
         {
             
             var apiInstance = new GetChangedPaymentTransactionsApi();
-            var lAUApplicationID = lAUApplicationID_example;  // String | ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys
-            var lAUVersion = lAUVersion_example;  // String | version of the LAUSigned header. Mandatory. "1.0" for this first release
-            var lAUCallTime = lAUCallTime_example;  // String | timestamp in UTC of the API call in the format YYYY-MM-DDTHH:MM:SS.sssZ
-            var lAURequestNonce = lAURequestNonce_example;  // String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response
-            var lAUSigned = lAUSigned_example;  // String | service specific HTTP headers
-            var lAUSignature = lAUSignature_example;  // String | contains the LAU signature, base64 ecoded
+            var lAUApplicationID = lAUApplicationID_example;  // String | ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys (default to 001)
+            var lAUVersion = lAUVersion_example;  // String | version of the LAUSigned header. Mandatory. "1.0" for this first release (default to 1.0)
+            var lAUCallTime = lAUCallTime_example;  // String | timestamp in UTC of the API call in the format YYYY-MM-DDTHH:MM:SS.sssZ (default to 2018-03-23T15:56:26.728Z)
+            var lAURequestNonce = lAURequestNonce_example;  // String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response (default to e802ab96-bb3a-4965-9139-5214b9f0f074)
+            var lAUSigned = lAUSigned_example;  // String | service specific HTTP headers (default to (ApplAPIKey=yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B),(RBACRole=[FullViewer/Scope/cclabeb0]))
+            var lAUSignature = lAUSignature_example;  // String | contains the LAU signature, base64 ecoded (default to U1khA8h9Lm1PqzB99fG6uw==)
+            var accept = accept_example;  // String |  (default to application/json)
+            var xApiKey = xApiKey_example;  // String | an api key given to your application (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
+            var xRecord = xRecord_example;  // String | a type of API response to get from API Sandbox (default to 0)
             var requestBody = new Camt.a04.001.02(); // Camt.a04.001.02 | Last Changed Payment Transactions Request
 
             try
             {
                 // Get Changed Payment Transactions
-                camt.a04.002.02 result = apiInstance.getChangedPaymentTransactionsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, requestBody);
+                camt.a04.002.02 result = apiInstance.getChangedPaymentTransactionsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, accept, xApiKey, xRecord, requestBody);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2482,10 +2535,13 @@ $lAUCallTime = lAUCallTime_example; // String | timestamp in UTC of the API call
 $lAURequestNonce = lAURequestNonce_example; // String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response
 $lAUSigned = lAUSigned_example; // String | service specific HTTP headers
 $lAUSignature = lAUSignature_example; // String | contains the LAU signature, base64 ecoded
+$accept = accept_example; // String | 
+$xApiKey = xApiKey_example; // String | an api key given to your application
+$xRecord = xRecord_example; // String | a type of API response to get from API Sandbox
 $requestBody = ; // Camt.a04.001.02 | Last Changed Payment Transactions Request
 
 try {
-    $result = $api_instance->getChangedPaymentTransactionsPost($lAUApplicationID, $lAUVersion, $lAUCallTime, $lAURequestNonce, $lAUSigned, $lAUSignature, $requestBody);
+    $result = $api_instance->getChangedPaymentTransactionsPost($lAUApplicationID, $lAUVersion, $lAUCallTime, $lAURequestNonce, $lAUSigned, $lAUSignature, $accept, $xApiKey, $xRecord, $requestBody);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GetChangedPaymentTransactionsApi->getChangedPaymentTransactionsPost: ', $e->getMessage(), PHP_EOL;
@@ -2505,10 +2561,13 @@ my $lAUCallTime = lAUCallTime_example; # String | timestamp in UTC of the API ca
 my $lAURequestNonce = lAURequestNonce_example; # String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response
 my $lAUSigned = lAUSigned_example; # String | service specific HTTP headers
 my $lAUSignature = lAUSignature_example; # String | contains the LAU signature, base64 ecoded
+my $accept = accept_example; # String | 
+my $xApiKey = xApiKey_example; # String | an api key given to your application
+my $xRecord = xRecord_example; # String | a type of API response to get from API Sandbox
 my $requestBody = WWW::SwaggerClient::Object::Camt.a04.001.02->new(); # Camt.a04.001.02 | Last Changed Payment Transactions Request
 
 eval { 
-    my $result = $api_instance->getChangedPaymentTransactionsPost(lAUApplicationID => $lAUApplicationID, lAUVersion => $lAUVersion, lAUCallTime => $lAUCallTime, lAURequestNonce => $lAURequestNonce, lAUSigned => $lAUSigned, lAUSignature => $lAUSignature, requestBody => $requestBody);
+    my $result = $api_instance->getChangedPaymentTransactionsPost(lAUApplicationID => $lAUApplicationID, lAUVersion => $lAUVersion, lAUCallTime => $lAUCallTime, lAURequestNonce => $lAURequestNonce, lAUSigned => $lAUSigned, lAUSignature => $lAUSignature, accept => $accept, xApiKey => $xApiKey, xRecord => $xRecord, requestBody => $requestBody);
     print Dumper($result);
 };
 if ($@) {
@@ -2525,17 +2584,20 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.GetChangedPaymentTransactionsApi()
-lAUApplicationID = lAUApplicationID_example # String | ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys
-lAUVersion = lAUVersion_example # String | version of the LAUSigned header. Mandatory. "1.0" for this first release
-lAUCallTime = lAUCallTime_example # String | timestamp in UTC of the API call in the format YYYY-MM-DDTHH:MM:SS.sssZ
-lAURequestNonce = lAURequestNonce_example # String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response
-lAUSigned = lAUSigned_example # String | service specific HTTP headers
-lAUSignature = lAUSignature_example # String | contains the LAU signature, base64 ecoded
+lAUApplicationID = lAUApplicationID_example # String | ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys (default to 001)
+lAUVersion = lAUVersion_example # String | version of the LAUSigned header. Mandatory. "1.0" for this first release (default to 1.0)
+lAUCallTime = lAUCallTime_example # String | timestamp in UTC of the API call in the format YYYY-MM-DDTHH:MM:SS.sssZ (default to 2018-03-23T15:56:26.728Z)
+lAURequestNonce = lAURequestNonce_example # String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response (default to e802ab96-bb3a-4965-9139-5214b9f0f074)
+lAUSigned = lAUSigned_example # String | service specific HTTP headers (default to (ApplAPIKey=yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B),(RBACRole=[FullViewer/Scope/cclabeb0]))
+lAUSignature = lAUSignature_example # String | contains the LAU signature, base64 ecoded (default to U1khA8h9Lm1PqzB99fG6uw==)
+accept = accept_example # String |  (default to application/json)
+xApiKey = xApiKey_example # String | an api key given to your application (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
+xRecord = xRecord_example # String | a type of API response to get from API Sandbox (default to 0)
 requestBody =  # Camt.a04.001.02 | Last Changed Payment Transactions Request
 
 try: 
     # Get Changed Payment Transactions
-    api_response = api_instance.get_changed_payment_transactions_post(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, requestBody)
+    api_response = api_instance.get_changed_payment_transactions_post(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, accept, xApiKey, xRecord, requestBody)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling GetChangedPaymentTransactionsApi->getChangedPaymentTransactionsPost: %s\n" % e)</code></pre>
@@ -2689,6 +2751,75 @@ except ApiException as e:
 </td>
 </tr>
 
+                                  <tr><td style="width:150px;">Accept*</td>
+<td>
+
+
+    <div id="d2e199_getChangedPaymentTransactionsPost_accept">
+        <div class="json-schema-view">
+            <div class="primitive">
+                <span class="type">
+                    String
+                </span>
+
+                    <div class="inner description">
+                        
+                    </div>
+            </div>
+                <div class="inner required">
+                    Required
+                </div>
+        </div>
+    </div>
+</td>
+</tr>
+
+                                  <tr><td style="width:150px;">x-api-key*</td>
+<td>
+
+
+    <div id="d2e199_getChangedPaymentTransactionsPost_xApiKey">
+        <div class="json-schema-view">
+            <div class="primitive">
+                <span class="type">
+                    String
+                </span>
+
+                    <div class="inner description">
+                        an api key given to your application
+                    </div>
+            </div>
+                <div class="inner required">
+                    Required
+                </div>
+        </div>
+    </div>
+</td>
+</tr>
+
+                                  <tr><td style="width:150px;">x-record*</td>
+<td>
+
+
+    <div id="d2e199_getChangedPaymentTransactionsPost_xRecord">
+        <div class="json-schema-view">
+            <div class="primitive">
+                <span class="type">
+                    String
+                </span>
+
+                    <div class="inner description">
+                        a type of API response to get from API Sandbox
+                    </div>
+            </div>
+                <div class="inner required">
+                    Required
+                </div>
+        </div>
+    </div>
+</td>
+</tr>
+
                             </table>
 
                             <div class="methodsubtabletitle">Body parameters</div>
@@ -2758,23 +2889,34 @@ $(document).ready(function() {
   "description" : "Last Changed Payment Transactions Request",
   "headers" : {
     "LAUApplicationID" : {
-      "type" : "string"
+      "type" : "string",
+      "description" : "ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys",
+      "default" : "001"
     },
     "LAUVersion" : {
-      "type" : "string"
+      "type" : "string",
+      "description" : "version of the LAUSigned header. Mandatory. \"1.0\" for this first release",
+      "default" : "1.0"
     },
     "LAUCallTime" : {
-      "type" : "string"
+      "type" : "string",
+      "description" : "timestamp in UTC of the API call in the format YYYY-MM-DDTHH:MM:SS.sssZ",
+      "default" : "2018-03-23T15:56:27.728Z"
     },
     "LAURequestNonce" : {
-      "type" : "string"
+      "type" : "string",
+      "description" : "a random value generated by the client. Provided with the request and copied by the gpi Connector on the response",
+      "default" : "e802ab96-bb3a-4965-9139-5214b9f0f074"
     },
     "LAUResponseNonce" : {
       "type" : "string",
-      "description" : "a random value generated by the gpi Connector on the response"
+      "description" : "a random value generated by the gpi Connector on the response",
+      "default" : "5f1fdf6c-9bbb-4707-bf9e-776e9be878b3"
     },
     "LAUSignature" : {
-      "type" : "string"
+      "type" : "string",
+      "description" : "contains the LAU signature, base64 ecoded",
+      "default" : "U1khA8h9Lm1PqzB99fG6uw=="
     }
   },
   "schema" : {
@@ -2814,25 +2956,25 @@ $(document).ready(function() {
                                             <td>LAUApplicationID</td>
                                             <td>String</td>
                                             <td></td>
-                                            <td></td>
+                                            <td>ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys</td>
                                         </tr>
                                         <tr>
                                             <td>LAUVersion</td>
                                             <td>String</td>
                                             <td></td>
-                                            <td></td>
+                                            <td>version of the LAUSigned header. Mandatory. &quot;1.0&quot; for this first release</td>
                                         </tr>
                                         <tr>
                                             <td>LAUCallTime</td>
                                             <td>String</td>
                                             <td></td>
-                                            <td></td>
+                                            <td>timestamp in UTC of the API call in the format YYYY-MM-DDTHH:MM:SS.sssZ</td>
                                         </tr>
                                         <tr>
                                             <td>LAURequestNonce</td>
                                             <td>String</td>
                                             <td></td>
-                                            <td></td>
+                                            <td>a random value generated by the client. Provided with the request and copied by the gpi Connector on the response</td>
                                         </tr>
                                         <tr>
                                             <td>LAUResponseNonce</td>
@@ -2844,7 +2986,7 @@ $(document).ready(function() {
                                             <td>LAUSignature</td>
                                             <td>String</td>
                                             <td></td>
-                                            <td></td>
+                                            <td>contains the LAU signature, base64 ecoded</td>
                                         </tr>
                                     </table>
                                 </div>
@@ -3232,7 +3374,7 @@ $(document).ready(function() {
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-GetInvalidEvents-getInvalidEventsPost-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://local-api-domain/swift-apitracker-pilot/v1/get_invalid_events"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://sandbox.swift.com/swift-apitracker-pilot/v1/get_invalid_events"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-GetInvalidEvents-getInvalidEventsPost-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -3254,9 +3396,12 @@ public class GetInvalidEventsApiExample {
         String lAURequestNonce = lAURequestNonce_example; // String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response
         String lAUSigned = lAUSigned_example; // String | service specific HTTP headers
         String lAUSignature = lAUSignature_example; // String | contains the LAU signature, base64 ecoded
+        String accept = accept_example; // String | 
+        String xApiKey = xApiKey_example; // String | an api key given to your application
+        String xRecord = xRecord_example; // String | a type of API response to get from API Sandbox
         Camt.a05.001.02 requestBody = ; // Camt.a05.001.02 | Payment Event Request
         try {
-            camt.a05.002.02 result = apiInstance.getInvalidEventsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, requestBody);
+            camt.a05.002.02 result = apiInstance.getInvalidEventsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, accept, xApiKey, xRecord, requestBody);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling GetInvalidEventsApi#getInvalidEventsPost");
@@ -3279,9 +3424,12 @@ public class GetInvalidEventsApiExample {
         String lAURequestNonce = lAURequestNonce_example; // String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response
         String lAUSigned = lAUSigned_example; // String | service specific HTTP headers
         String lAUSignature = lAUSignature_example; // String | contains the LAU signature, base64 ecoded
+        String accept = accept_example; // String | 
+        String xApiKey = xApiKey_example; // String | an api key given to your application
+        String xRecord = xRecord_example; // String | a type of API response to get from API Sandbox
         Camt.a05.001.02 requestBody = ; // Camt.a05.001.02 | Payment Event Request
         try {
-            camt.a05.002.02 result = apiInstance.getInvalidEventsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, requestBody);
+            camt.a05.002.02 result = apiInstance.getInvalidEventsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, accept, xApiKey, xRecord, requestBody);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling GetInvalidEventsApi#getInvalidEventsPost");
@@ -3295,12 +3443,15 @@ public class GetInvalidEventsApiExample {
   <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
   </div> -->
                             <div class="tab-pane" id="examples-GetInvalidEvents-getInvalidEventsPost-0-objc">
-                              <pre class="prettyprint"><code class="language-cpp">String *lAUApplicationID = lAUApplicationID_example; // ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys
-String *lAUVersion = lAUVersion_example; // version of the LAUSigned header. Mandatory. "1.0" for this first release
-String *lAUCallTime = lAUCallTime_example; // timestamp in UTC of the API call in the format YYYY-MM-DDTHH:MM:SS.sssZ
-String *lAURequestNonce = lAURequestNonce_example; // a random value generated by the client. Provided with the request and copied by the gpi Connector on the response
-String *lAUSigned = lAUSigned_example; // service specific HTTP headers
-String *lAUSignature = lAUSignature_example; // contains the LAU signature, base64 ecoded
+                              <pre class="prettyprint"><code class="language-cpp">String *lAUApplicationID = lAUApplicationID_example; // ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys (default to 001)
+String *lAUVersion = lAUVersion_example; // version of the LAUSigned header. Mandatory. "1.0" for this first release (default to 1.0)
+String *lAUCallTime = lAUCallTime_example; // timestamp in UTC of the API call in the format YYYY-MM-DDTHH:MM:SS.sssZ (default to 2018-03-23T15:56:26.728Z)
+String *lAURequestNonce = lAURequestNonce_example; // a random value generated by the client. Provided with the request and copied by the gpi Connector on the response (default to e802ab96-bb3a-4965-9139-5214b9f0f074)
+String *lAUSigned = lAUSigned_example; // service specific HTTP headers (default to (ApplAPIKey=yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B),(RBACRole=[FullViewer/Scope/cclabeb0]))
+String *lAUSignature = lAUSignature_example; // contains the LAU signature, base64 ecoded (default to U1khA8h9Lm1PqzB99fG6uw==)
+String *accept = accept_example; //  (default to application/json)
+String *xApiKey = xApiKey_example; // an api key given to your application (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
+String *xRecord = xRecord_example; // a type of API response to get from API Sandbox (default to 0)
 Camt.a05.001.02 *requestBody = ; // Payment Event Request
 
 GetInvalidEventsApi *apiInstance = [[GetInvalidEventsApi alloc] init];
@@ -3312,6 +3463,9 @@ GetInvalidEventsApi *apiInstance = [[GetInvalidEventsApi alloc] init];
     lAURequestNonce:lAURequestNonce
     lAUSigned:lAUSigned
     lAUSignature:lAUSignature
+    accept:accept
+    xApiKey:xApiKey
+    xRecord:xRecord
     requestBody:requestBody
               completionHandler: ^(camt.a05.002.02 output, NSError* error) {
                             if (output) {
@@ -3325,9 +3479,9 @@ GetInvalidEventsApi *apiInstance = [[GetInvalidEventsApi alloc] init];
                             </div>
 
                             <div class="tab-pane" id="examples-GetInvalidEvents-getInvalidEventsPost-0-javascript">
-                              <pre class="prettyprint"><code class="language-js">var GpiApi = require('gpi_api');
+                              <pre class="prettyprint"><code class="language-js">var TrackerApiV1 = require('tracker_api_v1');
 
-var api = new GpiApi.GetInvalidEventsApi()
+var api = new TrackerApiV1.GetInvalidEventsApi()
 
 var lAUApplicationID = lAUApplicationID_example; // {String} ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys
 
@@ -3341,6 +3495,12 @@ var lAUSigned = lAUSigned_example; // {String} service specific HTTP headers
 
 var lAUSignature = lAUSignature_example; // {String} contains the LAU signature, base64 ecoded
 
+var accept = accept_example; // {String} 
+
+var xApiKey = xApiKey_example; // {String} an api key given to your application
+
+var xRecord = xRecord_example; // {String} a type of API response to get from API Sandbox
+
 var requestBody = ; // {Camt.a05.001.02} Payment Event Request
 
 
@@ -3351,7 +3511,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.getInvalidEventsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, requestBody, callback);
+api.getInvalidEventsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, accept, xApiKey, xRecord, requestBody, callback);
 </code></pre>
                             </div>
 
@@ -3373,18 +3533,21 @@ namespace Example
         {
             
             var apiInstance = new GetInvalidEventsApi();
-            var lAUApplicationID = lAUApplicationID_example;  // String | ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys
-            var lAUVersion = lAUVersion_example;  // String | version of the LAUSigned header. Mandatory. "1.0" for this first release
-            var lAUCallTime = lAUCallTime_example;  // String | timestamp in UTC of the API call in the format YYYY-MM-DDTHH:MM:SS.sssZ
-            var lAURequestNonce = lAURequestNonce_example;  // String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response
-            var lAUSigned = lAUSigned_example;  // String | service specific HTTP headers
-            var lAUSignature = lAUSignature_example;  // String | contains the LAU signature, base64 ecoded
+            var lAUApplicationID = lAUApplicationID_example;  // String | ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys (default to 001)
+            var lAUVersion = lAUVersion_example;  // String | version of the LAUSigned header. Mandatory. "1.0" for this first release (default to 1.0)
+            var lAUCallTime = lAUCallTime_example;  // String | timestamp in UTC of the API call in the format YYYY-MM-DDTHH:MM:SS.sssZ (default to 2018-03-23T15:56:26.728Z)
+            var lAURequestNonce = lAURequestNonce_example;  // String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response (default to e802ab96-bb3a-4965-9139-5214b9f0f074)
+            var lAUSigned = lAUSigned_example;  // String | service specific HTTP headers (default to (ApplAPIKey=yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B),(RBACRole=[FullViewer/Scope/cclabeb0]))
+            var lAUSignature = lAUSignature_example;  // String | contains the LAU signature, base64 ecoded (default to U1khA8h9Lm1PqzB99fG6uw==)
+            var accept = accept_example;  // String |  (default to application/json)
+            var xApiKey = xApiKey_example;  // String | an api key given to your application (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
+            var xRecord = xRecord_example;  // String | a type of API response to get from API Sandbox (default to 0)
             var requestBody = new Camt.a05.001.02(); // Camt.a05.001.02 | Payment Event Request
 
             try
             {
                 // Get Invalid Events
-                camt.a05.002.02 result = apiInstance.getInvalidEventsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, requestBody);
+                camt.a05.002.02 result = apiInstance.getInvalidEventsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, accept, xApiKey, xRecord, requestBody);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3408,10 +3571,13 @@ $lAUCallTime = lAUCallTime_example; // String | timestamp in UTC of the API call
 $lAURequestNonce = lAURequestNonce_example; // String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response
 $lAUSigned = lAUSigned_example; // String | service specific HTTP headers
 $lAUSignature = lAUSignature_example; // String | contains the LAU signature, base64 ecoded
+$accept = accept_example; // String | 
+$xApiKey = xApiKey_example; // String | an api key given to your application
+$xRecord = xRecord_example; // String | a type of API response to get from API Sandbox
 $requestBody = ; // Camt.a05.001.02 | Payment Event Request
 
 try {
-    $result = $api_instance->getInvalidEventsPost($lAUApplicationID, $lAUVersion, $lAUCallTime, $lAURequestNonce, $lAUSigned, $lAUSignature, $requestBody);
+    $result = $api_instance->getInvalidEventsPost($lAUApplicationID, $lAUVersion, $lAUCallTime, $lAURequestNonce, $lAUSigned, $lAUSignature, $accept, $xApiKey, $xRecord, $requestBody);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GetInvalidEventsApi->getInvalidEventsPost: ', $e->getMessage(), PHP_EOL;
@@ -3431,10 +3597,13 @@ my $lAUCallTime = lAUCallTime_example; # String | timestamp in UTC of the API ca
 my $lAURequestNonce = lAURequestNonce_example; # String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response
 my $lAUSigned = lAUSigned_example; # String | service specific HTTP headers
 my $lAUSignature = lAUSignature_example; # String | contains the LAU signature, base64 ecoded
+my $accept = accept_example; # String | 
+my $xApiKey = xApiKey_example; # String | an api key given to your application
+my $xRecord = xRecord_example; # String | a type of API response to get from API Sandbox
 my $requestBody = WWW::SwaggerClient::Object::Camt.a05.001.02->new(); # Camt.a05.001.02 | Payment Event Request
 
 eval { 
-    my $result = $api_instance->getInvalidEventsPost(lAUApplicationID => $lAUApplicationID, lAUVersion => $lAUVersion, lAUCallTime => $lAUCallTime, lAURequestNonce => $lAURequestNonce, lAUSigned => $lAUSigned, lAUSignature => $lAUSignature, requestBody => $requestBody);
+    my $result = $api_instance->getInvalidEventsPost(lAUApplicationID => $lAUApplicationID, lAUVersion => $lAUVersion, lAUCallTime => $lAUCallTime, lAURequestNonce => $lAURequestNonce, lAUSigned => $lAUSigned, lAUSignature => $lAUSignature, accept => $accept, xApiKey => $xApiKey, xRecord => $xRecord, requestBody => $requestBody);
     print Dumper($result);
 };
 if ($@) {
@@ -3451,17 +3620,20 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.GetInvalidEventsApi()
-lAUApplicationID = lAUApplicationID_example # String | ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys
-lAUVersion = lAUVersion_example # String | version of the LAUSigned header. Mandatory. "1.0" for this first release
-lAUCallTime = lAUCallTime_example # String | timestamp in UTC of the API call in the format YYYY-MM-DDTHH:MM:SS.sssZ
-lAURequestNonce = lAURequestNonce_example # String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response
-lAUSigned = lAUSigned_example # String | service specific HTTP headers
-lAUSignature = lAUSignature_example # String | contains the LAU signature, base64 ecoded
+lAUApplicationID = lAUApplicationID_example # String | ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys (default to 001)
+lAUVersion = lAUVersion_example # String | version of the LAUSigned header. Mandatory. "1.0" for this first release (default to 1.0)
+lAUCallTime = lAUCallTime_example # String | timestamp in UTC of the API call in the format YYYY-MM-DDTHH:MM:SS.sssZ (default to 2018-03-23T15:56:26.728Z)
+lAURequestNonce = lAURequestNonce_example # String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response (default to e802ab96-bb3a-4965-9139-5214b9f0f074)
+lAUSigned = lAUSigned_example # String | service specific HTTP headers (default to (ApplAPIKey=yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B),(RBACRole=[FullViewer/Scope/cclabeb0]))
+lAUSignature = lAUSignature_example # String | contains the LAU signature, base64 ecoded (default to U1khA8h9Lm1PqzB99fG6uw==)
+accept = accept_example # String |  (default to application/json)
+xApiKey = xApiKey_example # String | an api key given to your application (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
+xRecord = xRecord_example # String | a type of API response to get from API Sandbox (default to 0)
 requestBody =  # Camt.a05.001.02 | Payment Event Request
 
 try: 
     # Get Invalid Events
-    api_response = api_instance.get_invalid_events_post(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, requestBody)
+    api_response = api_instance.get_invalid_events_post(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, accept, xApiKey, xRecord, requestBody)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling GetInvalidEventsApi->getInvalidEventsPost: %s\n" % e)</code></pre>
@@ -3615,6 +3787,75 @@ except ApiException as e:
 </td>
 </tr>
 
+                                  <tr><td style="width:150px;">Accept*</td>
+<td>
+
+
+    <div id="d2e199_getInvalidEventsPost_accept">
+        <div class="json-schema-view">
+            <div class="primitive">
+                <span class="type">
+                    String
+                </span>
+
+                    <div class="inner description">
+                        
+                    </div>
+            </div>
+                <div class="inner required">
+                    Required
+                </div>
+        </div>
+    </div>
+</td>
+</tr>
+
+                                  <tr><td style="width:150px;">x-api-key*</td>
+<td>
+
+
+    <div id="d2e199_getInvalidEventsPost_xApiKey">
+        <div class="json-schema-view">
+            <div class="primitive">
+                <span class="type">
+                    String
+                </span>
+
+                    <div class="inner description">
+                        an api key given to your application
+                    </div>
+            </div>
+                <div class="inner required">
+                    Required
+                </div>
+        </div>
+    </div>
+</td>
+</tr>
+
+                                  <tr><td style="width:150px;">x-record*</td>
+<td>
+
+
+    <div id="d2e199_getInvalidEventsPost_xRecord">
+        <div class="json-schema-view">
+            <div class="primitive">
+                <span class="type">
+                    String
+                </span>
+
+                    <div class="inner description">
+                        a type of API response to get from API Sandbox
+                    </div>
+            </div>
+                <div class="inner required">
+                    Required
+                </div>
+        </div>
+    </div>
+</td>
+</tr>
+
                             </table>
 
                             <div class="methodsubtabletitle">Body parameters</div>
@@ -3684,23 +3925,34 @@ $(document).ready(function() {
   "description" : "Payment Events Response",
   "headers" : {
     "LAUApplicationID" : {
-      "type" : "string"
+      "type" : "string",
+      "description" : "ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys",
+      "default" : "001"
     },
     "LAUVersion" : {
-      "type" : "string"
+      "type" : "string",
+      "description" : "version of the LAUSigned header. Mandatory. \"1.0\" for this first release",
+      "default" : "1.0"
     },
     "LAUCallTime" : {
-      "type" : "string"
+      "type" : "string",
+      "description" : "timestamp in UTC of the API call in the format YYYY-MM-DDTHH:MM:SS.sssZ",
+      "default" : "2018-03-23T15:56:27.728Z"
     },
     "LAURequestNonce" : {
-      "type" : "string"
+      "type" : "string",
+      "description" : "a random value generated by the client. Provided with the request and copied by the gpi Connector on the response",
+      "default" : "e802ab96-bb3a-4965-9139-5214b9f0f074"
     },
     "LAUResponseNonce" : {
       "type" : "string",
-      "description" : "a random value generated by the gpi Connector on the response"
+      "description" : "a random value generated by the gpi Connector on the response",
+      "default" : "5f1fdf6c-9bbb-4707-bf9e-776e9be878b3"
     },
     "LAUSignature" : {
-      "type" : "string"
+      "type" : "string",
+      "description" : "contains the LAU signature, base64 ecoded",
+      "default" : "U1khA8h9Lm1PqzB99fG6uw=="
     }
   },
   "schema" : {
@@ -3740,25 +3992,25 @@ $(document).ready(function() {
                                             <td>LAUApplicationID</td>
                                             <td>String</td>
                                             <td></td>
-                                            <td></td>
+                                            <td>ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys</td>
                                         </tr>
                                         <tr>
                                             <td>LAUVersion</td>
                                             <td>String</td>
                                             <td></td>
-                                            <td></td>
+                                            <td>version of the LAUSigned header. Mandatory. &quot;1.0&quot; for this first release</td>
                                         </tr>
                                         <tr>
                                             <td>LAUCallTime</td>
                                             <td>String</td>
                                             <td></td>
-                                            <td></td>
+                                            <td>timestamp in UTC of the API call in the format YYYY-MM-DDTHH:MM:SS.sssZ</td>
                                         </tr>
                                         <tr>
                                             <td>LAURequestNonce</td>
                                             <td>String</td>
                                             <td></td>
-                                            <td></td>
+                                            <td>a random value generated by the client. Provided with the request and copied by the gpi Connector on the response</td>
                                         </tr>
                                         <tr>
                                             <td>LAUResponseNonce</td>
@@ -3770,7 +4022,7 @@ $(document).ready(function() {
                                             <td>LAUSignature</td>
                                             <td>String</td>
                                             <td></td>
-                                            <td></td>
+                                            <td>contains the LAU signature, base64 ecoded</td>
                                         </tr>
                                     </table>
                                 </div>
@@ -4158,7 +4410,7 @@ $(document).ready(function() {
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-GetPaymentTransactionDetails-getPaymentTransactionDetailsPost-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://local-api-domain/swift-apitracker-pilot/v1/get_payment_transaction_details"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://sandbox.swift.com/swift-apitracker-pilot/v1/get_payment_transaction_details"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-GetPaymentTransactionDetails-getPaymentTransactionDetailsPost-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -4180,9 +4432,12 @@ public class GetPaymentTransactionDetailsApiExample {
         String lAURequestNonce = lAURequestNonce_example; // String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response
         String lAUSigned = lAUSigned_example; // String | service specific HTTP headers
         String lAUSignature = lAUSignature_example; // String | contains the LAU signature, base64 ecoded
+        String accept = accept_example; // String | 
+        String xApiKey = xApiKey_example; // String | an api key given to your application
+        String xRecord = xRecord_example; // String | a type of API response to get from API Sandbox
         Camt.a02.001.02 requestBody = ; // Camt.a02.001.02 | Payment Transaction Request
         try {
-            camt.a02.002.02 result = apiInstance.getPaymentTransactionDetailsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, requestBody);
+            camt.a02.002.02 result = apiInstance.getPaymentTransactionDetailsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, accept, xApiKey, xRecord, requestBody);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling GetPaymentTransactionDetailsApi#getPaymentTransactionDetailsPost");
@@ -4205,9 +4460,12 @@ public class GetPaymentTransactionDetailsApiExample {
         String lAURequestNonce = lAURequestNonce_example; // String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response
         String lAUSigned = lAUSigned_example; // String | service specific HTTP headers
         String lAUSignature = lAUSignature_example; // String | contains the LAU signature, base64 ecoded
+        String accept = accept_example; // String | 
+        String xApiKey = xApiKey_example; // String | an api key given to your application
+        String xRecord = xRecord_example; // String | a type of API response to get from API Sandbox
         Camt.a02.001.02 requestBody = ; // Camt.a02.001.02 | Payment Transaction Request
         try {
-            camt.a02.002.02 result = apiInstance.getPaymentTransactionDetailsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, requestBody);
+            camt.a02.002.02 result = apiInstance.getPaymentTransactionDetailsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, accept, xApiKey, xRecord, requestBody);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling GetPaymentTransactionDetailsApi#getPaymentTransactionDetailsPost");
@@ -4221,12 +4479,15 @@ public class GetPaymentTransactionDetailsApiExample {
   <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
   </div> -->
                             <div class="tab-pane" id="examples-GetPaymentTransactionDetails-getPaymentTransactionDetailsPost-0-objc">
-                              <pre class="prettyprint"><code class="language-cpp">String *lAUApplicationID = lAUApplicationID_example; // ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys
-String *lAUVersion = lAUVersion_example; // version of the LAUSigned header. Mandatory. "1.0" for this first release
-String *lAUCallTime = lAUCallTime_example; // timestamp in UTC of the API call in the format YYYY-MM-DDTHH:MM:SS.sssZ
-String *lAURequestNonce = lAURequestNonce_example; // a random value generated by the client. Provided with the request and copied by the gpi Connector on the response
-String *lAUSigned = lAUSigned_example; // service specific HTTP headers
-String *lAUSignature = lAUSignature_example; // contains the LAU signature, base64 ecoded
+                              <pre class="prettyprint"><code class="language-cpp">String *lAUApplicationID = lAUApplicationID_example; // ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys (default to 001)
+String *lAUVersion = lAUVersion_example; // version of the LAUSigned header. Mandatory. "1.0" for this first release (default to 1.0)
+String *lAUCallTime = lAUCallTime_example; // timestamp in UTC of the API call in the format YYYY-MM-DDTHH:MM:SS.sssZ (default to 2018-03-23T15:56:26.728Z)
+String *lAURequestNonce = lAURequestNonce_example; // a random value generated by the client. Provided with the request and copied by the gpi Connector on the response (default to e802ab96-bb3a-4965-9139-5214b9f0f074)
+String *lAUSigned = lAUSigned_example; // service specific HTTP headers (default to (ApplAPIKey=yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B),(RBACRole=[FullViewer/Scope/cclabeb0]))
+String *lAUSignature = lAUSignature_example; // contains the LAU signature, base64 ecoded (default to U1khA8h9Lm1PqzB99fG6uw==)
+String *accept = accept_example; //  (default to application/json)
+String *xApiKey = xApiKey_example; // an api key given to your application (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
+String *xRecord = xRecord_example; // a type of API response to get from API Sandbox (default to 0)
 Camt.a02.001.02 *requestBody = ; // Payment Transaction Request
 
 GetPaymentTransactionDetailsApi *apiInstance = [[GetPaymentTransactionDetailsApi alloc] init];
@@ -4238,6 +4499,9 @@ GetPaymentTransactionDetailsApi *apiInstance = [[GetPaymentTransactionDetailsApi
     lAURequestNonce:lAURequestNonce
     lAUSigned:lAUSigned
     lAUSignature:lAUSignature
+    accept:accept
+    xApiKey:xApiKey
+    xRecord:xRecord
     requestBody:requestBody
               completionHandler: ^(camt.a02.002.02 output, NSError* error) {
                             if (output) {
@@ -4251,9 +4515,9 @@ GetPaymentTransactionDetailsApi *apiInstance = [[GetPaymentTransactionDetailsApi
                             </div>
 
                             <div class="tab-pane" id="examples-GetPaymentTransactionDetails-getPaymentTransactionDetailsPost-0-javascript">
-                              <pre class="prettyprint"><code class="language-js">var GpiApi = require('gpi_api');
+                              <pre class="prettyprint"><code class="language-js">var TrackerApiV1 = require('tracker_api_v1');
 
-var api = new GpiApi.GetPaymentTransactionDetailsApi()
+var api = new TrackerApiV1.GetPaymentTransactionDetailsApi()
 
 var lAUApplicationID = lAUApplicationID_example; // {String} ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys
 
@@ -4267,6 +4531,12 @@ var lAUSigned = lAUSigned_example; // {String} service specific HTTP headers
 
 var lAUSignature = lAUSignature_example; // {String} contains the LAU signature, base64 ecoded
 
+var accept = accept_example; // {String} 
+
+var xApiKey = xApiKey_example; // {String} an api key given to your application
+
+var xRecord = xRecord_example; // {String} a type of API response to get from API Sandbox
+
 var requestBody = ; // {Camt.a02.001.02} Payment Transaction Request
 
 
@@ -4277,7 +4547,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.getPaymentTransactionDetailsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, requestBody, callback);
+api.getPaymentTransactionDetailsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, accept, xApiKey, xRecord, requestBody, callback);
 </code></pre>
                             </div>
 
@@ -4299,18 +4569,21 @@ namespace Example
         {
             
             var apiInstance = new GetPaymentTransactionDetailsApi();
-            var lAUApplicationID = lAUApplicationID_example;  // String | ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys
-            var lAUVersion = lAUVersion_example;  // String | version of the LAUSigned header. Mandatory. "1.0" for this first release
-            var lAUCallTime = lAUCallTime_example;  // String | timestamp in UTC of the API call in the format YYYY-MM-DDTHH:MM:SS.sssZ
-            var lAURequestNonce = lAURequestNonce_example;  // String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response
-            var lAUSigned = lAUSigned_example;  // String | service specific HTTP headers
-            var lAUSignature = lAUSignature_example;  // String | contains the LAU signature, base64 ecoded
+            var lAUApplicationID = lAUApplicationID_example;  // String | ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys (default to 001)
+            var lAUVersion = lAUVersion_example;  // String | version of the LAUSigned header. Mandatory. "1.0" for this first release (default to 1.0)
+            var lAUCallTime = lAUCallTime_example;  // String | timestamp in UTC of the API call in the format YYYY-MM-DDTHH:MM:SS.sssZ (default to 2018-03-23T15:56:26.728Z)
+            var lAURequestNonce = lAURequestNonce_example;  // String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response (default to e802ab96-bb3a-4965-9139-5214b9f0f074)
+            var lAUSigned = lAUSigned_example;  // String | service specific HTTP headers (default to (ApplAPIKey=yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B),(RBACRole=[FullViewer/Scope/cclabeb0]))
+            var lAUSignature = lAUSignature_example;  // String | contains the LAU signature, base64 ecoded (default to U1khA8h9Lm1PqzB99fG6uw==)
+            var accept = accept_example;  // String |  (default to application/json)
+            var xApiKey = xApiKey_example;  // String | an api key given to your application (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
+            var xRecord = xRecord_example;  // String | a type of API response to get from API Sandbox (default to 0)
             var requestBody = new Camt.a02.001.02(); // Camt.a02.001.02 | Payment Transaction Request
 
             try
             {
                 // Get Payment Transaction Details
-                camt.a02.002.02 result = apiInstance.getPaymentTransactionDetailsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, requestBody);
+                camt.a02.002.02 result = apiInstance.getPaymentTransactionDetailsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, accept, xApiKey, xRecord, requestBody);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4334,10 +4607,13 @@ $lAUCallTime = lAUCallTime_example; // String | timestamp in UTC of the API call
 $lAURequestNonce = lAURequestNonce_example; // String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response
 $lAUSigned = lAUSigned_example; // String | service specific HTTP headers
 $lAUSignature = lAUSignature_example; // String | contains the LAU signature, base64 ecoded
+$accept = accept_example; // String | 
+$xApiKey = xApiKey_example; // String | an api key given to your application
+$xRecord = xRecord_example; // String | a type of API response to get from API Sandbox
 $requestBody = ; // Camt.a02.001.02 | Payment Transaction Request
 
 try {
-    $result = $api_instance->getPaymentTransactionDetailsPost($lAUApplicationID, $lAUVersion, $lAUCallTime, $lAURequestNonce, $lAUSigned, $lAUSignature, $requestBody);
+    $result = $api_instance->getPaymentTransactionDetailsPost($lAUApplicationID, $lAUVersion, $lAUCallTime, $lAURequestNonce, $lAUSigned, $lAUSignature, $accept, $xApiKey, $xRecord, $requestBody);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GetPaymentTransactionDetailsApi->getPaymentTransactionDetailsPost: ', $e->getMessage(), PHP_EOL;
@@ -4357,10 +4633,13 @@ my $lAUCallTime = lAUCallTime_example; # String | timestamp in UTC of the API ca
 my $lAURequestNonce = lAURequestNonce_example; # String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response
 my $lAUSigned = lAUSigned_example; # String | service specific HTTP headers
 my $lAUSignature = lAUSignature_example; # String | contains the LAU signature, base64 ecoded
+my $accept = accept_example; # String | 
+my $xApiKey = xApiKey_example; # String | an api key given to your application
+my $xRecord = xRecord_example; # String | a type of API response to get from API Sandbox
 my $requestBody = WWW::SwaggerClient::Object::Camt.a02.001.02->new(); # Camt.a02.001.02 | Payment Transaction Request
 
 eval { 
-    my $result = $api_instance->getPaymentTransactionDetailsPost(lAUApplicationID => $lAUApplicationID, lAUVersion => $lAUVersion, lAUCallTime => $lAUCallTime, lAURequestNonce => $lAURequestNonce, lAUSigned => $lAUSigned, lAUSignature => $lAUSignature, requestBody => $requestBody);
+    my $result = $api_instance->getPaymentTransactionDetailsPost(lAUApplicationID => $lAUApplicationID, lAUVersion => $lAUVersion, lAUCallTime => $lAUCallTime, lAURequestNonce => $lAURequestNonce, lAUSigned => $lAUSigned, lAUSignature => $lAUSignature, accept => $accept, xApiKey => $xApiKey, xRecord => $xRecord, requestBody => $requestBody);
     print Dumper($result);
 };
 if ($@) {
@@ -4377,17 +4656,20 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.GetPaymentTransactionDetailsApi()
-lAUApplicationID = lAUApplicationID_example # String | ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys
-lAUVersion = lAUVersion_example # String | version of the LAUSigned header. Mandatory. "1.0" for this first release
-lAUCallTime = lAUCallTime_example # String | timestamp in UTC of the API call in the format YYYY-MM-DDTHH:MM:SS.sssZ
-lAURequestNonce = lAURequestNonce_example # String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response
-lAUSigned = lAUSigned_example # String | service specific HTTP headers
-lAUSignature = lAUSignature_example # String | contains the LAU signature, base64 ecoded
+lAUApplicationID = lAUApplicationID_example # String | ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys (default to 001)
+lAUVersion = lAUVersion_example # String | version of the LAUSigned header. Mandatory. "1.0" for this first release (default to 1.0)
+lAUCallTime = lAUCallTime_example # String | timestamp in UTC of the API call in the format YYYY-MM-DDTHH:MM:SS.sssZ (default to 2018-03-23T15:56:26.728Z)
+lAURequestNonce = lAURequestNonce_example # String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response (default to e802ab96-bb3a-4965-9139-5214b9f0f074)
+lAUSigned = lAUSigned_example # String | service specific HTTP headers (default to (ApplAPIKey=yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B),(RBACRole=[FullViewer/Scope/cclabeb0]))
+lAUSignature = lAUSignature_example # String | contains the LAU signature, base64 ecoded (default to U1khA8h9Lm1PqzB99fG6uw==)
+accept = accept_example # String |  (default to application/json)
+xApiKey = xApiKey_example # String | an api key given to your application (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
+xRecord = xRecord_example # String | a type of API response to get from API Sandbox (default to 0)
 requestBody =  # Camt.a02.001.02 | Payment Transaction Request
 
 try: 
     # Get Payment Transaction Details
-    api_response = api_instance.get_payment_transaction_details_post(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, requestBody)
+    api_response = api_instance.get_payment_transaction_details_post(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, accept, xApiKey, xRecord, requestBody)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling GetPaymentTransactionDetailsApi->getPaymentTransactionDetailsPost: %s\n" % e)</code></pre>
@@ -4541,6 +4823,75 @@ except ApiException as e:
 </td>
 </tr>
 
+                                  <tr><td style="width:150px;">Accept*</td>
+<td>
+
+
+    <div id="d2e199_getPaymentTransactionDetailsPost_accept">
+        <div class="json-schema-view">
+            <div class="primitive">
+                <span class="type">
+                    String
+                </span>
+
+                    <div class="inner description">
+                        
+                    </div>
+            </div>
+                <div class="inner required">
+                    Required
+                </div>
+        </div>
+    </div>
+</td>
+</tr>
+
+                                  <tr><td style="width:150px;">x-api-key*</td>
+<td>
+
+
+    <div id="d2e199_getPaymentTransactionDetailsPost_xApiKey">
+        <div class="json-schema-view">
+            <div class="primitive">
+                <span class="type">
+                    String
+                </span>
+
+                    <div class="inner description">
+                        an api key given to your application
+                    </div>
+            </div>
+                <div class="inner required">
+                    Required
+                </div>
+        </div>
+    </div>
+</td>
+</tr>
+
+                                  <tr><td style="width:150px;">x-record*</td>
+<td>
+
+
+    <div id="d2e199_getPaymentTransactionDetailsPost_xRecord">
+        <div class="json-schema-view">
+            <div class="primitive">
+                <span class="type">
+                    String
+                </span>
+
+                    <div class="inner description">
+                        a type of API response to get from API Sandbox
+                    </div>
+            </div>
+                <div class="inner required">
+                    Required
+                </div>
+        </div>
+    </div>
+</td>
+</tr>
+
                             </table>
 
                             <div class="methodsubtabletitle">Body parameters</div>
@@ -4610,23 +4961,34 @@ $(document).ready(function() {
   "description" : "Payment Transaction Response",
   "headers" : {
     "LAUApplicationID" : {
-      "type" : "string"
+      "type" : "string",
+      "description" : "ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys",
+      "default" : "001"
     },
     "LAUVersion" : {
-      "type" : "string"
+      "type" : "string",
+      "description" : "version of the LAUSigned header. Mandatory. \"1.0\" for this first release",
+      "default" : "1.0"
     },
     "LAUCallTime" : {
-      "type" : "string"
+      "type" : "string",
+      "description" : "timestamp in UTC of the API call in the format YYYY-MM-DDTHH:MM:SS.sssZ",
+      "default" : "2018-03-23T15:56:27.728Z"
     },
     "LAURequestNonce" : {
-      "type" : "string"
+      "type" : "string",
+      "description" : "a random value generated by the client. Provided with the request and copied by the gpi Connector on the response",
+      "default" : "e802ab96-bb3a-4965-9139-5214b9f0f074"
     },
     "LAUResponseNonce" : {
       "type" : "string",
-      "description" : "a random value generated by the gpi Connector on the response"
+      "description" : "a random value generated by the gpi Connector on the response",
+      "default" : "5f1fdf6c-9bbb-4707-bf9e-776e9be878b3"
     },
     "LAUSignature" : {
-      "type" : "string"
+      "type" : "string",
+      "description" : "contains the LAU signature, base64 ecoded",
+      "default" : "U1khA8h9Lm1PqzB99fG6uw=="
     }
   },
   "schema" : {
@@ -4666,25 +5028,25 @@ $(document).ready(function() {
                                             <td>LAUApplicationID</td>
                                             <td>String</td>
                                             <td></td>
-                                            <td></td>
+                                            <td>ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys</td>
                                         </tr>
                                         <tr>
                                             <td>LAUVersion</td>
                                             <td>String</td>
                                             <td></td>
-                                            <td></td>
+                                            <td>version of the LAUSigned header. Mandatory. &quot;1.0&quot; for this first release</td>
                                         </tr>
                                         <tr>
                                             <td>LAUCallTime</td>
                                             <td>String</td>
                                             <td></td>
-                                            <td></td>
+                                            <td>timestamp in UTC of the API call in the format YYYY-MM-DDTHH:MM:SS.sssZ</td>
                                         </tr>
                                         <tr>
                                             <td>LAURequestNonce</td>
                                             <td>String</td>
                                             <td></td>
-                                            <td></td>
+                                            <td>a random value generated by the client. Provided with the request and copied by the gpi Connector on the response</td>
                                         </tr>
                                         <tr>
                                             <td>LAUResponseNonce</td>
@@ -4696,7 +5058,7 @@ $(document).ready(function() {
                                             <td>LAUSignature</td>
                                             <td>String</td>
                                             <td></td>
-                                            <td></td>
+                                            <td>contains the LAU signature, base64 ecoded</td>
                                         </tr>
                                     </table>
                                 </div>
@@ -5127,7 +5489,7 @@ $(document).ready(function() {
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-GetPaymentTransactions-getPaymentTransactionsPost-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://local-api-domain/swift-apitracker-pilot/v1/get_payment_transactions"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://sandbox.swift.com/swift-apitracker-pilot/v1/get_payment_transactions"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-GetPaymentTransactions-getPaymentTransactionsPost-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -5149,9 +5511,12 @@ public class GetPaymentTransactionsApiExample {
         String lAURequestNonce = lAURequestNonce_example; // String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response
         String lAUSigned = lAUSigned_example; // String | service specific HTTP headers
         String lAUSignature = lAUSignature_example; // String | contains the LAU signature, base64 ecoded
+        String accept = accept_example; // String | 
+        String xApiKey = xApiKey_example; // String | an api key given to your application
+        String xRecord = xRecord_example; // String | a type of API response to get from API Sandbox
         Camt.a03.001.02 requestBody = ; // Camt.a03.001.02 | Payment Transactions Request
         try {
-            camt.a03.002.02 result = apiInstance.getPaymentTransactionsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, requestBody);
+            camt.a03.002.02 result = apiInstance.getPaymentTransactionsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, accept, xApiKey, xRecord, requestBody);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling GetPaymentTransactionsApi#getPaymentTransactionsPost");
@@ -5174,9 +5539,12 @@ public class GetPaymentTransactionsApiExample {
         String lAURequestNonce = lAURequestNonce_example; // String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response
         String lAUSigned = lAUSigned_example; // String | service specific HTTP headers
         String lAUSignature = lAUSignature_example; // String | contains the LAU signature, base64 ecoded
+        String accept = accept_example; // String | 
+        String xApiKey = xApiKey_example; // String | an api key given to your application
+        String xRecord = xRecord_example; // String | a type of API response to get from API Sandbox
         Camt.a03.001.02 requestBody = ; // Camt.a03.001.02 | Payment Transactions Request
         try {
-            camt.a03.002.02 result = apiInstance.getPaymentTransactionsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, requestBody);
+            camt.a03.002.02 result = apiInstance.getPaymentTransactionsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, accept, xApiKey, xRecord, requestBody);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling GetPaymentTransactionsApi#getPaymentTransactionsPost");
@@ -5190,12 +5558,15 @@ public class GetPaymentTransactionsApiExample {
   <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
   </div> -->
                             <div class="tab-pane" id="examples-GetPaymentTransactions-getPaymentTransactionsPost-0-objc">
-                              <pre class="prettyprint"><code class="language-cpp">String *lAUApplicationID = lAUApplicationID_example; // ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys
-String *lAUVersion = lAUVersion_example; // version of the LAUSigned header. Mandatory. "1.0" for this first release
-String *lAUCallTime = lAUCallTime_example; // timestamp in UTC of the API call in the format YYYY-MM-DDTHH:MM:SS.sssZ
-String *lAURequestNonce = lAURequestNonce_example; // a random value generated by the client. Provided with the request and copied by the gpi Connector on the response
-String *lAUSigned = lAUSigned_example; // service specific HTTP headers
-String *lAUSignature = lAUSignature_example; // contains the LAU signature, base64 ecoded
+                              <pre class="prettyprint"><code class="language-cpp">String *lAUApplicationID = lAUApplicationID_example; // ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys (default to 001)
+String *lAUVersion = lAUVersion_example; // version of the LAUSigned header. Mandatory. "1.0" for this first release (default to 1.0)
+String *lAUCallTime = lAUCallTime_example; // timestamp in UTC of the API call in the format YYYY-MM-DDTHH:MM:SS.sssZ (default to 2018-03-23T15:56:26.728Z)
+String *lAURequestNonce = lAURequestNonce_example; // a random value generated by the client. Provided with the request and copied by the gpi Connector on the response (default to e802ab96-bb3a-4965-9139-5214b9f0f074)
+String *lAUSigned = lAUSigned_example; // service specific HTTP headers (default to (ApplAPIKey=yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B),(RBACRole=[FullViewer/Scope/cclabeb0]))
+String *lAUSignature = lAUSignature_example; // contains the LAU signature, base64 ecoded (default to U1khA8h9Lm1PqzB99fG6uw==)
+String *accept = accept_example; //  (default to application/json)
+String *xApiKey = xApiKey_example; // an api key given to your application (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
+String *xRecord = xRecord_example; // a type of API response to get from API Sandbox (default to 0)
 Camt.a03.001.02 *requestBody = ; // Payment Transactions Request
 
 GetPaymentTransactionsApi *apiInstance = [[GetPaymentTransactionsApi alloc] init];
@@ -5207,6 +5578,9 @@ GetPaymentTransactionsApi *apiInstance = [[GetPaymentTransactionsApi alloc] init
     lAURequestNonce:lAURequestNonce
     lAUSigned:lAUSigned
     lAUSignature:lAUSignature
+    accept:accept
+    xApiKey:xApiKey
+    xRecord:xRecord
     requestBody:requestBody
               completionHandler: ^(camt.a03.002.02 output, NSError* error) {
                             if (output) {
@@ -5220,9 +5594,9 @@ GetPaymentTransactionsApi *apiInstance = [[GetPaymentTransactionsApi alloc] init
                             </div>
 
                             <div class="tab-pane" id="examples-GetPaymentTransactions-getPaymentTransactionsPost-0-javascript">
-                              <pre class="prettyprint"><code class="language-js">var GpiApi = require('gpi_api');
+                              <pre class="prettyprint"><code class="language-js">var TrackerApiV1 = require('tracker_api_v1');
 
-var api = new GpiApi.GetPaymentTransactionsApi()
+var api = new TrackerApiV1.GetPaymentTransactionsApi()
 
 var lAUApplicationID = lAUApplicationID_example; // {String} ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys
 
@@ -5236,6 +5610,12 @@ var lAUSigned = lAUSigned_example; // {String} service specific HTTP headers
 
 var lAUSignature = lAUSignature_example; // {String} contains the LAU signature, base64 ecoded
 
+var accept = accept_example; // {String} 
+
+var xApiKey = xApiKey_example; // {String} an api key given to your application
+
+var xRecord = xRecord_example; // {String} a type of API response to get from API Sandbox
+
 var requestBody = ; // {Camt.a03.001.02} Payment Transactions Request
 
 
@@ -5246,7 +5626,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.getPaymentTransactionsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, requestBody, callback);
+api.getPaymentTransactionsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, accept, xApiKey, xRecord, requestBody, callback);
 </code></pre>
                             </div>
 
@@ -5268,18 +5648,21 @@ namespace Example
         {
             
             var apiInstance = new GetPaymentTransactionsApi();
-            var lAUApplicationID = lAUApplicationID_example;  // String | ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys
-            var lAUVersion = lAUVersion_example;  // String | version of the LAUSigned header. Mandatory. "1.0" for this first release
-            var lAUCallTime = lAUCallTime_example;  // String | timestamp in UTC of the API call in the format YYYY-MM-DDTHH:MM:SS.sssZ
-            var lAURequestNonce = lAURequestNonce_example;  // String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response
-            var lAUSigned = lAUSigned_example;  // String | service specific HTTP headers
-            var lAUSignature = lAUSignature_example;  // String | contains the LAU signature, base64 ecoded
+            var lAUApplicationID = lAUApplicationID_example;  // String | ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys (default to 001)
+            var lAUVersion = lAUVersion_example;  // String | version of the LAUSigned header. Mandatory. "1.0" for this first release (default to 1.0)
+            var lAUCallTime = lAUCallTime_example;  // String | timestamp in UTC of the API call in the format YYYY-MM-DDTHH:MM:SS.sssZ (default to 2018-03-23T15:56:26.728Z)
+            var lAURequestNonce = lAURequestNonce_example;  // String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response (default to e802ab96-bb3a-4965-9139-5214b9f0f074)
+            var lAUSigned = lAUSigned_example;  // String | service specific HTTP headers (default to (ApplAPIKey=yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B),(RBACRole=[FullViewer/Scope/cclabeb0]))
+            var lAUSignature = lAUSignature_example;  // String | contains the LAU signature, base64 ecoded (default to U1khA8h9Lm1PqzB99fG6uw==)
+            var accept = accept_example;  // String |  (default to application/json)
+            var xApiKey = xApiKey_example;  // String | an api key given to your application (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
+            var xRecord = xRecord_example;  // String | a type of API response to get from API Sandbox (default to 0)
             var requestBody = new Camt.a03.001.02(); // Camt.a03.001.02 | Payment Transactions Request
 
             try
             {
                 // Get Payment Transactions
-                camt.a03.002.02 result = apiInstance.getPaymentTransactionsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, requestBody);
+                camt.a03.002.02 result = apiInstance.getPaymentTransactionsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, accept, xApiKey, xRecord, requestBody);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -5303,10 +5686,13 @@ $lAUCallTime = lAUCallTime_example; // String | timestamp in UTC of the API call
 $lAURequestNonce = lAURequestNonce_example; // String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response
 $lAUSigned = lAUSigned_example; // String | service specific HTTP headers
 $lAUSignature = lAUSignature_example; // String | contains the LAU signature, base64 ecoded
+$accept = accept_example; // String | 
+$xApiKey = xApiKey_example; // String | an api key given to your application
+$xRecord = xRecord_example; // String | a type of API response to get from API Sandbox
 $requestBody = ; // Camt.a03.001.02 | Payment Transactions Request
 
 try {
-    $result = $api_instance->getPaymentTransactionsPost($lAUApplicationID, $lAUVersion, $lAUCallTime, $lAURequestNonce, $lAUSigned, $lAUSignature, $requestBody);
+    $result = $api_instance->getPaymentTransactionsPost($lAUApplicationID, $lAUVersion, $lAUCallTime, $lAURequestNonce, $lAUSigned, $lAUSignature, $accept, $xApiKey, $xRecord, $requestBody);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GetPaymentTransactionsApi->getPaymentTransactionsPost: ', $e->getMessage(), PHP_EOL;
@@ -5326,10 +5712,13 @@ my $lAUCallTime = lAUCallTime_example; # String | timestamp in UTC of the API ca
 my $lAURequestNonce = lAURequestNonce_example; # String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response
 my $lAUSigned = lAUSigned_example; # String | service specific HTTP headers
 my $lAUSignature = lAUSignature_example; # String | contains the LAU signature, base64 ecoded
+my $accept = accept_example; # String | 
+my $xApiKey = xApiKey_example; # String | an api key given to your application
+my $xRecord = xRecord_example; # String | a type of API response to get from API Sandbox
 my $requestBody = WWW::SwaggerClient::Object::Camt.a03.001.02->new(); # Camt.a03.001.02 | Payment Transactions Request
 
 eval { 
-    my $result = $api_instance->getPaymentTransactionsPost(lAUApplicationID => $lAUApplicationID, lAUVersion => $lAUVersion, lAUCallTime => $lAUCallTime, lAURequestNonce => $lAURequestNonce, lAUSigned => $lAUSigned, lAUSignature => $lAUSignature, requestBody => $requestBody);
+    my $result = $api_instance->getPaymentTransactionsPost(lAUApplicationID => $lAUApplicationID, lAUVersion => $lAUVersion, lAUCallTime => $lAUCallTime, lAURequestNonce => $lAURequestNonce, lAUSigned => $lAUSigned, lAUSignature => $lAUSignature, accept => $accept, xApiKey => $xApiKey, xRecord => $xRecord, requestBody => $requestBody);
     print Dumper($result);
 };
 if ($@) {
@@ -5346,17 +5735,20 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.GetPaymentTransactionsApi()
-lAUApplicationID = lAUApplicationID_example # String | ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys
-lAUVersion = lAUVersion_example # String | version of the LAUSigned header. Mandatory. "1.0" for this first release
-lAUCallTime = lAUCallTime_example # String | timestamp in UTC of the API call in the format YYYY-MM-DDTHH:MM:SS.sssZ
-lAURequestNonce = lAURequestNonce_example # String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response
-lAUSigned = lAUSigned_example # String | service specific HTTP headers
-lAUSignature = lAUSignature_example # String | contains the LAU signature, base64 ecoded
+lAUApplicationID = lAUApplicationID_example # String | ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys (default to 001)
+lAUVersion = lAUVersion_example # String | version of the LAUSigned header. Mandatory. "1.0" for this first release (default to 1.0)
+lAUCallTime = lAUCallTime_example # String | timestamp in UTC of the API call in the format YYYY-MM-DDTHH:MM:SS.sssZ (default to 2018-03-23T15:56:26.728Z)
+lAURequestNonce = lAURequestNonce_example # String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response (default to e802ab96-bb3a-4965-9139-5214b9f0f074)
+lAUSigned = lAUSigned_example # String | service specific HTTP headers (default to (ApplAPIKey=yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B),(RBACRole=[FullViewer/Scope/cclabeb0]))
+lAUSignature = lAUSignature_example # String | contains the LAU signature, base64 ecoded (default to U1khA8h9Lm1PqzB99fG6uw==)
+accept = accept_example # String |  (default to application/json)
+xApiKey = xApiKey_example # String | an api key given to your application (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
+xRecord = xRecord_example # String | a type of API response to get from API Sandbox (default to 0)
 requestBody =  # Camt.a03.001.02 | Payment Transactions Request
 
 try: 
     # Get Payment Transactions
-    api_response = api_instance.get_payment_transactions_post(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, requestBody)
+    api_response = api_instance.get_payment_transactions_post(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, accept, xApiKey, xRecord, requestBody)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling GetPaymentTransactionsApi->getPaymentTransactionsPost: %s\n" % e)</code></pre>
@@ -5510,6 +5902,75 @@ except ApiException as e:
 </td>
 </tr>
 
+                                  <tr><td style="width:150px;">Accept*</td>
+<td>
+
+
+    <div id="d2e199_getPaymentTransactionsPost_accept">
+        <div class="json-schema-view">
+            <div class="primitive">
+                <span class="type">
+                    String
+                </span>
+
+                    <div class="inner description">
+                        
+                    </div>
+            </div>
+                <div class="inner required">
+                    Required
+                </div>
+        </div>
+    </div>
+</td>
+</tr>
+
+                                  <tr><td style="width:150px;">x-api-key*</td>
+<td>
+
+
+    <div id="d2e199_getPaymentTransactionsPost_xApiKey">
+        <div class="json-schema-view">
+            <div class="primitive">
+                <span class="type">
+                    String
+                </span>
+
+                    <div class="inner description">
+                        an api key given to your application
+                    </div>
+            </div>
+                <div class="inner required">
+                    Required
+                </div>
+        </div>
+    </div>
+</td>
+</tr>
+
+                                  <tr><td style="width:150px;">x-record*</td>
+<td>
+
+
+    <div id="d2e199_getPaymentTransactionsPost_xRecord">
+        <div class="json-schema-view">
+            <div class="primitive">
+                <span class="type">
+                    String
+                </span>
+
+                    <div class="inner description">
+                        a type of API response to get from API Sandbox
+                    </div>
+            </div>
+                <div class="inner required">
+                    Required
+                </div>
+        </div>
+    </div>
+</td>
+</tr>
+
                             </table>
 
                             <div class="methodsubtabletitle">Body parameters</div>
@@ -5579,23 +6040,34 @@ $(document).ready(function() {
   "description" : "Payment Transactions Response",
   "headers" : {
     "LAUApplicationID" : {
-      "type" : "string"
+      "type" : "string",
+      "description" : "ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys",
+      "default" : "001"
     },
     "LAUVersion" : {
-      "type" : "string"
+      "type" : "string",
+      "description" : "version of the LAUSigned header. Mandatory. \"1.0\" for this first release",
+      "default" : "1.0"
     },
     "LAUCallTime" : {
-      "type" : "string"
+      "type" : "string",
+      "description" : "timestamp in UTC of the API call in the format YYYY-MM-DDTHH:MM:SS.sssZ",
+      "default" : "2018-03-23T15:56:27.728Z"
     },
     "LAURequestNonce" : {
-      "type" : "string"
+      "type" : "string",
+      "description" : "a random value generated by the client. Provided with the request and copied by the gpi Connector on the response",
+      "default" : "e802ab96-bb3a-4965-9139-5214b9f0f074"
     },
     "LAUResponseNonce" : {
       "type" : "string",
-      "description" : "a random value generated by the gpi Connector on the response"
+      "description" : "a random value generated by the gpi Connector on the response",
+      "default" : "5f1fdf6c-9bbb-4707-bf9e-776e9be878b3"
     },
     "LAUSignature" : {
-      "type" : "string"
+      "type" : "string",
+      "description" : "contains the LAU signature, base64 ecoded",
+      "default" : "U1khA8h9Lm1PqzB99fG6uw=="
     }
   },
   "schema" : {
@@ -5635,25 +6107,25 @@ $(document).ready(function() {
                                             <td>LAUApplicationID</td>
                                             <td>String</td>
                                             <td></td>
-                                            <td></td>
+                                            <td>ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys</td>
                                         </tr>
                                         <tr>
                                             <td>LAUVersion</td>
                                             <td>String</td>
                                             <td></td>
-                                            <td></td>
+                                            <td>version of the LAUSigned header. Mandatory. &quot;1.0&quot; for this first release</td>
                                         </tr>
                                         <tr>
                                             <td>LAUCallTime</td>
                                             <td>String</td>
                                             <td></td>
-                                            <td></td>
+                                            <td>timestamp in UTC of the API call in the format YYYY-MM-DDTHH:MM:SS.sssZ</td>
                                         </tr>
                                         <tr>
                                             <td>LAURequestNonce</td>
                                             <td>String</td>
                                             <td></td>
-                                            <td></td>
+                                            <td>a random value generated by the client. Provided with the request and copied by the gpi Connector on the response</td>
                                         </tr>
                                         <tr>
                                             <td>LAUResponseNonce</td>
@@ -5665,7 +6137,7 @@ $(document).ready(function() {
                                             <td>LAUSignature</td>
                                             <td>String</td>
                                             <td></td>
-                                            <td></td>
+                                            <td>contains the LAU signature, base64 ecoded</td>
                                         </tr>
                                     </table>
                                 </div>
@@ -6096,7 +6568,7 @@ $(document).ready(function() {
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-StatusConfirmations-statusConfirmationsPost-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://local-api-domain/swift-apitracker-pilot/v1/status_confirmations"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://sandbox.swift.com/swift-apitracker-pilot/v1/status_confirmations"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-StatusConfirmations-statusConfirmationsPost-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -6118,9 +6590,12 @@ public class StatusConfirmationsApiExample {
         String lAURequestNonce = lAURequestNonce_example; // String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response
         String lAUSigned = lAUSigned_example; // String | service specific HTTP headers
         String lAUSignature = lAUSignature_example; // String | contains the LAU signature, base64 ecoded
+        String accept = accept_example; // String | 
+        String xApiKey = xApiKey_example; // String | an api key given to your application
+        String xRecord = xRecord_example; // String | a type of API response to get from API Sandbox
         Camt.a01.001.02 requestBody = ; // Camt.a01.001.02 | Status Confirmation Request
         try {
-            camt.a01.002.02 result = apiInstance.statusConfirmationsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, requestBody);
+            camt.a01.002.02 result = apiInstance.statusConfirmationsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, accept, xApiKey, xRecord, requestBody);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling StatusConfirmationsApi#statusConfirmationsPost");
@@ -6143,9 +6618,12 @@ public class StatusConfirmationsApiExample {
         String lAURequestNonce = lAURequestNonce_example; // String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response
         String lAUSigned = lAUSigned_example; // String | service specific HTTP headers
         String lAUSignature = lAUSignature_example; // String | contains the LAU signature, base64 ecoded
+        String accept = accept_example; // String | 
+        String xApiKey = xApiKey_example; // String | an api key given to your application
+        String xRecord = xRecord_example; // String | a type of API response to get from API Sandbox
         Camt.a01.001.02 requestBody = ; // Camt.a01.001.02 | Status Confirmation Request
         try {
-            camt.a01.002.02 result = apiInstance.statusConfirmationsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, requestBody);
+            camt.a01.002.02 result = apiInstance.statusConfirmationsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, accept, xApiKey, xRecord, requestBody);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling StatusConfirmationsApi#statusConfirmationsPost");
@@ -6159,12 +6637,15 @@ public class StatusConfirmationsApiExample {
   <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
   </div> -->
                             <div class="tab-pane" id="examples-StatusConfirmations-statusConfirmationsPost-0-objc">
-                              <pre class="prettyprint"><code class="language-cpp">String *lAUApplicationID = lAUApplicationID_example; // ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys
-String *lAUVersion = lAUVersion_example; // version of the LAUSigned header. Mandatory. "1.0" for this first release
-String *lAUCallTime = lAUCallTime_example; // timestamp in UTC of the API call in the format YYYY-MM-DDTHH:MM:SS.sssZ
-String *lAURequestNonce = lAURequestNonce_example; // a random value generated by the client. Provided with the request and copied by the gpi Connector on the response
-String *lAUSigned = lAUSigned_example; // service specific HTTP headers
-String *lAUSignature = lAUSignature_example; // contains the LAU signature, base64 ecoded
+                              <pre class="prettyprint"><code class="language-cpp">String *lAUApplicationID = lAUApplicationID_example; // ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys (default to 001)
+String *lAUVersion = lAUVersion_example; // version of the LAUSigned header. Mandatory. "1.0" for this first release (default to 1.0)
+String *lAUCallTime = lAUCallTime_example; // timestamp in UTC of the API call in the format YYYY-MM-DDTHH:MM:SS.sssZ (default to 2018-03-23T15:56:26.728Z)
+String *lAURequestNonce = lAURequestNonce_example; // a random value generated by the client. Provided with the request and copied by the gpi Connector on the response (default to e802ab96-bb3a-4965-9139-5214b9f0f074)
+String *lAUSigned = lAUSigned_example; // service specific HTTP headers (default to (ApplAPIKey=yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B),(RBACRole=[Update/Scope/cclabeb0]))
+String *lAUSignature = lAUSignature_example; // contains the LAU signature, base64 ecoded (default to U1khA8h9Lm1PqzB99fG6uw==)
+String *accept = accept_example; //  (default to application/json)
+String *xApiKey = xApiKey_example; // an api key given to your application (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
+String *xRecord = xRecord_example; // a type of API response to get from API Sandbox (default to 0)
 Camt.a01.001.02 *requestBody = ; // Status Confirmation Request
 
 StatusConfirmationsApi *apiInstance = [[StatusConfirmationsApi alloc] init];
@@ -6176,6 +6657,9 @@ StatusConfirmationsApi *apiInstance = [[StatusConfirmationsApi alloc] init];
     lAURequestNonce:lAURequestNonce
     lAUSigned:lAUSigned
     lAUSignature:lAUSignature
+    accept:accept
+    xApiKey:xApiKey
+    xRecord:xRecord
     requestBody:requestBody
               completionHandler: ^(camt.a01.002.02 output, NSError* error) {
                             if (output) {
@@ -6189,9 +6673,9 @@ StatusConfirmationsApi *apiInstance = [[StatusConfirmationsApi alloc] init];
                             </div>
 
                             <div class="tab-pane" id="examples-StatusConfirmations-statusConfirmationsPost-0-javascript">
-                              <pre class="prettyprint"><code class="language-js">var GpiApi = require('gpi_api');
+                              <pre class="prettyprint"><code class="language-js">var TrackerApiV1 = require('tracker_api_v1');
 
-var api = new GpiApi.StatusConfirmationsApi()
+var api = new TrackerApiV1.StatusConfirmationsApi()
 
 var lAUApplicationID = lAUApplicationID_example; // {String} ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys
 
@@ -6205,6 +6689,12 @@ var lAUSigned = lAUSigned_example; // {String} service specific HTTP headers
 
 var lAUSignature = lAUSignature_example; // {String} contains the LAU signature, base64 ecoded
 
+var accept = accept_example; // {String} 
+
+var xApiKey = xApiKey_example; // {String} an api key given to your application
+
+var xRecord = xRecord_example; // {String} a type of API response to get from API Sandbox
+
 var requestBody = ; // {Camt.a01.001.02} Status Confirmation Request
 
 
@@ -6215,7 +6705,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.statusConfirmationsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, requestBody, callback);
+api.statusConfirmationsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, accept, xApiKey, xRecord, requestBody, callback);
 </code></pre>
                             </div>
 
@@ -6237,18 +6727,21 @@ namespace Example
         {
             
             var apiInstance = new StatusConfirmationsApi();
-            var lAUApplicationID = lAUApplicationID_example;  // String | ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys
-            var lAUVersion = lAUVersion_example;  // String | version of the LAUSigned header. Mandatory. "1.0" for this first release
-            var lAUCallTime = lAUCallTime_example;  // String | timestamp in UTC of the API call in the format YYYY-MM-DDTHH:MM:SS.sssZ
-            var lAURequestNonce = lAURequestNonce_example;  // String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response
-            var lAUSigned = lAUSigned_example;  // String | service specific HTTP headers
-            var lAUSignature = lAUSignature_example;  // String | contains the LAU signature, base64 ecoded
+            var lAUApplicationID = lAUApplicationID_example;  // String | ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys (default to 001)
+            var lAUVersion = lAUVersion_example;  // String | version of the LAUSigned header. Mandatory. "1.0" for this first release (default to 1.0)
+            var lAUCallTime = lAUCallTime_example;  // String | timestamp in UTC of the API call in the format YYYY-MM-DDTHH:MM:SS.sssZ (default to 2018-03-23T15:56:26.728Z)
+            var lAURequestNonce = lAURequestNonce_example;  // String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response (default to e802ab96-bb3a-4965-9139-5214b9f0f074)
+            var lAUSigned = lAUSigned_example;  // String | service specific HTTP headers (default to (ApplAPIKey=yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B),(RBACRole=[Update/Scope/cclabeb0]))
+            var lAUSignature = lAUSignature_example;  // String | contains the LAU signature, base64 ecoded (default to U1khA8h9Lm1PqzB99fG6uw==)
+            var accept = accept_example;  // String |  (default to application/json)
+            var xApiKey = xApiKey_example;  // String | an api key given to your application (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
+            var xRecord = xRecord_example;  // String | a type of API response to get from API Sandbox (default to 0)
             var requestBody = new Camt.a01.001.02(); // Camt.a01.001.02 | Status Confirmation Request
 
             try
             {
                 // Status Confirmations
-                camt.a01.002.02 result = apiInstance.statusConfirmationsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, requestBody);
+                camt.a01.002.02 result = apiInstance.statusConfirmationsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, accept, xApiKey, xRecord, requestBody);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -6272,10 +6765,13 @@ $lAUCallTime = lAUCallTime_example; // String | timestamp in UTC of the API call
 $lAURequestNonce = lAURequestNonce_example; // String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response
 $lAUSigned = lAUSigned_example; // String | service specific HTTP headers
 $lAUSignature = lAUSignature_example; // String | contains the LAU signature, base64 ecoded
+$accept = accept_example; // String | 
+$xApiKey = xApiKey_example; // String | an api key given to your application
+$xRecord = xRecord_example; // String | a type of API response to get from API Sandbox
 $requestBody = ; // Camt.a01.001.02 | Status Confirmation Request
 
 try {
-    $result = $api_instance->statusConfirmationsPost($lAUApplicationID, $lAUVersion, $lAUCallTime, $lAURequestNonce, $lAUSigned, $lAUSignature, $requestBody);
+    $result = $api_instance->statusConfirmationsPost($lAUApplicationID, $lAUVersion, $lAUCallTime, $lAURequestNonce, $lAUSigned, $lAUSignature, $accept, $xApiKey, $xRecord, $requestBody);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StatusConfirmationsApi->statusConfirmationsPost: ', $e->getMessage(), PHP_EOL;
@@ -6295,10 +6791,13 @@ my $lAUCallTime = lAUCallTime_example; # String | timestamp in UTC of the API ca
 my $lAURequestNonce = lAURequestNonce_example; # String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response
 my $lAUSigned = lAUSigned_example; # String | service specific HTTP headers
 my $lAUSignature = lAUSignature_example; # String | contains the LAU signature, base64 ecoded
+my $accept = accept_example; # String | 
+my $xApiKey = xApiKey_example; # String | an api key given to your application
+my $xRecord = xRecord_example; # String | a type of API response to get from API Sandbox
 my $requestBody = WWW::SwaggerClient::Object::Camt.a01.001.02->new(); # Camt.a01.001.02 | Status Confirmation Request
 
 eval { 
-    my $result = $api_instance->statusConfirmationsPost(lAUApplicationID => $lAUApplicationID, lAUVersion => $lAUVersion, lAUCallTime => $lAUCallTime, lAURequestNonce => $lAURequestNonce, lAUSigned => $lAUSigned, lAUSignature => $lAUSignature, requestBody => $requestBody);
+    my $result = $api_instance->statusConfirmationsPost(lAUApplicationID => $lAUApplicationID, lAUVersion => $lAUVersion, lAUCallTime => $lAUCallTime, lAURequestNonce => $lAURequestNonce, lAUSigned => $lAUSigned, lAUSignature => $lAUSignature, accept => $accept, xApiKey => $xApiKey, xRecord => $xRecord, requestBody => $requestBody);
     print Dumper($result);
 };
 if ($@) {
@@ -6315,17 +6814,20 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.StatusConfirmationsApi()
-lAUApplicationID = lAUApplicationID_example # String | ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys
-lAUVersion = lAUVersion_example # String | version of the LAUSigned header. Mandatory. "1.0" for this first release
-lAUCallTime = lAUCallTime_example # String | timestamp in UTC of the API call in the format YYYY-MM-DDTHH:MM:SS.sssZ
-lAURequestNonce = lAURequestNonce_example # String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response
-lAUSigned = lAUSigned_example # String | service specific HTTP headers
-lAUSignature = lAUSignature_example # String | contains the LAU signature, base64 ecoded
+lAUApplicationID = lAUApplicationID_example # String | ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys (default to 001)
+lAUVersion = lAUVersion_example # String | version of the LAUSigned header. Mandatory. "1.0" for this first release (default to 1.0)
+lAUCallTime = lAUCallTime_example # String | timestamp in UTC of the API call in the format YYYY-MM-DDTHH:MM:SS.sssZ (default to 2018-03-23T15:56:26.728Z)
+lAURequestNonce = lAURequestNonce_example # String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response (default to e802ab96-bb3a-4965-9139-5214b9f0f074)
+lAUSigned = lAUSigned_example # String | service specific HTTP headers (default to (ApplAPIKey=yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B),(RBACRole=[Update/Scope/cclabeb0]))
+lAUSignature = lAUSignature_example # String | contains the LAU signature, base64 ecoded (default to U1khA8h9Lm1PqzB99fG6uw==)
+accept = accept_example # String |  (default to application/json)
+xApiKey = xApiKey_example # String | an api key given to your application (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
+xRecord = xRecord_example # String | a type of API response to get from API Sandbox (default to 0)
 requestBody =  # Camt.a01.001.02 | Status Confirmation Request
 
 try: 
     # Status Confirmations
-    api_response = api_instance.status_confirmations_post(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, requestBody)
+    api_response = api_instance.status_confirmations_post(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, accept, xApiKey, xRecord, requestBody)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling StatusConfirmationsApi->statusConfirmationsPost: %s\n" % e)</code></pre>
@@ -6479,6 +6981,75 @@ except ApiException as e:
 </td>
 </tr>
 
+                                  <tr><td style="width:150px;">Accept*</td>
+<td>
+
+
+    <div id="d2e199_statusConfirmationsPost_accept">
+        <div class="json-schema-view">
+            <div class="primitive">
+                <span class="type">
+                    String
+                </span>
+
+                    <div class="inner description">
+                        
+                    </div>
+            </div>
+                <div class="inner required">
+                    Required
+                </div>
+        </div>
+    </div>
+</td>
+</tr>
+
+                                  <tr><td style="width:150px;">x-api-key*</td>
+<td>
+
+
+    <div id="d2e199_statusConfirmationsPost_xApiKey">
+        <div class="json-schema-view">
+            <div class="primitive">
+                <span class="type">
+                    String
+                </span>
+
+                    <div class="inner description">
+                        an api key given to your application
+                    </div>
+            </div>
+                <div class="inner required">
+                    Required
+                </div>
+        </div>
+    </div>
+</td>
+</tr>
+
+                                  <tr><td style="width:150px;">x-record*</td>
+<td>
+
+
+    <div id="d2e199_statusConfirmationsPost_xRecord">
+        <div class="json-schema-view">
+            <div class="primitive">
+                <span class="type">
+                    String
+                </span>
+
+                    <div class="inner description">
+                        a type of API response to get from API Sandbox
+                    </div>
+            </div>
+                <div class="inner required">
+                    Required
+                </div>
+        </div>
+    </div>
+</td>
+</tr>
+
                             </table>
 
                             <div class="methodsubtabletitle">Body parameters</div>
@@ -6548,23 +7119,34 @@ $(document).ready(function() {
   "description" : "Status Confirmation Response",
   "headers" : {
     "LAUApplicationID" : {
-      "type" : "string"
+      "type" : "string",
+      "description" : "ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys",
+      "default" : "001"
     },
     "LAUVersion" : {
-      "type" : "string"
+      "type" : "string",
+      "description" : "version of the LAUSigned header. Mandatory. \"1.0\" for this first release",
+      "default" : "1.0"
     },
     "LAUCallTime" : {
-      "type" : "string"
+      "type" : "string",
+      "description" : "timestamp in UTC of the API call in the format YYYY-MM-DDTHH:MM:SS.sssZ",
+      "default" : "2018-03-23T15:56:27.728Z"
     },
     "LAURequestNonce" : {
-      "type" : "string"
+      "type" : "string",
+      "description" : "a random value generated by the client. Provided with the request and copied by the gpi Connector on the response",
+      "default" : "e802ab96-bb3a-4965-9139-5214b9f0f074"
     },
     "LAUResponseNonce" : {
       "type" : "string",
-      "description" : "a random value generated by the gpi Connector on the response"
+      "description" : "a random value generated by the gpi Connector on the response",
+      "default" : "5f1fdf6c-9bbb-4707-bf9e-776e9be878b3"
     },
     "LAUSignature" : {
-      "type" : "string"
+      "type" : "string",
+      "description" : "contains the LAU signature, base64 ecoded",
+      "default" : "U1khA8h9Lm1PqzB99fG6uw=="
     }
   },
   "schema" : {
@@ -6604,25 +7186,25 @@ $(document).ready(function() {
                                             <td>LAUApplicationID</td>
                                             <td>String</td>
                                             <td></td>
-                                            <td></td>
+                                            <td>ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys</td>
                                         </tr>
                                         <tr>
                                             <td>LAUVersion</td>
                                             <td>String</td>
                                             <td></td>
-                                            <td></td>
+                                            <td>version of the LAUSigned header. Mandatory. &quot;1.0&quot; for this first release</td>
                                         </tr>
                                         <tr>
                                             <td>LAUCallTime</td>
                                             <td>String</td>
                                             <td></td>
-                                            <td></td>
+                                            <td>timestamp in UTC of the API call in the format YYYY-MM-DDTHH:MM:SS.sssZ</td>
                                         </tr>
                                         <tr>
                                             <td>LAURequestNonce</td>
                                             <td>String</td>
                                             <td></td>
-                                            <td></td>
+                                            <td>a random value generated by the client. Provided with the request and copied by the gpi Connector on the response</td>
                                         </tr>
                                         <tr>
                                             <td>LAUResponseNonce</td>
@@ -6634,7 +7216,7 @@ $(document).ready(function() {
                                             <td>LAUSignature</td>
                                             <td>String</td>
                                             <td></td>
-                                            <td></td>
+                                            <td>contains the LAU signature, base64 ecoded</td>
                                         </tr>
                                     </table>
                                 </div>
@@ -7040,6 +7622,11 @@ $(document).ready(function() {
               </p>
                 <div class="license-info">All rights reserved</div>
                 <div class="license-url">http://apache.org/licenses/LICENSE-2.0.html</div>
+            </div>
+          </div>
+          <div id="generator">
+            <div class="content">
+              Generated 2018-10-09T14:37:46.589Z
             </div>
           </div>
       </div>
