@@ -157,7 +157,7 @@ h={};g()}};typeof define==="function"&&define.amd&&define("google-code-prettify"
     });
   </script>
   <style type="text/css">
-  
+
 /*!
  * Bootstrap v2.3.2
  *
@@ -1430,14 +1430,14 @@ margin-bottom: 20px;
                         <ul class="nav nav-tabs nav-tabs-examples">
                           <li class="active"><a href="#examples-Bbans-getIbanFromBban-0-curl">Curl</a></li>
                           <li class=""><a href="#examples-Bbans-getIbanFromBban-0-java">Java</a></li>
-                          <li class=""><a href="#examples-Bbans-getIbanFromBban-0-android">Android</a></li>
-                          <!--<li class=""><a href="#examples-Bbans-getIbanFromBban-0-groovy">Groovy</a></li>-->
-                          <li class=""><a href="#examples-Bbans-getIbanFromBban-0-objc">Obj-C</a></li>
+                          <!--<li class=""><a href="#examples-Bbans-getIbanFromBban-0-android">Android</a></li>
+                          <li class=""><a href="#examples-Bbans-getIbanFromBban-0-groovy">Groovy</a></li>
+                          <li class=""><a href="#examples-Bbans-getIbanFromBban-0-objc">Obj-C</a></li>-->
                           <li class=""><a href="#examples-Bbans-getIbanFromBban-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-Bbans-getIbanFromBban-0-angular">Angular</a></li>-->
+                          <!--<li class=""><a href="#examples-Bbans-getIbanFromBban-0-angular">Angular</a></li>
                           <li class=""><a href="#examples-Bbans-getIbanFromBban-0-csharp">C#</a></li>
                           <li class=""><a href="#examples-Bbans-getIbanFromBban-0-php">PHP</a></li>
-                          <li class=""><a href="#examples-Bbans-getIbanFromBban-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-Bbans-getIbanFromBban-0-perl">Perl</a></li>-->
                           <li class=""><a href="#examples-Bbans-getIbanFromBban-0-python">Python</a></li>
                         </ul>
 
@@ -1457,11 +1457,11 @@ import java.util.*;
 public class BbansApiExample {
 
     public static void main(String[] args) {
-        
+
         BbansApi apiInstance = new BbansApi();
         String bban = bban_example; // String | BBAN for which the corresponding IBAN is requested
         String countryCode = countryCode_example; // String | The 2-character ISO 3166-1 country code of the country that issued the national ID
-        String xApiKey = xApiKey_example; // String | An API key given to your application
+        String xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
         try {
             Iban result = apiInstance.getIbanFromBban(bban, countryCode, xApiKey);
             System.out.println(result);
@@ -1482,7 +1482,7 @@ public class BbansApiExample {
         BbansApi apiInstance = new BbansApi();
         String bban = bban_example; // String | BBAN for which the corresponding IBAN is requested
         String countryCode = countryCode_example; // String | The 2-character ISO 3166-1 country code of the country that issued the national ID
-        String xApiKey = xApiKey_example; // String | An API key given to your application
+        String xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
         try {
             Iban result = apiInstance.getIbanFromBban(bban, countryCode, xApiKey);
             System.out.println(result);
@@ -1500,7 +1500,7 @@ public class BbansApiExample {
                             <div class="tab-pane" id="examples-Bbans-getIbanFromBban-0-objc">
                               <pre class="prettyprint"><code class="language-cpp">String *bban = bban_example; // BBAN for which the corresponding IBAN is requested
 String *countryCode = countryCode_example; // The 2-character ISO 3166-1 country code of the country that issued the national ID (default to BE)
-String *xApiKey = xApiKey_example; // An API key given to your application (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
+String *xApiKey = xApiKey_example; // An API key given to your application to authenticate against the sandbox URL (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
 
 BbansApi *apiInstance = [[BbansApi alloc] init];
 
@@ -1528,7 +1528,7 @@ var bban = bban_example; // {String} BBAN for which the corresponding IBAN is re
 
 var countryCode = countryCode_example; // {String} The 2-character ISO 3166-1 country code of the country that issued the national ID
 
-var xApiKey = xApiKey_example; // {String} An API key given to your application
+var xApiKey = xApiKey_example; // {String} An API key given to your application to authenticate against the sandbox URL
 
 
 var callback = function(error, data, response) {
@@ -1558,11 +1558,11 @@ namespace Example
     {
         public void main()
         {
-            
+
             var apiInstance = new BbansApi();
             var bban = bban_example;  // String | BBAN for which the corresponding IBAN is requested
             var countryCode = countryCode_example;  // String | The 2-character ISO 3166-1 country code of the country that issued the national ID (default to BE)
-            var xApiKey = xApiKey_example;  // String | An API key given to your application (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
+            var xApiKey = xApiKey_example;  // String | An API key given to your application to authenticate against the sandbox URL (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
 
             try
             {
@@ -1587,7 +1587,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $api_instance = new Swagger\Client\Api\BbansApi();
 $bban = bban_example; // String | BBAN for which the corresponding IBAN is requested
 $countryCode = countryCode_example; // String | The 2-character ISO 3166-1 country code of the country that issued the national ID
-$xApiKey = xApiKey_example; // String | An API key given to your application
+$xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
 
 try {
     $result = $api_instance->getIbanFromBban($bban, $countryCode, $xApiKey);
@@ -1606,9 +1606,9 @@ use WWW::SwaggerClient::BbansApi;
 my $api_instance = WWW::SwaggerClient::BbansApi->new();
 my $bban = bban_example; # String | BBAN for which the corresponding IBAN is requested
 my $countryCode = countryCode_example; # String | The 2-character ISO 3166-1 country code of the country that issued the national ID
-my $xApiKey = xApiKey_example; # String | An API key given to your application
+my $xApiKey = xApiKey_example; # String | An API key given to your application to authenticate against the sandbox URL
 
-eval { 
+eval {
     my $result = $api_instance->getIbanFromBban(bban => $bban, countryCode => $countryCode, xApiKey => $xApiKey);
     print Dumper($result);
 };
@@ -1628,9 +1628,9 @@ from pprint import pprint
 api_instance = swagger_client.BbansApi()
 bban = bban_example # String | BBAN for which the corresponding IBAN is requested
 countryCode = countryCode_example # String | The 2-character ISO 3166-1 country code of the country that issued the national ID (default to BE)
-xApiKey = xApiKey_example # String | An API key given to your application (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
+xApiKey = xApiKey_example # String | An API key given to your application to authenticate against the sandbox URL (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
 
-try: 
+try:
     # Get the IBAN from a BBAN
     api_response = api_instance.get_iban_from_bban(bban, countryCode, xApiKey)
     pprint(api_response)
@@ -1690,7 +1690,7 @@ except ApiException as e:
                 </span>
 
                     <div class="inner description">
-                        An API key given to your application
+                        An API key given to your application to authenticate against the sandbox URL
                     </div>
             </div>
                 <div class="inner required">
@@ -1934,14 +1934,14 @@ except ApiException as e:
                         <ul class="nav nav-tabs nav-tabs-examples">
                           <li class="active"><a href="#examples-Bics-getBicDetails-0-curl">Curl</a></li>
                           <li class=""><a href="#examples-Bics-getBicDetails-0-java">Java</a></li>
-                          <li class=""><a href="#examples-Bics-getBicDetails-0-android">Android</a></li>
-                          <!--<li class=""><a href="#examples-Bics-getBicDetails-0-groovy">Groovy</a></li>-->
-                          <li class=""><a href="#examples-Bics-getBicDetails-0-objc">Obj-C</a></li>
+                          <!--<li class=""><a href="#examples-Bics-getBicDetails-0-android">Android</a></li>
+                          <li class=""><a href="#examples-Bics-getBicDetails-0-groovy">Groovy</a></li>
+                          <li class=""><a href="#examples-Bics-getBicDetails-0-objc">Obj-C</a></li>-->
                           <li class=""><a href="#examples-Bics-getBicDetails-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-Bics-getBicDetails-0-angular">Angular</a></li>-->
+                          <!--<li class=""><a href="#examples-Bics-getBicDetails-0-angular">Angular</a></li>
                           <li class=""><a href="#examples-Bics-getBicDetails-0-csharp">C#</a></li>
                           <li class=""><a href="#examples-Bics-getBicDetails-0-php">PHP</a></li>
-                          <li class=""><a href="#examples-Bics-getBicDetails-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-Bics-getBicDetails-0-perl">Perl</a></li>-->
                           <li class=""><a href="#examples-Bics-getBicDetails-0-python">Python</a></li>
                         </ul>
 
@@ -1961,10 +1961,10 @@ import java.util.*;
 public class BicsApiExample {
 
     public static void main(String[] args) {
-        
+
         BicsApi apiInstance = new BicsApi();
         String bic = bic_example; // String | BIC (8-characters or 11-characters) for which details are requested
-        String xApiKey = xApiKey_example; // String | An API key given to your application
+        String xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
         try {
             BicDetails result = apiInstance.getBicDetails(bic, xApiKey);
             System.out.println(result);
@@ -1984,7 +1984,7 @@ public class BicsApiExample {
     public static void main(String[] args) {
         BicsApi apiInstance = new BicsApi();
         String bic = bic_example; // String | BIC (8-characters or 11-characters) for which details are requested
-        String xApiKey = xApiKey_example; // String | An API key given to your application
+        String xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
         try {
             BicDetails result = apiInstance.getBicDetails(bic, xApiKey);
             System.out.println(result);
@@ -2001,7 +2001,7 @@ public class BicsApiExample {
   </div> -->
                             <div class="tab-pane" id="examples-Bics-getBicDetails-0-objc">
                               <pre class="prettyprint"><code class="language-cpp">String *bic = bic_example; // BIC (8-characters or 11-characters) for which details are requested
-String *xApiKey = xApiKey_example; // An API key given to your application (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
+String *xApiKey = xApiKey_example; // An API key given to your application to authenticate against the sandbox URL (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
 
 BicsApi *apiInstance = [[BicsApi alloc] init];
 
@@ -2026,7 +2026,7 @@ var api = new SwiftRefApi.BicsApi()
 
 var bic = bic_example; // {String} BIC (8-characters or 11-characters) for which details are requested
 
-var xApiKey = xApiKey_example; // {String} An API key given to your application
+var xApiKey = xApiKey_example; // {String} An API key given to your application to authenticate against the sandbox URL
 
 
 var callback = function(error, data, response) {
@@ -2056,10 +2056,10 @@ namespace Example
     {
         public void main()
         {
-            
+
             var apiInstance = new BicsApi();
             var bic = bic_example;  // String | BIC (8-characters or 11-characters) for which details are requested
-            var xApiKey = xApiKey_example;  // String | An API key given to your application (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
+            var xApiKey = xApiKey_example;  // String | An API key given to your application to authenticate against the sandbox URL (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
 
             try
             {
@@ -2083,7 +2083,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Swagger\Client\Api\BicsApi();
 $bic = bic_example; // String | BIC (8-characters or 11-characters) for which details are requested
-$xApiKey = xApiKey_example; // String | An API key given to your application
+$xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
 
 try {
     $result = $api_instance->getBicDetails($bic, $xApiKey);
@@ -2101,9 +2101,9 @@ use WWW::SwaggerClient::BicsApi;
 
 my $api_instance = WWW::SwaggerClient::BicsApi->new();
 my $bic = bic_example; # String | BIC (8-characters or 11-characters) for which details are requested
-my $xApiKey = xApiKey_example; # String | An API key given to your application
+my $xApiKey = xApiKey_example; # String | An API key given to your application to authenticate against the sandbox URL
 
-eval { 
+eval {
     my $result = $api_instance->getBicDetails(bic => $bic, xApiKey => $xApiKey);
     print Dumper($result);
 };
@@ -2122,9 +2122,9 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = swagger_client.BicsApi()
 bic = bic_example # String | BIC (8-characters or 11-characters) for which details are requested
-xApiKey = xApiKey_example # String | An API key given to your application (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
+xApiKey = xApiKey_example # String | An API key given to your application to authenticate against the sandbox URL (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
 
-try: 
+try:
     # Get details of a BIC
     api_response = api_instance.get_bic_details(bic, xApiKey)
     pprint(api_response)
@@ -2184,7 +2184,7 @@ except ApiException as e:
                 </span>
 
                     <div class="inner description">
-                        An API key given to your application
+                        An API key given to your application to authenticate against the sandbox URL
                     </div>
             </div>
                 <div class="inner required">
@@ -2395,14 +2395,14 @@ except ApiException as e:
                         <ul class="nav nav-tabs nav-tabs-examples">
                           <li class="active"><a href="#examples-Bics-getBicValidity-0-curl">Curl</a></li>
                           <li class=""><a href="#examples-Bics-getBicValidity-0-java">Java</a></li>
-                          <li class=""><a href="#examples-Bics-getBicValidity-0-android">Android</a></li>
-                          <!--<li class=""><a href="#examples-Bics-getBicValidity-0-groovy">Groovy</a></li>-->
-                          <li class=""><a href="#examples-Bics-getBicValidity-0-objc">Obj-C</a></li>
+                          <!--<li class=""><a href="#examples-Bics-getBicValidity-0-android">Android</a></li>
+                          <li class=""><a href="#examples-Bics-getBicValidity-0-groovy">Groovy</a></li>
+                          <li class=""><a href="#examples-Bics-getBicValidity-0-objc">Obj-C</a></li>-->
                           <li class=""><a href="#examples-Bics-getBicValidity-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-Bics-getBicValidity-0-angular">Angular</a></li>-->
+                          <!--<li class=""><a href="#examples-Bics-getBicValidity-0-angular">Angular</a></li>
                           <li class=""><a href="#examples-Bics-getBicValidity-0-csharp">C#</a></li>
                           <li class=""><a href="#examples-Bics-getBicValidity-0-php">PHP</a></li>
-                          <li class=""><a href="#examples-Bics-getBicValidity-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-Bics-getBicValidity-0-perl">Perl</a></li>-->
                           <li class=""><a href="#examples-Bics-getBicValidity-0-python">Python</a></li>
                         </ul>
 
@@ -2422,10 +2422,10 @@ import java.util.*;
 public class BicsApiExample {
 
     public static void main(String[] args) {
-        
+
         BicsApi apiInstance = new BicsApi();
         String bic = bic_example; // String | BIC (8-characters or 11-characters) to validate
-        String xApiKey = xApiKey_example; // String | An API key given to your application
+        String xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
         String effectiveDate = effectiveDate_example; // String | A date in YYYY-MM-DD format
         try {
             BicValidity result = apiInstance.getBicValidity(bic, xApiKey, effectiveDate);
@@ -2446,7 +2446,7 @@ public class BicsApiExample {
     public static void main(String[] args) {
         BicsApi apiInstance = new BicsApi();
         String bic = bic_example; // String | BIC (8-characters or 11-characters) to validate
-        String xApiKey = xApiKey_example; // String | An API key given to your application
+        String xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
         String effectiveDate = effectiveDate_example; // String | A date in YYYY-MM-DD format
         try {
             BicValidity result = apiInstance.getBicValidity(bic, xApiKey, effectiveDate);
@@ -2464,7 +2464,7 @@ public class BicsApiExample {
   </div> -->
                             <div class="tab-pane" id="examples-Bics-getBicValidity-0-objc">
                               <pre class="prettyprint"><code class="language-cpp">String *bic = bic_example; // BIC (8-characters or 11-characters) to validate
-String *xApiKey = xApiKey_example; // An API key given to your application (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
+String *xApiKey = xApiKey_example; // An API key given to your application to authenticate against the sandbox URL (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
 String *effectiveDate = effectiveDate_example; // A date in YYYY-MM-DD format (optional) (default to 2018-05-07)
 
 BicsApi *apiInstance = [[BicsApi alloc] init];
@@ -2491,9 +2491,9 @@ var api = new SwiftRefApi.BicsApi()
 
 var bic = bic_example; // {String} BIC (8-characters or 11-characters) to validate
 
-var xApiKey = xApiKey_example; // {String} An API key given to your application
+var xApiKey = xApiKey_example; // {String} An API key given to your application to authenticate against the sandbox URL
 
-var opts = { 
+var opts = {
   'effectiveDate': effectiveDate_example // {String} A date in YYYY-MM-DD format
 };
 
@@ -2524,10 +2524,10 @@ namespace Example
     {
         public void main()
         {
-            
+
             var apiInstance = new BicsApi();
             var bic = bic_example;  // String | BIC (8-characters or 11-characters) to validate
-            var xApiKey = xApiKey_example;  // String | An API key given to your application (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
+            var xApiKey = xApiKey_example;  // String | An API key given to your application to authenticate against the sandbox URL (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
             var effectiveDate = effectiveDate_example;  // String | A date in YYYY-MM-DD format (optional)  (default to 2018-05-07)
 
             try
@@ -2552,7 +2552,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Swagger\Client\Api\BicsApi();
 $bic = bic_example; // String | BIC (8-characters or 11-characters) to validate
-$xApiKey = xApiKey_example; // String | An API key given to your application
+$xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
 $effectiveDate = effectiveDate_example; // String | A date in YYYY-MM-DD format
 
 try {
@@ -2571,10 +2571,10 @@ use WWW::SwaggerClient::BicsApi;
 
 my $api_instance = WWW::SwaggerClient::BicsApi->new();
 my $bic = bic_example; # String | BIC (8-characters or 11-characters) to validate
-my $xApiKey = xApiKey_example; # String | An API key given to your application
+my $xApiKey = xApiKey_example; # String | An API key given to your application to authenticate against the sandbox URL
 my $effectiveDate = effectiveDate_example; # String | A date in YYYY-MM-DD format
 
-eval { 
+eval {
     my $result = $api_instance->getBicValidity(bic => $bic, xApiKey => $xApiKey, effectiveDate => $effectiveDate);
     print Dumper($result);
 };
@@ -2593,10 +2593,10 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = swagger_client.BicsApi()
 bic = bic_example # String | BIC (8-characters or 11-characters) to validate
-xApiKey = xApiKey_example # String | An API key given to your application (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
+xApiKey = xApiKey_example # String | An API key given to your application to authenticate against the sandbox URL (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
 effectiveDate = effectiveDate_example # String | A date in YYYY-MM-DD format (optional) (default to 2018-05-07)
 
-try: 
+try:
     # Check validity of a BIC
     api_response = api_instance.get_bic_validity(bic, xApiKey, effectiveDate=effectiveDate)
     pprint(api_response)
@@ -2656,7 +2656,7 @@ except ApiException as e:
                 </span>
 
                     <div class="inner description">
-                        An API key given to your application
+                        An API key given to your application to authenticate against the sandbox URL
                     </div>
             </div>
                 <div class="inner required">
@@ -2893,15 +2893,15 @@ except ApiException as e:
                         </p>
                         <ul class="nav nav-tabs nav-tabs-examples">
                           <li class="active"><a href="#examples-Bics-getLeiFromBic-0-curl">Curl</a></li>
-                          <li class=""><a href="#examples-Bics-getLeiFromBic-0-java">Java</a></li>
+                          <!--<li class=""><a href="#examples-Bics-getLeiFromBic-0-java">Java</a></li>
                           <li class=""><a href="#examples-Bics-getLeiFromBic-0-android">Android</a></li>
-                          <!--<li class=""><a href="#examples-Bics-getLeiFromBic-0-groovy">Groovy</a></li>-->
-                          <li class=""><a href="#examples-Bics-getLeiFromBic-0-objc">Obj-C</a></li>
+                          <!--<li class=""><a href="#examples-Bics-getLeiFromBic-0-groovy">Groovy</a></li>
+                          <li class=""><a href="#examples-Bics-getLeiFromBic-0-objc">Obj-C</a></li>-->
                           <li class=""><a href="#examples-Bics-getLeiFromBic-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-Bics-getLeiFromBic-0-angular">Angular</a></li>-->
+                          <!--<li class=""><a href="#examples-Bics-getLeiFromBic-0-angular">Angular</a></li>
                           <li class=""><a href="#examples-Bics-getLeiFromBic-0-csharp">C#</a></li>
                           <li class=""><a href="#examples-Bics-getLeiFromBic-0-php">PHP</a></li>
-                          <li class=""><a href="#examples-Bics-getLeiFromBic-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-Bics-getLeiFromBic-0-perl">Perl</a></li>-->
                           <li class=""><a href="#examples-Bics-getLeiFromBic-0-python">Python</a></li>
                         </ul>
 
@@ -2921,10 +2921,10 @@ import java.util.*;
 public class BicsApiExample {
 
     public static void main(String[] args) {
-        
+
         BicsApi apiInstance = new BicsApi();
         String bic = bic_example; // String | BIC (8-characters or 11-characters) for which the corresponding LEI is requested
-        String xApiKey = xApiKey_example; // String | An API key given to your application
+        String xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
         try {
             Lei result = apiInstance.getLeiFromBic(bic, xApiKey);
             System.out.println(result);
@@ -2944,7 +2944,7 @@ public class BicsApiExample {
     public static void main(String[] args) {
         BicsApi apiInstance = new BicsApi();
         String bic = bic_example; // String | BIC (8-characters or 11-characters) for which the corresponding LEI is requested
-        String xApiKey = xApiKey_example; // String | An API key given to your application
+        String xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
         try {
             Lei result = apiInstance.getLeiFromBic(bic, xApiKey);
             System.out.println(result);
@@ -2961,7 +2961,7 @@ public class BicsApiExample {
   </div> -->
                             <div class="tab-pane" id="examples-Bics-getLeiFromBic-0-objc">
                               <pre class="prettyprint"><code class="language-cpp">String *bic = bic_example; // BIC (8-characters or 11-characters) for which the corresponding LEI is requested
-String *xApiKey = xApiKey_example; // An API key given to your application (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
+String *xApiKey = xApiKey_example; // An API key given to your application to authenticate against the sandbox URL (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
 
 BicsApi *apiInstance = [[BicsApi alloc] init];
 
@@ -2986,7 +2986,7 @@ var api = new SwiftRefApi.BicsApi()
 
 var bic = bic_example; // {String} BIC (8-characters or 11-characters) for which the corresponding LEI is requested
 
-var xApiKey = xApiKey_example; // {String} An API key given to your application
+var xApiKey = xApiKey_example; // {String} An API key given to your application to authenticate against the sandbox URL
 
 
 var callback = function(error, data, response) {
@@ -3016,10 +3016,10 @@ namespace Example
     {
         public void main()
         {
-            
+
             var apiInstance = new BicsApi();
             var bic = bic_example;  // String | BIC (8-characters or 11-characters) for which the corresponding LEI is requested
-            var xApiKey = xApiKey_example;  // String | An API key given to your application (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
+            var xApiKey = xApiKey_example;  // String | An API key given to your application to authenticate against the sandbox URL (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
 
             try
             {
@@ -3043,7 +3043,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Swagger\Client\Api\BicsApi();
 $bic = bic_example; // String | BIC (8-characters or 11-characters) for which the corresponding LEI is requested
-$xApiKey = xApiKey_example; // String | An API key given to your application
+$xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
 
 try {
     $result = $api_instance->getLeiFromBic($bic, $xApiKey);
@@ -3061,9 +3061,9 @@ use WWW::SwaggerClient::BicsApi;
 
 my $api_instance = WWW::SwaggerClient::BicsApi->new();
 my $bic = bic_example; # String | BIC (8-characters or 11-characters) for which the corresponding LEI is requested
-my $xApiKey = xApiKey_example; # String | An API key given to your application
+my $xApiKey = xApiKey_example; # String | An API key given to your application to authenticate against the sandbox URL
 
-eval { 
+eval {
     my $result = $api_instance->getLeiFromBic(bic => $bic, xApiKey => $xApiKey);
     print Dumper($result);
 };
@@ -3082,9 +3082,9 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = swagger_client.BicsApi()
 bic = bic_example # String | BIC (8-characters or 11-characters) for which the corresponding LEI is requested
-xApiKey = xApiKey_example # String | An API key given to your application (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
+xApiKey = xApiKey_example # String | An API key given to your application to authenticate against the sandbox URL (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
 
-try: 
+try:
     # Get the LEI for a BIC
     api_response = api_instance.get_lei_from_bic(bic, xApiKey)
     pprint(api_response)
@@ -3144,7 +3144,7 @@ except ApiException as e:
                 </span>
 
                     <div class="inner description">
-                        An API key given to your application
+                        An API key given to your application to authenticate against the sandbox URL
                     </div>
             </div>
                 <div class="inner required">
@@ -3354,15 +3354,15 @@ except ApiException as e:
                         </p>
                         <ul class="nav nav-tabs nav-tabs-examples">
                           <li class="active"><a href="#examples-Bics-getNationalIdsFromBic-0-curl">Curl</a></li>
-                          <li class=""><a href="#examples-Bics-getNationalIdsFromBic-0-java">Java</a></li>
+                          <!--<li class=""><a href="#examples-Bics-getNationalIdsFromBic-0-java">Java</a></li>
                           <li class=""><a href="#examples-Bics-getNationalIdsFromBic-0-android">Android</a></li>
-                          <!--<li class=""><a href="#examples-Bics-getNationalIdsFromBic-0-groovy">Groovy</a></li>-->
-                          <li class=""><a href="#examples-Bics-getNationalIdsFromBic-0-objc">Obj-C</a></li>
+                          <!<li class=""><a href="#examples-Bics-getNationalIdsFromBic-0-groovy">Groovy</a></li>
+                          <li class=""><a href="#examples-Bics-getNationalIdsFromBic-0-objc">Obj-C</a></li>-->
                           <li class=""><a href="#examples-Bics-getNationalIdsFromBic-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-Bics-getNationalIdsFromBic-0-angular">Angular</a></li>-->
+                          <!--<li class=""><a href="#examples-Bics-getNationalIdsFromBic-0-angular">Angular</a></li>
                           <li class=""><a href="#examples-Bics-getNationalIdsFromBic-0-csharp">C#</a></li>
                           <li class=""><a href="#examples-Bics-getNationalIdsFromBic-0-php">PHP</a></li>
-                          <li class=""><a href="#examples-Bics-getNationalIdsFromBic-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-Bics-getNationalIdsFromBic-0-perl">Perl</a></li>-->
                           <li class=""><a href="#examples-Bics-getNationalIdsFromBic-0-python">Python</a></li>
                         </ul>
 
@@ -3382,10 +3382,10 @@ import java.util.*;
 public class BicsApiExample {
 
     public static void main(String[] args) {
-        
+
         BicsApi apiInstance = new BicsApi();
         String bic = bic_example; // String | BIC (8-characters or 11-characters) for which the corresponding national IDs are requested
-        String xApiKey = xApiKey_example; // String | An API key given to your application
+        String xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
         try {
             NationalIds result = apiInstance.getNationalIdsFromBic(bic, xApiKey);
             System.out.println(result);
@@ -3405,7 +3405,7 @@ public class BicsApiExample {
     public static void main(String[] args) {
         BicsApi apiInstance = new BicsApi();
         String bic = bic_example; // String | BIC (8-characters or 11-characters) for which the corresponding national IDs are requested
-        String xApiKey = xApiKey_example; // String | An API key given to your application
+        String xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
         try {
             NationalIds result = apiInstance.getNationalIdsFromBic(bic, xApiKey);
             System.out.println(result);
@@ -3422,7 +3422,7 @@ public class BicsApiExample {
   </div> -->
                             <div class="tab-pane" id="examples-Bics-getNationalIdsFromBic-0-objc">
                               <pre class="prettyprint"><code class="language-cpp">String *bic = bic_example; // BIC (8-characters or 11-characters) for which the corresponding national IDs are requested
-String *xApiKey = xApiKey_example; // An API key given to your application (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
+String *xApiKey = xApiKey_example; // An API key given to your application to authenticate against the sandbox URL (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
 
 BicsApi *apiInstance = [[BicsApi alloc] init];
 
@@ -3447,7 +3447,7 @@ var api = new SwiftRefApi.BicsApi()
 
 var bic = bic_example; // {String} BIC (8-characters or 11-characters) for which the corresponding national IDs are requested
 
-var xApiKey = xApiKey_example; // {String} An API key given to your application
+var xApiKey = xApiKey_example; // {String} An API key given to your application to authenticate against the sandbox URL
 
 
 var callback = function(error, data, response) {
@@ -3477,10 +3477,10 @@ namespace Example
     {
         public void main()
         {
-            
+
             var apiInstance = new BicsApi();
             var bic = bic_example;  // String | BIC (8-characters or 11-characters) for which the corresponding national IDs are requested
-            var xApiKey = xApiKey_example;  // String | An API key given to your application (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
+            var xApiKey = xApiKey_example;  // String | An API key given to your application to authenticate against the sandbox URL (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
 
             try
             {
@@ -3504,7 +3504,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Swagger\Client\Api\BicsApi();
 $bic = bic_example; // String | BIC (8-characters or 11-characters) for which the corresponding national IDs are requested
-$xApiKey = xApiKey_example; // String | An API key given to your application
+$xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
 
 try {
     $result = $api_instance->getNationalIdsFromBic($bic, $xApiKey);
@@ -3522,9 +3522,9 @@ use WWW::SwaggerClient::BicsApi;
 
 my $api_instance = WWW::SwaggerClient::BicsApi->new();
 my $bic = bic_example; # String | BIC (8-characters or 11-characters) for which the corresponding national IDs are requested
-my $xApiKey = xApiKey_example; # String | An API key given to your application
+my $xApiKey = xApiKey_example; # String | An API key given to your application to authenticate against the sandbox URL
 
-eval { 
+eval {
     my $result = $api_instance->getNationalIdsFromBic(bic => $bic, xApiKey => $xApiKey);
     print Dumper($result);
 };
@@ -3543,9 +3543,9 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = swagger_client.BicsApi()
 bic = bic_example # String | BIC (8-characters or 11-characters) for which the corresponding national IDs are requested
-xApiKey = xApiKey_example # String | An API key given to your application (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
+xApiKey = xApiKey_example # String | An API key given to your application to authenticate against the sandbox URL (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
 
-try: 
+try:
     # Get National IDs for a BIC
     api_response = api_instance.get_national_ids_from_bic(bic, xApiKey)
     pprint(api_response)
@@ -3605,7 +3605,7 @@ except ApiException as e:
                 </span>
 
                     <div class="inner description">
-                        An API key given to your application
+                        An API key given to your application to authenticate against the sandbox URL
                     </div>
             </div>
                 <div class="inner required">
@@ -3815,15 +3815,15 @@ except ApiException as e:
                         </p>
                         <ul class="nav nav-tabs nav-tabs-examples">
                           <li class="active"><a href="#examples-Bics-getSepaReachabilityFromBic-0-curl">Curl</a></li>
-                          <li class=""><a href="#examples-Bics-getSepaReachabilityFromBic-0-java">Java</a></li>
+                          <!--<li class=""><a href="#examples-Bics-getSepaReachabilityFromBic-0-java">Java</a></li>
                           <li class=""><a href="#examples-Bics-getSepaReachabilityFromBic-0-android">Android</a></li>
-                          <!--<li class=""><a href="#examples-Bics-getSepaReachabilityFromBic-0-groovy">Groovy</a></li>-->
-                          <li class=""><a href="#examples-Bics-getSepaReachabilityFromBic-0-objc">Obj-C</a></li>
+                          <!<li class=""><a href="#examples-Bics-getSepaReachabilityFromBic-0-groovy">Groovy</a></li>
+                          <li class=""><a href="#examples-Bics-getSepaReachabilityFromBic-0-objc">Obj-C</a></li>-->
                           <li class=""><a href="#examples-Bics-getSepaReachabilityFromBic-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-Bics-getSepaReachabilityFromBic-0-angular">Angular</a></li>-->
+                          <!--<li class=""><a href="#examples-Bics-getSepaReachabilityFromBic-0-angular">Angular</a></li>
                           <li class=""><a href="#examples-Bics-getSepaReachabilityFromBic-0-csharp">C#</a></li>
                           <li class=""><a href="#examples-Bics-getSepaReachabilityFromBic-0-php">PHP</a></li>
-                          <li class=""><a href="#examples-Bics-getSepaReachabilityFromBic-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-Bics-getSepaReachabilityFromBic-0-perl">Perl</a></li>-->
                           <li class=""><a href="#examples-Bics-getSepaReachabilityFromBic-0-python">Python</a></li>
                         </ul>
 
@@ -3843,11 +3843,11 @@ import java.util.*;
 public class BicsApiExample {
 
     public static void main(String[] args) {
-        
+
         BicsApi apiInstance = new BicsApi();
         String bic = bic_example; // String | BIC (8-characters or 11-characters) for which SEPA reachability is requested
         String sepaScheme = sepaScheme_example; // String | SEPA service code
-        String xApiKey = xApiKey_example; // String | An API key given to your application
+        String xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
         try {
             SepaReachability result = apiInstance.getSepaReachabilityFromBic(bic, sepaScheme, xApiKey);
             System.out.println(result);
@@ -3868,7 +3868,7 @@ public class BicsApiExample {
         BicsApi apiInstance = new BicsApi();
         String bic = bic_example; // String | BIC (8-characters or 11-characters) for which SEPA reachability is requested
         String sepaScheme = sepaScheme_example; // String | SEPA service code
-        String xApiKey = xApiKey_example; // String | An API key given to your application
+        String xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
         try {
             SepaReachability result = apiInstance.getSepaReachabilityFromBic(bic, sepaScheme, xApiKey);
             System.out.println(result);
@@ -3886,7 +3886,7 @@ public class BicsApiExample {
                             <div class="tab-pane" id="examples-Bics-getSepaReachabilityFromBic-0-objc">
                               <pre class="prettyprint"><code class="language-cpp">String *bic = bic_example; // BIC (8-characters or 11-characters) for which SEPA reachability is requested
 String *sepaScheme = sepaScheme_example; // SEPA service code (default to SDD)
-String *xApiKey = xApiKey_example; // An API key given to your application (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
+String *xApiKey = xApiKey_example; // An API key given to your application to authenticate against the sandbox URL (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
 
 BicsApi *apiInstance = [[BicsApi alloc] init];
 
@@ -3914,7 +3914,7 @@ var bic = bic_example; // {String} BIC (8-characters or 11-characters) for which
 
 var sepaScheme = sepaScheme_example; // {String} SEPA service code
 
-var xApiKey = xApiKey_example; // {String} An API key given to your application
+var xApiKey = xApiKey_example; // {String} An API key given to your application to authenticate against the sandbox URL
 
 
 var callback = function(error, data, response) {
@@ -3944,11 +3944,11 @@ namespace Example
     {
         public void main()
         {
-            
+
             var apiInstance = new BicsApi();
             var bic = bic_example;  // String | BIC (8-characters or 11-characters) for which SEPA reachability is requested
             var sepaScheme = sepaScheme_example;  // String | SEPA service code (default to SDD)
-            var xApiKey = xApiKey_example;  // String | An API key given to your application (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
+            var xApiKey = xApiKey_example;  // String | An API key given to your application to authenticate against the sandbox URL (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
 
             try
             {
@@ -3973,7 +3973,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $api_instance = new Swagger\Client\Api\BicsApi();
 $bic = bic_example; // String | BIC (8-characters or 11-characters) for which SEPA reachability is requested
 $sepaScheme = sepaScheme_example; // String | SEPA service code
-$xApiKey = xApiKey_example; // String | An API key given to your application
+$xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
 
 try {
     $result = $api_instance->getSepaReachabilityFromBic($bic, $sepaScheme, $xApiKey);
@@ -3992,9 +3992,9 @@ use WWW::SwaggerClient::BicsApi;
 my $api_instance = WWW::SwaggerClient::BicsApi->new();
 my $bic = bic_example; # String | BIC (8-characters or 11-characters) for which SEPA reachability is requested
 my $sepaScheme = sepaScheme_example; # String | SEPA service code
-my $xApiKey = xApiKey_example; # String | An API key given to your application
+my $xApiKey = xApiKey_example; # String | An API key given to your application to authenticate against the sandbox URL
 
-eval { 
+eval {
     my $result = $api_instance->getSepaReachabilityFromBic(bic => $bic, sepaScheme => $sepaScheme, xApiKey => $xApiKey);
     print Dumper($result);
 };
@@ -4014,9 +4014,9 @@ from pprint import pprint
 api_instance = swagger_client.BicsApi()
 bic = bic_example # String | BIC (8-characters or 11-characters) for which SEPA reachability is requested
 sepaScheme = sepaScheme_example # String | SEPA service code (default to SDD)
-xApiKey = xApiKey_example # String | An API key given to your application (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
+xApiKey = xApiKey_example # String | An API key given to your application to authenticate against the sandbox URL (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
 
-try: 
+try:
     # Validate SEPA reachability of a BIC
     api_response = api_instance.get_sepa_reachability_from_bic(bic, sepaScheme, xApiKey)
     pprint(api_response)
@@ -4076,7 +4076,7 @@ except ApiException as e:
                 </span>
 
                     <div class="inner description">
-                        An API key given to your application
+                        An API key given to your application to authenticate against the sandbox URL
                     </div>
             </div>
                 <div class="inner required">
@@ -4316,15 +4316,15 @@ except ApiException as e:
                         </p>
                         <ul class="nav nav-tabs nav-tabs-examples">
                           <li class="active"><a href="#examples-Bics-getSsisFromBic-0-curl">Curl</a></li>
-                          <li class=""><a href="#examples-Bics-getSsisFromBic-0-java">Java</a></li>
+                          <!--<li class=""><a href="#examples-Bics-getSsisFromBic-0-java">Java</a></li>
                           <li class=""><a href="#examples-Bics-getSsisFromBic-0-android">Android</a></li>
-                          <!--<li class=""><a href="#examples-Bics-getSsisFromBic-0-groovy">Groovy</a></li>-->
-                          <li class=""><a href="#examples-Bics-getSsisFromBic-0-objc">Obj-C</a></li>
+                          <!<li class=""><a href="#examples-Bics-getSsisFromBic-0-groovy">Groovy</a></li>
+                          <li class=""><a href="#examples-Bics-getSsisFromBic-0-objc">Obj-C</a></li>-->
                           <li class=""><a href="#examples-Bics-getSsisFromBic-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-Bics-getSsisFromBic-0-angular">Angular</a></li>-->
+                          <!--<li class=""><a href="#examples-Bics-getSsisFromBic-0-angular">Angular</a></li>
                           <li class=""><a href="#examples-Bics-getSsisFromBic-0-csharp">C#</a></li>
                           <li class=""><a href="#examples-Bics-getSsisFromBic-0-php">PHP</a></li>
-                          <li class=""><a href="#examples-Bics-getSsisFromBic-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-Bics-getSsisFromBic-0-perl">Perl</a></li>-->
                           <li class=""><a href="#examples-Bics-getSsisFromBic-0-python">Python</a></li>
                         </ul>
 
@@ -4344,11 +4344,11 @@ import java.util.*;
 public class BicsApiExample {
 
     public static void main(String[] args) {
-        
+
         BicsApi apiInstance = new BicsApi();
         String bic = bic_example; // String | BIC (8-characters or 11-characters) for which the corresponding SSIs are requested
         String currencyCode = currencyCode_example; // String | A 3-character currency code for which SSI data needs to be retrieved
-        String xApiKey = xApiKey_example; // String | An API key given to your application
+        String xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
         String ssiCategory = ssiCategory_example; // String | Code that indicates the SSI category for which SSI data needs to be retrieved, that is COPA or WHLS
         try {
             Ssis result = apiInstance.getSsisFromBic(bic, currencyCode, xApiKey, ssiCategory);
@@ -4370,7 +4370,7 @@ public class BicsApiExample {
         BicsApi apiInstance = new BicsApi();
         String bic = bic_example; // String | BIC (8-characters or 11-characters) for which the corresponding SSIs are requested
         String currencyCode = currencyCode_example; // String | A 3-character currency code for which SSI data needs to be retrieved
-        String xApiKey = xApiKey_example; // String | An API key given to your application
+        String xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
         String ssiCategory = ssiCategory_example; // String | Code that indicates the SSI category for which SSI data needs to be retrieved, that is COPA or WHLS
         try {
             Ssis result = apiInstance.getSsisFromBic(bic, currencyCode, xApiKey, ssiCategory);
@@ -4389,7 +4389,7 @@ public class BicsApiExample {
                             <div class="tab-pane" id="examples-Bics-getSsisFromBic-0-objc">
                               <pre class="prettyprint"><code class="language-cpp">String *bic = bic_example; // BIC (8-characters or 11-characters) for which the corresponding SSIs are requested
 String *currencyCode = currencyCode_example; // A 3-character currency code for which SSI data needs to be retrieved (default to USD)
-String *xApiKey = xApiKey_example; // An API key given to your application (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
+String *xApiKey = xApiKey_example; // An API key given to your application to authenticate against the sandbox URL (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
 String *ssiCategory = ssiCategory_example; // Code that indicates the SSI category for which SSI data needs to be retrieved, that is COPA or WHLS (optional) (default to WHLS)
 
 BicsApi *apiInstance = [[BicsApi alloc] init];
@@ -4419,9 +4419,9 @@ var bic = bic_example; // {String} BIC (8-characters or 11-characters) for which
 
 var currencyCode = currencyCode_example; // {String} A 3-character currency code for which SSI data needs to be retrieved
 
-var xApiKey = xApiKey_example; // {String} An API key given to your application
+var xApiKey = xApiKey_example; // {String} An API key given to your application to authenticate against the sandbox URL
 
-var opts = { 
+var opts = {
   'ssiCategory': ssiCategory_example // {String} Code that indicates the SSI category for which SSI data needs to be retrieved, that is COPA or WHLS
 };
 
@@ -4452,11 +4452,11 @@ namespace Example
     {
         public void main()
         {
-            
+
             var apiInstance = new BicsApi();
             var bic = bic_example;  // String | BIC (8-characters or 11-characters) for which the corresponding SSIs are requested
             var currencyCode = currencyCode_example;  // String | A 3-character currency code for which SSI data needs to be retrieved (default to USD)
-            var xApiKey = xApiKey_example;  // String | An API key given to your application (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
+            var xApiKey = xApiKey_example;  // String | An API key given to your application to authenticate against the sandbox URL (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
             var ssiCategory = ssiCategory_example;  // String | Code that indicates the SSI category for which SSI data needs to be retrieved, that is COPA or WHLS (optional)  (default to WHLS)
 
             try
@@ -4482,7 +4482,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $api_instance = new Swagger\Client\Api\BicsApi();
 $bic = bic_example; // String | BIC (8-characters or 11-characters) for which the corresponding SSIs are requested
 $currencyCode = currencyCode_example; // String | A 3-character currency code for which SSI data needs to be retrieved
-$xApiKey = xApiKey_example; // String | An API key given to your application
+$xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
 $ssiCategory = ssiCategory_example; // String | Code that indicates the SSI category for which SSI data needs to be retrieved, that is COPA or WHLS
 
 try {
@@ -4502,10 +4502,10 @@ use WWW::SwaggerClient::BicsApi;
 my $api_instance = WWW::SwaggerClient::BicsApi->new();
 my $bic = bic_example; # String | BIC (8-characters or 11-characters) for which the corresponding SSIs are requested
 my $currencyCode = currencyCode_example; # String | A 3-character currency code for which SSI data needs to be retrieved
-my $xApiKey = xApiKey_example; # String | An API key given to your application
+my $xApiKey = xApiKey_example; # String | An API key given to your application to authenticate against the sandbox URL
 my $ssiCategory = ssiCategory_example; # String | Code that indicates the SSI category for which SSI data needs to be retrieved, that is COPA or WHLS
 
-eval { 
+eval {
     my $result = $api_instance->getSsisFromBic(bic => $bic, currencyCode => $currencyCode, xApiKey => $xApiKey, ssiCategory => $ssiCategory);
     print Dumper($result);
 };
@@ -4525,10 +4525,10 @@ from pprint import pprint
 api_instance = swagger_client.BicsApi()
 bic = bic_example # String | BIC (8-characters or 11-characters) for which the corresponding SSIs are requested
 currencyCode = currencyCode_example # String | A 3-character currency code for which SSI data needs to be retrieved (default to USD)
-xApiKey = xApiKey_example # String | An API key given to your application (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
+xApiKey = xApiKey_example # String | An API key given to your application to authenticate against the sandbox URL (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
 ssiCategory = ssiCategory_example # String | Code that indicates the SSI category for which SSI data needs to be retrieved, that is COPA or WHLS (optional) (default to WHLS)
 
-try: 
+try:
     # Get SSIs for a BIC
     api_response = api_instance.get_ssis_from_bic(bic, currencyCode, xApiKey, ssiCategory=ssiCategory)
     pprint(api_response)
@@ -4588,7 +4588,7 @@ except ApiException as e:
                 </span>
 
                     <div class="inner description">
-                        An API key given to your application
+                        An API key given to your application to authenticate against the sandbox URL
                     </div>
             </div>
                 <div class="inner required">
@@ -4851,15 +4851,15 @@ except ApiException as e:
                         </p>
                         <ul class="nav nav-tabs nav-tabs-examples">
                           <li class="active"><a href="#examples-Ibans-getBicFromIban-0-curl">Curl</a></li>
-                          <li class=""><a href="#examples-Ibans-getBicFromIban-0-java">Java</a></li>
+                          <!--<li class=""><a href="#examples-Ibans-getBicFromIban-0-java">Java</a></li>
                           <li class=""><a href="#examples-Ibans-getBicFromIban-0-android">Android</a></li>
-                          <!--<li class=""><a href="#examples-Ibans-getBicFromIban-0-groovy">Groovy</a></li>-->
-                          <li class=""><a href="#examples-Ibans-getBicFromIban-0-objc">Obj-C</a></li>
+                          <!<li class=""><a href="#examples-Ibans-getBicFromIban-0-groovy">Groovy</a></li>
+                          <li class=""><a href="#examples-Ibans-getBicFromIban-0-objc">Obj-C</a></li>-->
                           <li class=""><a href="#examples-Ibans-getBicFromIban-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-Ibans-getBicFromIban-0-angular">Angular</a></li>-->
+                          <!--<li class=""><a href="#examples-Ibans-getBicFromIban-0-angular">Angular</a></li>
                           <li class=""><a href="#examples-Ibans-getBicFromIban-0-csharp">C#</a></li>
                           <li class=""><a href="#examples-Ibans-getBicFromIban-0-php">PHP</a></li>
-                          <li class=""><a href="#examples-Ibans-getBicFromIban-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-Ibans-getBicFromIban-0-perl">Perl</a></li>-->
                           <li class=""><a href="#examples-Ibans-getBicFromIban-0-python">Python</a></li>
                         </ul>
 
@@ -4879,10 +4879,10 @@ import java.util.*;
 public class IbansApiExample {
 
     public static void main(String[] args) {
-        
+
         IbansApi apiInstance = new IbansApi();
         String iban = iban_example; // String | IBAN for which the corresponding BIC is requested
-        String xApiKey = xApiKey_example; // String | An API key given to your application
+        String xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
         try {
             IbanBic result = apiInstance.getBicFromIban(iban, xApiKey);
             System.out.println(result);
@@ -4902,7 +4902,7 @@ public class IbansApiExample {
     public static void main(String[] args) {
         IbansApi apiInstance = new IbansApi();
         String iban = iban_example; // String | IBAN for which the corresponding BIC is requested
-        String xApiKey = xApiKey_example; // String | An API key given to your application
+        String xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
         try {
             IbanBic result = apiInstance.getBicFromIban(iban, xApiKey);
             System.out.println(result);
@@ -4919,7 +4919,7 @@ public class IbansApiExample {
   </div> -->
                             <div class="tab-pane" id="examples-Ibans-getBicFromIban-0-objc">
                               <pre class="prettyprint"><code class="language-cpp">String *iban = iban_example; // IBAN for which the corresponding BIC is requested
-String *xApiKey = xApiKey_example; // An API key given to your application (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
+String *xApiKey = xApiKey_example; // An API key given to your application to authenticate against the sandbox URL (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
 
 IbansApi *apiInstance = [[IbansApi alloc] init];
 
@@ -4944,7 +4944,7 @@ var api = new SwiftRefApi.IbansApi()
 
 var iban = iban_example; // {String} IBAN for which the corresponding BIC is requested
 
-var xApiKey = xApiKey_example; // {String} An API key given to your application
+var xApiKey = xApiKey_example; // {String} An API key given to your application to authenticate against the sandbox URL
 
 
 var callback = function(error, data, response) {
@@ -4974,10 +4974,10 @@ namespace Example
     {
         public void main()
         {
-            
+
             var apiInstance = new IbansApi();
             var iban = iban_example;  // String | IBAN for which the corresponding BIC is requested
-            var xApiKey = xApiKey_example;  // String | An API key given to your application (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
+            var xApiKey = xApiKey_example;  // String | An API key given to your application to authenticate against the sandbox URL (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
 
             try
             {
@@ -5001,7 +5001,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Swagger\Client\Api\IbansApi();
 $iban = iban_example; // String | IBAN for which the corresponding BIC is requested
-$xApiKey = xApiKey_example; // String | An API key given to your application
+$xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
 
 try {
     $result = $api_instance->getBicFromIban($iban, $xApiKey);
@@ -5019,9 +5019,9 @@ use WWW::SwaggerClient::IbansApi;
 
 my $api_instance = WWW::SwaggerClient::IbansApi->new();
 my $iban = iban_example; # String | IBAN for which the corresponding BIC is requested
-my $xApiKey = xApiKey_example; # String | An API key given to your application
+my $xApiKey = xApiKey_example; # String | An API key given to your application to authenticate against the sandbox URL
 
-eval { 
+eval {
     my $result = $api_instance->getBicFromIban(iban => $iban, xApiKey => $xApiKey);
     print Dumper($result);
 };
@@ -5040,9 +5040,9 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = swagger_client.IbansApi()
 iban = iban_example # String | IBAN for which the corresponding BIC is requested
-xApiKey = xApiKey_example # String | An API key given to your application (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
+xApiKey = xApiKey_example # String | An API key given to your application to authenticate against the sandbox URL (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
 
-try: 
+try:
     # Get the BIC for an IBAN
     api_response = api_instance.get_bic_from_iban(iban, xApiKey)
     pprint(api_response)
@@ -5102,7 +5102,7 @@ except ApiException as e:
                 </span>
 
                     <div class="inner description">
-                        An API key given to your application
+                        An API key given to your application to authenticate against the sandbox URL
                     </div>
             </div>
                 <div class="inner required">
@@ -5313,14 +5313,14 @@ except ApiException as e:
                         <ul class="nav nav-tabs nav-tabs-examples">
                           <li class="active"><a href="#examples-Ibans-getIbanDetails-0-curl">Curl</a></li>
                           <li class=""><a href="#examples-Ibans-getIbanDetails-0-java">Java</a></li>
-                          <li class=""><a href="#examples-Ibans-getIbanDetails-0-android">Android</a></li>
-                          <!--<li class=""><a href="#examples-Ibans-getIbanDetails-0-groovy">Groovy</a></li>-->
-                          <li class=""><a href="#examples-Ibans-getIbanDetails-0-objc">Obj-C</a></li>
+                          <!--<li class=""><a href="#examples-Ibans-getIbanDetails-0-android">Android</a></li>
+                          <li class=""><a href="#examples-Ibans-getIbanDetails-0-groovy">Groovy</a></li>
+                          <li class=""><a href="#examples-Ibans-getIbanDetails-0-objc">Obj-C</a></li>-->
                           <li class=""><a href="#examples-Ibans-getIbanDetails-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-Ibans-getIbanDetails-0-angular">Angular</a></li>-->
+                          <!--<li class=""><a href="#examples-Ibans-getIbanDetails-0-angular">Angular</a></li>
                           <li class=""><a href="#examples-Ibans-getIbanDetails-0-csharp">C#</a></li>
                           <li class=""><a href="#examples-Ibans-getIbanDetails-0-php">PHP</a></li>
-                          <li class=""><a href="#examples-Ibans-getIbanDetails-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-Ibans-getIbanDetails-0-perl">Perl</a></li>-->
                           <li class=""><a href="#examples-Ibans-getIbanDetails-0-python">Python</a></li>
                         </ul>
 
@@ -5340,10 +5340,10 @@ import java.util.*;
 public class IbansApiExample {
 
     public static void main(String[] args) {
-        
+
         IbansApi apiInstance = new IbansApi();
         String iban = iban_example; // String | IBAN for which details are requested
-        String xApiKey = xApiKey_example; // String | An API key given to your application
+        String xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
         try {
             IbanDetails result = apiInstance.getIbanDetails(iban, xApiKey);
             System.out.println(result);
@@ -5363,7 +5363,7 @@ public class IbansApiExample {
     public static void main(String[] args) {
         IbansApi apiInstance = new IbansApi();
         String iban = iban_example; // String | IBAN for which details are requested
-        String xApiKey = xApiKey_example; // String | An API key given to your application
+        String xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
         try {
             IbanDetails result = apiInstance.getIbanDetails(iban, xApiKey);
             System.out.println(result);
@@ -5380,7 +5380,7 @@ public class IbansApiExample {
   </div> -->
                             <div class="tab-pane" id="examples-Ibans-getIbanDetails-0-objc">
                               <pre class="prettyprint"><code class="language-cpp">String *iban = iban_example; // IBAN for which details are requested
-String *xApiKey = xApiKey_example; // An API key given to your application (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
+String *xApiKey = xApiKey_example; // An API key given to your application to authenticate against the sandbox URL (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
 
 IbansApi *apiInstance = [[IbansApi alloc] init];
 
@@ -5405,7 +5405,7 @@ var api = new SwiftRefApi.IbansApi()
 
 var iban = iban_example; // {String} IBAN for which details are requested
 
-var xApiKey = xApiKey_example; // {String} An API key given to your application
+var xApiKey = xApiKey_example; // {String} An API key given to your application to authenticate against the sandbox URL
 
 
 var callback = function(error, data, response) {
@@ -5435,10 +5435,10 @@ namespace Example
     {
         public void main()
         {
-            
+
             var apiInstance = new IbansApi();
             var iban = iban_example;  // String | IBAN for which details are requested
-            var xApiKey = xApiKey_example;  // String | An API key given to your application (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
+            var xApiKey = xApiKey_example;  // String | An API key given to your application to authenticate against the sandbox URL (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
 
             try
             {
@@ -5462,7 +5462,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Swagger\Client\Api\IbansApi();
 $iban = iban_example; // String | IBAN for which details are requested
-$xApiKey = xApiKey_example; // String | An API key given to your application
+$xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
 
 try {
     $result = $api_instance->getIbanDetails($iban, $xApiKey);
@@ -5480,9 +5480,9 @@ use WWW::SwaggerClient::IbansApi;
 
 my $api_instance = WWW::SwaggerClient::IbansApi->new();
 my $iban = iban_example; # String | IBAN for which details are requested
-my $xApiKey = xApiKey_example; # String | An API key given to your application
+my $xApiKey = xApiKey_example; # String | An API key given to your application to authenticate against the sandbox URL
 
-eval { 
+eval {
     my $result = $api_instance->getIbanDetails(iban => $iban, xApiKey => $xApiKey);
     print Dumper($result);
 };
@@ -5501,9 +5501,9 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = swagger_client.IbansApi()
 iban = iban_example # String | IBAN for which details are requested
-xApiKey = xApiKey_example # String | An API key given to your application (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
+xApiKey = xApiKey_example # String | An API key given to your application to authenticate against the sandbox URL (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
 
-try: 
+try:
     # Get details for an IBAN
     api_response = api_instance.get_iban_details(iban, xApiKey)
     pprint(api_response)
@@ -5563,7 +5563,7 @@ except ApiException as e:
                 </span>
 
                     <div class="inner description">
-                        An API key given to your application
+                        An API key given to your application to authenticate against the sandbox URL
                     </div>
             </div>
                 <div class="inner required">
@@ -5774,14 +5774,14 @@ except ApiException as e:
                         <ul class="nav nav-tabs nav-tabs-examples">
                           <li class="active"><a href="#examples-Ibans-getIbanValidity-0-curl">Curl</a></li>
                           <li class=""><a href="#examples-Ibans-getIbanValidity-0-java">Java</a></li>
-                          <li class=""><a href="#examples-Ibans-getIbanValidity-0-android">Android</a></li>
-                          <!--<li class=""><a href="#examples-Ibans-getIbanValidity-0-groovy">Groovy</a></li>-->
-                          <li class=""><a href="#examples-Ibans-getIbanValidity-0-objc">Obj-C</a></li>
+                          <!--<li class=""><a href="#examples-Ibans-getIbanValidity-0-android">Android</a></li>
+                          <!<li class=""><a href="#examples-Ibans-getIbanValidity-0-groovy">Groovy</a></li>
+                          <li class=""><a href="#examples-Ibans-getIbanValidity-0-objc">Obj-C</a></li>-->
                           <li class=""><a href="#examples-Ibans-getIbanValidity-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-Ibans-getIbanValidity-0-angular">Angular</a></li>-->
+                          <!--<li class=""><a href="#examples-Ibans-getIbanValidity-0-angular">Angular</a></li>
                           <li class=""><a href="#examples-Ibans-getIbanValidity-0-csharp">C#</a></li>
                           <li class=""><a href="#examples-Ibans-getIbanValidity-0-php">PHP</a></li>
-                          <li class=""><a href="#examples-Ibans-getIbanValidity-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-Ibans-getIbanValidity-0-perl">Perl</a></li>-->
                           <li class=""><a href="#examples-Ibans-getIbanValidity-0-python">Python</a></li>
                         </ul>
 
@@ -5801,11 +5801,12 @@ import java.util.*;
 public class IbansApiExample {
 
     public static void main(String[] args) {
-        
+
         IbansApi apiInstance = new IbansApi();
         String iban = iban_example; // String | IBAN to validate
+        String xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
         try {
-            IbanValidity result = apiInstance.getIbanValidity(iban);
+            IbanValidity result = apiInstance.getIbanValidity(iban, xApiKey);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling IbansApi#getIbanValidity");
@@ -5823,8 +5824,9 @@ public class IbansApiExample {
     public static void main(String[] args) {
         IbansApi apiInstance = new IbansApi();
         String iban = iban_example; // String | IBAN to validate
+        String xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
         try {
-            IbanValidity result = apiInstance.getIbanValidity(iban);
+            IbanValidity result = apiInstance.getIbanValidity(iban, xApiKey);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling IbansApi#getIbanValidity");
@@ -5839,11 +5841,13 @@ public class IbansApiExample {
   </div> -->
                             <div class="tab-pane" id="examples-Ibans-getIbanValidity-0-objc">
                               <pre class="prettyprint"><code class="language-cpp">String *iban = iban_example; // IBAN to validate
+String *xApiKey = xApiKey_example; // An API key given to your application to authenticate against the sandbox URL (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
 
 IbansApi *apiInstance = [[IbansApi alloc] init];
 
 // Check validity of an IBAN
 [apiInstance getIbanValidityWith:iban
+    xApiKey:xApiKey
               completionHandler: ^(IbanValidity output, NSError* error) {
                             if (output) {
                                 NSLog(@"%@", output);
@@ -5862,6 +5866,8 @@ var api = new SwiftRefApi.IbansApi()
 
 var iban = iban_example; // {String} IBAN to validate
 
+var xApiKey = xApiKey_example; // {String} An API key given to your application to authenticate against the sandbox URL
+
 
 var callback = function(error, data, response) {
   if (error) {
@@ -5870,7 +5876,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.getIbanValidity(iban, callback);
+api.getIbanValidity(iban, xApiKey, callback);
 </code></pre>
                             </div>
 
@@ -5890,14 +5896,15 @@ namespace Example
     {
         public void main()
         {
-            
+
             var apiInstance = new IbansApi();
             var iban = iban_example;  // String | IBAN to validate
+            var xApiKey = xApiKey_example;  // String | An API key given to your application to authenticate against the sandbox URL (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
 
             try
             {
                 // Check validity of an IBAN
-                IbanValidity result = apiInstance.getIbanValidity(iban);
+                IbanValidity result = apiInstance.getIbanValidity(iban, xApiKey);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -5916,9 +5923,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Swagger\Client\Api\IbansApi();
 $iban = iban_example; // String | IBAN to validate
+$xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
 
 try {
-    $result = $api_instance->getIbanValidity($iban);
+    $result = $api_instance->getIbanValidity($iban, $xApiKey);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling IbansApi->getIbanValidity: ', $e->getMessage(), PHP_EOL;
@@ -5933,9 +5941,10 @@ use WWW::SwaggerClient::IbansApi;
 
 my $api_instance = WWW::SwaggerClient::IbansApi->new();
 my $iban = iban_example; # String | IBAN to validate
+my $xApiKey = xApiKey_example; # String | An API key given to your application to authenticate against the sandbox URL
 
-eval { 
-    my $result = $api_instance->getIbanValidity(iban => $iban);
+eval {
+    my $result = $api_instance->getIbanValidity(iban => $iban, xApiKey => $xApiKey);
     print Dumper($result);
 };
 if ($@) {
@@ -5953,10 +5962,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = swagger_client.IbansApi()
 iban = iban_example # String | IBAN to validate
+xApiKey = xApiKey_example # String | An API key given to your application to authenticate against the sandbox URL (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
 
-try: 
+try:
     # Check validity of an IBAN
-    api_response = api_instance.get_iban_validity(iban)
+    api_response = api_instance.get_iban_validity(iban, xApiKey)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IbansApi->getIbanValidity: %s\n" % e)</code></pre>
@@ -5996,6 +6006,36 @@ except ApiException as e:
 
                             </table>
 
+                            <div class="methodsubtabletitle">Header parameters</div>
+                            <table id="methodsubtable">
+                              <tr>
+                                <th width="150px">Name</th>
+                                <th>Description</th>
+                              </tr>
+                                  <tr><td style="width:150px;">x-api-key*</td>
+<td>
+
+
+    <div id="d2e199_getIbanValidity_xApiKey">
+        <div class="json-schema-view">
+            <div class="primitive">
+                <span class="type">
+                    String
+                </span>
+
+                    <div class="inner description">
+                        An API key given to your application to authenticate against the sandbox URL
+                    </div>
+            </div>
+                <div class="inner required">
+                    Required
+                </div>
+        </div>
+    </div>
+</td>
+</tr>
+
+                            </table>
 
 
 
@@ -6198,14 +6238,14 @@ except ApiException as e:
                         <ul class="nav nav-tabs nav-tabs-examples">
                           <li class="active"><a href="#examples-Leis-getBicFromLei-0-curl">Curl</a></li>
                           <li class=""><a href="#examples-Leis-getBicFromLei-0-java">Java</a></li>
-                          <li class=""><a href="#examples-Leis-getBicFromLei-0-android">Android</a></li>
-                          <!--<li class=""><a href="#examples-Leis-getBicFromLei-0-groovy">Groovy</a></li>-->
-                          <li class=""><a href="#examples-Leis-getBicFromLei-0-objc">Obj-C</a></li>
+                          <!--<li class=""><a href="#examples-Leis-getBicFromLei-0-android">Android</a></li>
+                          <li class=""><a href="#examples-Leis-getBicFromLei-0-groovy">Groovy</a></li>
+                          <li class=""><a href="#examples-Leis-getBicFromLei-0-objc">Obj-C</a></li>-->
                           <li class=""><a href="#examples-Leis-getBicFromLei-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-Leis-getBicFromLei-0-angular">Angular</a></li>-->
+                          <!--<li class=""><a href="#examples-Leis-getBicFromLei-0-angular">Angular</a></li>
                           <li class=""><a href="#examples-Leis-getBicFromLei-0-csharp">C#</a></li>
                           <li class=""><a href="#examples-Leis-getBicFromLei-0-php">PHP</a></li>
-                          <li class=""><a href="#examples-Leis-getBicFromLei-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-Leis-getBicFromLei-0-perl">Perl</a></li>-->
                           <li class=""><a href="#examples-Leis-getBicFromLei-0-python">Python</a></li>
                         </ul>
 
@@ -6225,10 +6265,10 @@ import java.util.*;
 public class LeisApiExample {
 
     public static void main(String[] args) {
-        
+
         LeisApi apiInstance = new LeisApi();
         String lei = lei_example; // String | LEI (20-characters) for which the corresponding BIC is requested
-        String xApiKey = xApiKey_example; // String | An API key given to your application
+        String xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
         try {
             Bic result = apiInstance.getBicFromLei(lei, xApiKey);
             System.out.println(result);
@@ -6248,7 +6288,7 @@ public class LeisApiExample {
     public static void main(String[] args) {
         LeisApi apiInstance = new LeisApi();
         String lei = lei_example; // String | LEI (20-characters) for which the corresponding BIC is requested
-        String xApiKey = xApiKey_example; // String | An API key given to your application
+        String xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
         try {
             Bic result = apiInstance.getBicFromLei(lei, xApiKey);
             System.out.println(result);
@@ -6265,7 +6305,7 @@ public class LeisApiExample {
   </div> -->
                             <div class="tab-pane" id="examples-Leis-getBicFromLei-0-objc">
                               <pre class="prettyprint"><code class="language-cpp">String *lei = lei_example; // LEI (20-characters) for which the corresponding BIC is requested
-String *xApiKey = xApiKey_example; // An API key given to your application (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
+String *xApiKey = xApiKey_example; // An API key given to your application to authenticate against the sandbox URL (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
 
 LeisApi *apiInstance = [[LeisApi alloc] init];
 
@@ -6290,7 +6330,7 @@ var api = new SwiftRefApi.LeisApi()
 
 var lei = lei_example; // {String} LEI (20-characters) for which the corresponding BIC is requested
 
-var xApiKey = xApiKey_example; // {String} An API key given to your application
+var xApiKey = xApiKey_example; // {String} An API key given to your application to authenticate against the sandbox URL
 
 
 var callback = function(error, data, response) {
@@ -6320,10 +6360,10 @@ namespace Example
     {
         public void main()
         {
-            
+
             var apiInstance = new LeisApi();
             var lei = lei_example;  // String | LEI (20-characters) for which the corresponding BIC is requested
-            var xApiKey = xApiKey_example;  // String | An API key given to your application (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
+            var xApiKey = xApiKey_example;  // String | An API key given to your application to authenticate against the sandbox URL (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
 
             try
             {
@@ -6347,7 +6387,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Swagger\Client\Api\LeisApi();
 $lei = lei_example; // String | LEI (20-characters) for which the corresponding BIC is requested
-$xApiKey = xApiKey_example; // String | An API key given to your application
+$xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
 
 try {
     $result = $api_instance->getBicFromLei($lei, $xApiKey);
@@ -6365,9 +6405,9 @@ use WWW::SwaggerClient::LeisApi;
 
 my $api_instance = WWW::SwaggerClient::LeisApi->new();
 my $lei = lei_example; # String | LEI (20-characters) for which the corresponding BIC is requested
-my $xApiKey = xApiKey_example; # String | An API key given to your application
+my $xApiKey = xApiKey_example; # String | An API key given to your application to authenticate against the sandbox URL
 
-eval { 
+eval {
     my $result = $api_instance->getBicFromLei(lei => $lei, xApiKey => $xApiKey);
     print Dumper($result);
 };
@@ -6386,9 +6426,9 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = swagger_client.LeisApi()
 lei = lei_example # String | LEI (20-characters) for which the corresponding BIC is requested
-xApiKey = xApiKey_example # String | An API key given to your application (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
+xApiKey = xApiKey_example # String | An API key given to your application to authenticate against the sandbox URL (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
 
-try: 
+try:
     # Get the BIC for an LEI
     api_response = api_instance.get_bic_from_lei(lei, xApiKey)
     pprint(api_response)
@@ -6448,7 +6488,7 @@ except ApiException as e:
                 </span>
 
                     <div class="inner description">
-                        An API key given to your application
+                        An API key given to your application to authenticate against the sandbox URL
                     </div>
             </div>
                 <div class="inner required">
@@ -6662,14 +6702,14 @@ except ApiException as e:
                         <ul class="nav nav-tabs nav-tabs-examples">
                           <li class="active"><a href="#examples-NationalIds-getBicsFromNationalId-0-curl">Curl</a></li>
                           <li class=""><a href="#examples-NationalIds-getBicsFromNationalId-0-java">Java</a></li>
-                          <li class=""><a href="#examples-NationalIds-getBicsFromNationalId-0-android">Android</a></li>
-                          <!--<li class=""><a href="#examples-NationalIds-getBicsFromNationalId-0-groovy">Groovy</a></li>-->
-                          <li class=""><a href="#examples-NationalIds-getBicsFromNationalId-0-objc">Obj-C</a></li>
+                          <!--<li class=""><a href="#examples-NationalIds-getBicsFromNationalId-0-android">Android</a></li>
+                          <!<li class=""><a href="#examples-NationalIds-getBicsFromNationalId-0-groovy">Groovy</a></li>
+                          <li class=""><a href="#examples-NationalIds-getBicsFromNationalId-0-objc">Obj-C</a></li>-->
                           <li class=""><a href="#examples-NationalIds-getBicsFromNationalId-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-NationalIds-getBicsFromNationalId-0-angular">Angular</a></li>-->
+                          <!--<li class=""><a href="#examples-NationalIds-getBicsFromNationalId-0-angular">Angular</a></li>
                           <li class=""><a href="#examples-NationalIds-getBicsFromNationalId-0-csharp">C#</a></li>
                           <li class=""><a href="#examples-NationalIds-getBicsFromNationalId-0-php">PHP</a></li>
-                          <li class=""><a href="#examples-NationalIds-getBicsFromNationalId-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-NationalIds-getBicsFromNationalId-0-perl">Perl</a></li>-->
                           <li class=""><a href="#examples-NationalIds-getBicsFromNationalId-0-python">Python</a></li>
                         </ul>
 
@@ -6689,10 +6729,10 @@ import java.util.*;
 public class NationalIdsApiExample {
 
     public static void main(String[] args) {
-        
+
         NationalIdsApi apiInstance = new NationalIdsApi();
         String nationalId = nationalId_example; // String | National ID for which the corresponding BICs are requested
-        String xApiKey = xApiKey_example; // String | An API key given to your application
+        String xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
         String countryCode = countryCode_example; // String | The 2-character ISO 3166-1 country code of the country that issued the National ID (mandatory, when scheme parameter is not provided)
         String scheme = scheme_example; // String | The scheme under which the national ID is defined (mandatory, when country_code parameter is not provided)
         try {
@@ -6714,7 +6754,7 @@ public class NationalIdsApiExample {
     public static void main(String[] args) {
         NationalIdsApi apiInstance = new NationalIdsApi();
         String nationalId = nationalId_example; // String | National ID for which the corresponding BICs are requested
-        String xApiKey = xApiKey_example; // String | An API key given to your application
+        String xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
         String countryCode = countryCode_example; // String | The 2-character ISO 3166-1 country code of the country that issued the National ID (mandatory, when scheme parameter is not provided)
         String scheme = scheme_example; // String | The scheme under which the national ID is defined (mandatory, when country_code parameter is not provided)
         try {
@@ -6733,7 +6773,7 @@ public class NationalIdsApiExample {
   </div> -->
                             <div class="tab-pane" id="examples-NationalIds-getBicsFromNationalId-0-objc">
                               <pre class="prettyprint"><code class="language-cpp">String *nationalId = nationalId_example; // National ID for which the corresponding BICs are requested
-String *xApiKey = xApiKey_example; // An API key given to your application (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
+String *xApiKey = xApiKey_example; // An API key given to your application to authenticate against the sandbox URL (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
 String *countryCode = countryCode_example; // The 2-character ISO 3166-1 country code of the country that issued the National ID (mandatory, when scheme parameter is not provided) (optional) (default to BE)
 String *scheme = scheme_example; // The scheme under which the national ID is defined (mandatory, when country_code parameter is not provided) (optional)
 
@@ -6762,9 +6802,9 @@ var api = new SwiftRefApi.NationalIdsApi()
 
 var nationalId = nationalId_example; // {String} National ID for which the corresponding BICs are requested
 
-var xApiKey = xApiKey_example; // {String} An API key given to your application
+var xApiKey = xApiKey_example; // {String} An API key given to your application to authenticate against the sandbox URL
 
-var opts = { 
+var opts = {
   'countryCode': countryCode_example, // {String} The 2-character ISO 3166-1 country code of the country that issued the National ID (mandatory, when scheme parameter is not provided)
   'scheme': scheme_example // {String} The scheme under which the national ID is defined (mandatory, when country_code parameter is not provided)
 };
@@ -6796,12 +6836,12 @@ namespace Example
     {
         public void main()
         {
-            
+
             var apiInstance = new NationalIdsApi();
             var nationalId = nationalId_example;  // String | National ID for which the corresponding BICs are requested
-            var xApiKey = xApiKey_example;  // String | An API key given to your application (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
+            var xApiKey = xApiKey_example;  // String | An API key given to your application to authenticate against the sandbox URL (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
             var countryCode = countryCode_example;  // String | The 2-character ISO 3166-1 country code of the country that issued the National ID (mandatory, when scheme parameter is not provided) (optional)  (default to BE)
-            var scheme = scheme_example;  // String | The scheme under which the national ID is defined (mandatory, when country_code parameter is not provided) (optional) 
+            var scheme = scheme_example;  // String | The scheme under which the national ID is defined (mandatory, when country_code parameter is not provided) (optional)
 
             try
             {
@@ -6825,7 +6865,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Swagger\Client\Api\NationalIdsApi();
 $nationalId = nationalId_example; // String | National ID for which the corresponding BICs are requested
-$xApiKey = xApiKey_example; // String | An API key given to your application
+$xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
 $countryCode = countryCode_example; // String | The 2-character ISO 3166-1 country code of the country that issued the National ID (mandatory, when scheme parameter is not provided)
 $scheme = scheme_example; // String | The scheme under which the national ID is defined (mandatory, when country_code parameter is not provided)
 
@@ -6845,11 +6885,11 @@ use WWW::SwaggerClient::NationalIdsApi;
 
 my $api_instance = WWW::SwaggerClient::NationalIdsApi->new();
 my $nationalId = nationalId_example; # String | National ID for which the corresponding BICs are requested
-my $xApiKey = xApiKey_example; # String | An API key given to your application
+my $xApiKey = xApiKey_example; # String | An API key given to your application to authenticate against the sandbox URL
 my $countryCode = countryCode_example; # String | The 2-character ISO 3166-1 country code of the country that issued the National ID (mandatory, when scheme parameter is not provided)
 my $scheme = scheme_example; # String | The scheme under which the national ID is defined (mandatory, when country_code parameter is not provided)
 
-eval { 
+eval {
     my $result = $api_instance->getBicsFromNationalId(nationalId => $nationalId, xApiKey => $xApiKey, countryCode => $countryCode, scheme => $scheme);
     print Dumper($result);
 };
@@ -6868,11 +6908,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = swagger_client.NationalIdsApi()
 nationalId = nationalId_example # String | National ID for which the corresponding BICs are requested
-xApiKey = xApiKey_example # String | An API key given to your application (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
+xApiKey = xApiKey_example # String | An API key given to your application to authenticate against the sandbox URL (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
 countryCode = countryCode_example # String | The 2-character ISO 3166-1 country code of the country that issued the National ID (mandatory, when scheme parameter is not provided) (optional) (default to BE)
 scheme = scheme_example # String | The scheme under which the national ID is defined (mandatory, when country_code parameter is not provided) (optional)
 
-try: 
+try:
     # Get BICs of a National ID
     api_response = api_instance.get_bics_from_national_id(nationalId, xApiKey, countryCode=countryCode, scheme=scheme)
     pprint(api_response)
@@ -6932,7 +6972,7 @@ except ApiException as e:
                 </span>
 
                     <div class="inner description">
-                        An API key given to your application
+                        An API key given to your application to authenticate against the sandbox URL
                     </div>
             </div>
                 <div class="inner required">
@@ -7190,14 +7230,14 @@ except ApiException as e:
                         <ul class="nav nav-tabs nav-tabs-examples">
                           <li class="active"><a href="#examples-NationalIds-getNationalIdDetails-0-curl">Curl</a></li>
                           <li class=""><a href="#examples-NationalIds-getNationalIdDetails-0-java">Java</a></li>
-                          <li class=""><a href="#examples-NationalIds-getNationalIdDetails-0-android">Android</a></li>
-                          <!--<li class=""><a href="#examples-NationalIds-getNationalIdDetails-0-groovy">Groovy</a></li>-->
-                          <li class=""><a href="#examples-NationalIds-getNationalIdDetails-0-objc">Obj-C</a></li>
+                          <!--<li class=""><a href="#examples-NationalIds-getNationalIdDetails-0-android">Android</a></li>
+                          <!<li class=""><a href="#examples-NationalIds-getNationalIdDetails-0-groovy">Groovy</a></li>
+                          <li class=""><a href="#examples-NationalIds-getNationalIdDetails-0-objc">Obj-C</a></li>-->
                           <li class=""><a href="#examples-NationalIds-getNationalIdDetails-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-NationalIds-getNationalIdDetails-0-angular">Angular</a></li>-->
+                          <!--<li class=""><a href="#examples-NationalIds-getNationalIdDetails-0-angular">Angular</a></li>
                           <li class=""><a href="#examples-NationalIds-getNationalIdDetails-0-csharp">C#</a></li>
                           <li class=""><a href="#examples-NationalIds-getNationalIdDetails-0-php">PHP</a></li>
-                          <li class=""><a href="#examples-NationalIds-getNationalIdDetails-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-NationalIds-getNationalIdDetails-0-perl">Perl</a></li>-->
                           <li class=""><a href="#examples-NationalIds-getNationalIdDetails-0-python">Python</a></li>
                         </ul>
 
@@ -7217,10 +7257,10 @@ import java.util.*;
 public class NationalIdsApiExample {
 
     public static void main(String[] args) {
-        
+
         NationalIdsApi apiInstance = new NationalIdsApi();
         String nationalId = nationalId_example; // String | National ID for which details are requested
-        String xApiKey = xApiKey_example; // String | An API key given to your application
+        String xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
         String countryCode = countryCode_example; // String | The 2-character ISO 3166-1 country code of the country that issued the National ID (mandatory, when scheme parameter is not provided)
         String scheme = scheme_example; // String | The scheme under which the national ID is defined (mandatory, when country_code parameter is not provided)
         try {
@@ -7242,7 +7282,7 @@ public class NationalIdsApiExample {
     public static void main(String[] args) {
         NationalIdsApi apiInstance = new NationalIdsApi();
         String nationalId = nationalId_example; // String | National ID for which details are requested
-        String xApiKey = xApiKey_example; // String | An API key given to your application
+        String xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
         String countryCode = countryCode_example; // String | The 2-character ISO 3166-1 country code of the country that issued the National ID (mandatory, when scheme parameter is not provided)
         String scheme = scheme_example; // String | The scheme under which the national ID is defined (mandatory, when country_code parameter is not provided)
         try {
@@ -7261,7 +7301,7 @@ public class NationalIdsApiExample {
   </div> -->
                             <div class="tab-pane" id="examples-NationalIds-getNationalIdDetails-0-objc">
                               <pre class="prettyprint"><code class="language-cpp">String *nationalId = nationalId_example; // National ID for which details are requested
-String *xApiKey = xApiKey_example; // An API key given to your application (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
+String *xApiKey = xApiKey_example; // An API key given to your application to authenticate against the sandbox URL (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
 String *countryCode = countryCode_example; // The 2-character ISO 3166-1 country code of the country that issued the National ID (mandatory, when scheme parameter is not provided) (optional) (default to BE)
 String *scheme = scheme_example; // The scheme under which the national ID is defined (mandatory, when country_code parameter is not provided) (optional) (default to ABB-BVB)
 
@@ -7290,9 +7330,9 @@ var api = new SwiftRefApi.NationalIdsApi()
 
 var nationalId = nationalId_example; // {String} National ID for which details are requested
 
-var xApiKey = xApiKey_example; // {String} An API key given to your application
+var xApiKey = xApiKey_example; // {String} An API key given to your application to authenticate against the sandbox URL
 
-var opts = { 
+var opts = {
   'countryCode': countryCode_example, // {String} The 2-character ISO 3166-1 country code of the country that issued the National ID (mandatory, when scheme parameter is not provided)
   'scheme': scheme_example // {String} The scheme under which the national ID is defined (mandatory, when country_code parameter is not provided)
 };
@@ -7324,10 +7364,10 @@ namespace Example
     {
         public void main()
         {
-            
+
             var apiInstance = new NationalIdsApi();
             var nationalId = nationalId_example;  // String | National ID for which details are requested
-            var xApiKey = xApiKey_example;  // String | An API key given to your application (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
+            var xApiKey = xApiKey_example;  // String | An API key given to your application to authenticate against the sandbox URL (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
             var countryCode = countryCode_example;  // String | The 2-character ISO 3166-1 country code of the country that issued the National ID (mandatory, when scheme parameter is not provided) (optional)  (default to BE)
             var scheme = scheme_example;  // String | The scheme under which the national ID is defined (mandatory, when country_code parameter is not provided) (optional)  (default to ABB-BVB)
 
@@ -7353,7 +7393,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Swagger\Client\Api\NationalIdsApi();
 $nationalId = nationalId_example; // String | National ID for which details are requested
-$xApiKey = xApiKey_example; // String | An API key given to your application
+$xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
 $countryCode = countryCode_example; // String | The 2-character ISO 3166-1 country code of the country that issued the National ID (mandatory, when scheme parameter is not provided)
 $scheme = scheme_example; // String | The scheme under which the national ID is defined (mandatory, when country_code parameter is not provided)
 
@@ -7373,11 +7413,11 @@ use WWW::SwaggerClient::NationalIdsApi;
 
 my $api_instance = WWW::SwaggerClient::NationalIdsApi->new();
 my $nationalId = nationalId_example; # String | National ID for which details are requested
-my $xApiKey = xApiKey_example; # String | An API key given to your application
+my $xApiKey = xApiKey_example; # String | An API key given to your application to authenticate against the sandbox URL
 my $countryCode = countryCode_example; # String | The 2-character ISO 3166-1 country code of the country that issued the National ID (mandatory, when scheme parameter is not provided)
 my $scheme = scheme_example; # String | The scheme under which the national ID is defined (mandatory, when country_code parameter is not provided)
 
-eval { 
+eval {
     my $result = $api_instance->getNationalIdDetails(nationalId => $nationalId, xApiKey => $xApiKey, countryCode => $countryCode, scheme => $scheme);
     print Dumper($result);
 };
@@ -7396,11 +7436,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = swagger_client.NationalIdsApi()
 nationalId = nationalId_example # String | National ID for which details are requested
-xApiKey = xApiKey_example # String | An API key given to your application (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
+xApiKey = xApiKey_example # String | An API key given to your application to authenticate against the sandbox URL (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
 countryCode = countryCode_example # String | The 2-character ISO 3166-1 country code of the country that issued the National ID (mandatory, when scheme parameter is not provided) (optional) (default to BE)
 scheme = scheme_example # String | The scheme under which the national ID is defined (mandatory, when country_code parameter is not provided) (optional) (default to ABB-BVB)
 
-try: 
+try:
     # Get details of a National ID
     api_response = api_instance.get_national_id_details(nationalId, xApiKey, countryCode=countryCode, scheme=scheme)
     pprint(api_response)
@@ -7460,7 +7500,7 @@ except ApiException as e:
                 </span>
 
                     <div class="inner description">
-                        An API key given to your application
+                        An API key given to your application to authenticate against the sandbox URL
                     </div>
             </div>
                 <div class="inner required">
@@ -7718,14 +7758,14 @@ except ApiException as e:
                         <ul class="nav nav-tabs nav-tabs-examples">
                           <li class="active"><a href="#examples-NationalIds-getNationalIdValidity-0-curl">Curl</a></li>
                           <li class=""><a href="#examples-NationalIds-getNationalIdValidity-0-java">Java</a></li>
-                          <li class=""><a href="#examples-NationalIds-getNationalIdValidity-0-android">Android</a></li>
-                          <!--<li class=""><a href="#examples-NationalIds-getNationalIdValidity-0-groovy">Groovy</a></li>-->
-                          <li class=""><a href="#examples-NationalIds-getNationalIdValidity-0-objc">Obj-C</a></li>
+                          <!--<li class=""><a href="#examples-NationalIds-getNationalIdValidity-0-android">Android</a></li>
+                          <!<li class=""><a href="#examples-NationalIds-getNationalIdValidity-0-groovy">Groovy</a></li>
+                          <li class=""><a href="#examples-NationalIds-getNationalIdValidity-0-objc">Obj-C</a></li>-->
                           <li class=""><a href="#examples-NationalIds-getNationalIdValidity-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-NationalIds-getNationalIdValidity-0-angular">Angular</a></li>-->
+                          <!--<li class=""><a href="#examples-NationalIds-getNationalIdValidity-0-angular">Angular</a></li>
                           <li class=""><a href="#examples-NationalIds-getNationalIdValidity-0-csharp">C#</a></li>
                           <li class=""><a href="#examples-NationalIds-getNationalIdValidity-0-php">PHP</a></li>
-                          <li class=""><a href="#examples-NationalIds-getNationalIdValidity-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-NationalIds-getNationalIdValidity-0-perl">Perl</a></li>-->
                           <li class=""><a href="#examples-NationalIds-getNationalIdValidity-0-python">Python</a></li>
                         </ul>
 
@@ -7745,10 +7785,10 @@ import java.util.*;
 public class NationalIdsApiExample {
 
     public static void main(String[] args) {
-        
+
         NationalIdsApi apiInstance = new NationalIdsApi();
         String nationalId = nationalId_example; // String | National ID to validate
-        String xApiKey = xApiKey_example; // String | An API key given to your application
+        String xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
         String countryCode = countryCode_example; // String | The 2-character ISO 3166-1 country code of the country that issued the National ID (mandatory, when scheme parameter is not provided)
         String scheme = scheme_example; // String | The scheme under which the national ID is defined (mandatory, when country_code parameter is not provided)
         try {
@@ -7770,7 +7810,7 @@ public class NationalIdsApiExample {
     public static void main(String[] args) {
         NationalIdsApi apiInstance = new NationalIdsApi();
         String nationalId = nationalId_example; // String | National ID to validate
-        String xApiKey = xApiKey_example; // String | An API key given to your application
+        String xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
         String countryCode = countryCode_example; // String | The 2-character ISO 3166-1 country code of the country that issued the National ID (mandatory, when scheme parameter is not provided)
         String scheme = scheme_example; // String | The scheme under which the national ID is defined (mandatory, when country_code parameter is not provided)
         try {
@@ -7789,7 +7829,7 @@ public class NationalIdsApiExample {
   </div> -->
                             <div class="tab-pane" id="examples-NationalIds-getNationalIdValidity-0-objc">
                               <pre class="prettyprint"><code class="language-cpp">String *nationalId = nationalId_example; // National ID to validate
-String *xApiKey = xApiKey_example; // An API key given to your application (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
+String *xApiKey = xApiKey_example; // An API key given to your application to authenticate against the sandbox URL (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
 String *countryCode = countryCode_example; // The 2-character ISO 3166-1 country code of the country that issued the National ID (mandatory, when scheme parameter is not provided) (optional) (default to BE)
 String *scheme = scheme_example; // The scheme under which the national ID is defined (mandatory, when country_code parameter is not provided) (optional)
 
@@ -7818,9 +7858,9 @@ var api = new SwiftRefApi.NationalIdsApi()
 
 var nationalId = nationalId_example; // {String} National ID to validate
 
-var xApiKey = xApiKey_example; // {String} An API key given to your application
+var xApiKey = xApiKey_example; // {String} An API key given to your application to authenticate against the sandbox URL
 
-var opts = { 
+var opts = {
   'countryCode': countryCode_example, // {String} The 2-character ISO 3166-1 country code of the country that issued the National ID (mandatory, when scheme parameter is not provided)
   'scheme': scheme_example // {String} The scheme under which the national ID is defined (mandatory, when country_code parameter is not provided)
 };
@@ -7852,12 +7892,12 @@ namespace Example
     {
         public void main()
         {
-            
+
             var apiInstance = new NationalIdsApi();
             var nationalId = nationalId_example;  // String | National ID to validate
-            var xApiKey = xApiKey_example;  // String | An API key given to your application (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
+            var xApiKey = xApiKey_example;  // String | An API key given to your application to authenticate against the sandbox URL (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
             var countryCode = countryCode_example;  // String | The 2-character ISO 3166-1 country code of the country that issued the National ID (mandatory, when scheme parameter is not provided) (optional)  (default to BE)
-            var scheme = scheme_example;  // String | The scheme under which the national ID is defined (mandatory, when country_code parameter is not provided) (optional) 
+            var scheme = scheme_example;  // String | The scheme under which the national ID is defined (mandatory, when country_code parameter is not provided) (optional)
 
             try
             {
@@ -7881,7 +7921,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Swagger\Client\Api\NationalIdsApi();
 $nationalId = nationalId_example; // String | National ID to validate
-$xApiKey = xApiKey_example; // String | An API key given to your application
+$xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
 $countryCode = countryCode_example; // String | The 2-character ISO 3166-1 country code of the country that issued the National ID (mandatory, when scheme parameter is not provided)
 $scheme = scheme_example; // String | The scheme under which the national ID is defined (mandatory, when country_code parameter is not provided)
 
@@ -7901,11 +7941,11 @@ use WWW::SwaggerClient::NationalIdsApi;
 
 my $api_instance = WWW::SwaggerClient::NationalIdsApi->new();
 my $nationalId = nationalId_example; # String | National ID to validate
-my $xApiKey = xApiKey_example; # String | An API key given to your application
+my $xApiKey = xApiKey_example; # String | An API key given to your application to authenticate against the sandbox URL
 my $countryCode = countryCode_example; # String | The 2-character ISO 3166-1 country code of the country that issued the National ID (mandatory, when scheme parameter is not provided)
 my $scheme = scheme_example; # String | The scheme under which the national ID is defined (mandatory, when country_code parameter is not provided)
 
-eval { 
+eval {
     my $result = $api_instance->getNationalIdValidity(nationalId => $nationalId, xApiKey => $xApiKey, countryCode => $countryCode, scheme => $scheme);
     print Dumper($result);
 };
@@ -7924,11 +7964,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = swagger_client.NationalIdsApi()
 nationalId = nationalId_example # String | National ID to validate
-xApiKey = xApiKey_example # String | An API key given to your application (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
+xApiKey = xApiKey_example # String | An API key given to your application to authenticate against the sandbox URL (default to ZGyXZxU6Zmro1YZfJnJyh77IyOkKbb8n)
 countryCode = countryCode_example # String | The 2-character ISO 3166-1 country code of the country that issued the National ID (mandatory, when scheme parameter is not provided) (optional) (default to BE)
 scheme = scheme_example # String | The scheme under which the national ID is defined (mandatory, when country_code parameter is not provided) (optional)
 
-try: 
+try:
     # Check the Validity of a National ID
     api_response = api_instance.get_national_id_validity(nationalId, xApiKey, countryCode=countryCode, scheme=scheme)
     pprint(api_response)
@@ -7988,7 +8028,7 @@ except ApiException as e:
                 </span>
 
                     <div class="inner description">
-                        An API key given to your application
+                        An API key given to your application to authenticate against the sandbox URL
                     </div>
             </div>
                 <div class="inner required">
@@ -8241,7 +8281,7 @@ except ApiException as e:
           </div>
           <div id="generator">
             <div class="content">
-              Generated 2018-10-09T14:47:41.873Z
+              Generated 2018-10-16T10:27:04.631Z
             </div>
           </div>
       </div>
@@ -8746,7 +8786,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
-	
+
 	// load the styles
 	var content = __webpack_require__(3);
 	if(typeof content === 'string') content = [[module.id, content, '']];
@@ -8773,11 +8813,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports = module.exports = __webpack_require__(4)();
 	// imports
-	
-	
+
+
 	// module
 	exports.push([module.id, ".json-formatter-row {\n  font-family: monospace;\n}\n.json-formatter-row,\n.json-formatter-row a,\n.json-formatter-row a:hover {\n  color: black;\n  text-decoration: none;\n}\n.json-formatter-row .json-formatter-row {\n  margin-left: 1rem;\n}\n.json-formatter-row .json-formatter-children.json-formatter-empty {\n  opacity: 0.5;\n  margin-left: 1rem;\n}\n.json-formatter-row .json-formatter-children.json-formatter-empty:after {\n  display: none;\n}\n.json-formatter-row .json-formatter-children.json-formatter-empty.json-formatter-object:after {\n  content: \"No properties\";\n}\n.json-formatter-row .json-formatter-children.json-formatter-empty.json-formatter-array:after {\n  content: \"[]\";\n}\n.json-formatter-row .json-formatter-string {\n  color: green;\n  white-space: pre;\n  word-wrap: break-word;\n}\n.json-formatter-row .json-formatter-number {\n  color: blue;\n}\n.json-formatter-row .json-formatter-boolean {\n  color: red;\n}\n.json-formatter-row .json-formatter-null {\n  color: #855A00;\n}\n.json-formatter-row .json-formatter-undefined {\n  color: #ca0b69;\n}\n.json-formatter-row .json-formatter-function {\n  color: #FF20ED;\n}\n.json-formatter-row .json-formatter-date {\n  background-color: rgba(0, 0, 0, 0.05);\n}\n.json-formatter-row .json-formatter-url {\n  text-decoration: underline;\n  color: blue;\n  cursor: pointer;\n}\n.json-formatter-row .json-formatter-bracket {\n  color: blue;\n}\n.json-formatter-row .json-formatter-key {\n  color: #00008B;\n  cursor: pointer;\n  padding-right: 0.2rem;\n}\n.json-formatter-row .json-formatter-constructor-name {\n  cursor: pointer;\n}\n.json-formatter-row .json-formatter-toggler {\n  line-height: 1.2rem;\n  font-size: 0.7rem;\n  vertical-align: middle;\n  opacity: 0.6;\n  cursor: pointer;\n  padding-right: 0.2rem;\n}\n.json-formatter-row .json-formatter-toggler:after {\n  display: inline-block;\n  transition: transform 100ms ease-in;\n  content: \"\\25BA\";\n}\n.json-formatter-row > a > .json-formatter-preview-text {\n  opacity: 0;\n  transition: opacity 0.15s ease-in;\n  font-style: italic;\n}\n.json-formatter-row:hover > a > .json-formatter-preview-text {\n  opacity: 0.6;\n}\n.json-formatter-row.json-formatter-open > .json-formatter-toggler-link .json-formatter-toggler:after {\n  transform: rotate(90deg);\n}\n.json-formatter-row.json-formatter-open > .json-formatter-children:after {\n  display: inline-block;\n}\n.json-formatter-row.json-formatter-open > a > .json-formatter-preview-text {\n  display: none;\n}\n.json-formatter-row.json-formatter-open.json-formatter-empty:after {\n  display: block;\n}\n.json-formatter-dark.json-formatter-row {\n  font-family: monospace;\n}\n.json-formatter-dark.json-formatter-row,\n.json-formatter-dark.json-formatter-row a,\n.json-formatter-dark.json-formatter-row a:hover {\n  color: white;\n  text-decoration: none;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-row {\n  margin-left: 1rem;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-children.json-formatter-empty {\n  opacity: 0.5;\n  margin-left: 1rem;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-children.json-formatter-empty:after {\n  display: none;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-children.json-formatter-empty.json-formatter-object:after {\n  content: \"No properties\";\n}\n.json-formatter-dark.json-formatter-row .json-formatter-children.json-formatter-empty.json-formatter-array:after {\n  content: \"[]\";\n}\n.json-formatter-dark.json-formatter-row .json-formatter-string {\n  color: #31F031;\n  white-space: pre;\n  word-wrap: break-word;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-number {\n  color: #66C2FF;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-boolean {\n  color: #EC4242;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-null {\n  color: #EEC97D;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-undefined {\n  color: #ef8fbe;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-function {\n  color: #FD48CB;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-date {\n  background-color: rgba(255, 255, 255, 0.05);\n}\n.json-formatter-dark.json-formatter-row .json-formatter-url {\n  text-decoration: underline;\n  color: #027BFF;\n  cursor: pointer;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-bracket {\n  color: #9494FF;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-key {\n  color: #23A0DB;\n  cursor: pointer;\n  padding-right: 0.2rem;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-constructor-name {\n  cursor: pointer;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-toggler {\n  line-height: 1.2rem;\n  font-size: 0.7rem;\n  vertical-align: middle;\n  opacity: 0.6;\n  cursor: pointer;\n  padding-right: 0.2rem;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-toggler:after {\n  display: inline-block;\n  transition: transform 100ms ease-in;\n  content: \"\\25BA\";\n}\n.json-formatter-dark.json-formatter-row > a > .json-formatter-preview-text {\n  opacity: 0;\n  transition: opacity 0.15s ease-in;\n  font-style: italic;\n}\n.json-formatter-dark.json-formatter-row:hover > a > .json-formatter-preview-text {\n  opacity: 0.6;\n}\n.json-formatter-dark.json-formatter-row.json-formatter-open > .json-formatter-toggler-link .json-formatter-toggler:after {\n  transform: rotate(90deg);\n}\n.json-formatter-dark.json-formatter-row.json-formatter-open > .json-formatter-children:after {\n  display: inline-block;\n}\n.json-formatter-dark.json-formatter-row.json-formatter-open > a > .json-formatter-preview-text {\n  display: none;\n}\n.json-formatter-dark.json-formatter-row.json-formatter-open.json-formatter-empty:after {\n  display: block;\n}\n", "", {"version":3,"sources":["/./src/style.less","/./src/style.less"],"names":[],"mappings":"AA0GA;EA3FE,uBAAA;CCbD;ADcC;;;EACE,aAAA;EACA,sBAAA;CCVH;ADkGD;EApFI,kBAAA;CCXH;ADeG;EACE,aAAA;EACA,kBAAA;CCbL;ADeK;EAAU,cAAA;CCZf;ADaK;EAAgC,yBAAA;CCVrC;ADWK;EAA+B,cAAA;CCRpC;ADkFD;EArEI,aAAA;EACA,iBAAA;EACA,sBAAA;CCVH;AD6ED;EAjE2B,YAAA;CCT1B;AD0ED;EAhE4B,WAAA;CCP3B;ADuED;EA/DyB,eAAA;CCLxB;ADoED;EA9D8B,eAAA;CCH7B;ADiED;EA7D6B,eAAA;CCD5B;AD8DD;EA5DyB,sCAAA;CCCxB;AD2DD;EA1DI,2BAAA;EACA,YAAA;EACA,gBAAA;CCEH;ADsDD;EArD4B,YAAA;CCE3B;ADmDD;EAnDI,eAAA;EACA,gBAAA;EACA,sBAAA;CCGH;AD8CD;EA9CI,gBAAA;CCGH;AD2CD;EA1CI,oBAAA;EACA,kBAAA;EACA,uBAAA;EACA,aAAA;EACA,gBAAA;EACA,sBAAA;CCEH;ADAG;EACE,sBAAA;EACA,oCAAA;EACA,iBAAA;CCEL;AD8BD;EA1BI,WAAA;EACA,kCAAA;EACA,mBAAA;CCDH;ADGC;EACE,aAAA;CCDH;ADKC;EAEI,yBAAA;CCJL;ADEC;EAKI,sBAAA;CCJL;ADDC;EAQI,cAAA;CCJL;ADMG;EACE,eAAA;CCJL;ADeD;EAhGE,uBAAA;CCoFD;ADnFC;;;EACE,aAAA;EACA,sBAAA;CCuFH;ADMD;EAzFI,kBAAA;CCsFH;ADlFG;EACE,aAAA;EACA,kBAAA;CCoFL;ADlFK;EAAU,cAAA;CCqFf;ADpFK;EAAgC,yBAAA;CCuFrC;ADtFK;EAA+B,cAAA;CCyFpC;ADVD;EA1EI,eAAA;EACA,iBAAA;EACA,sBAAA;CCuFH;ADfD;EAtE2B,eAAA;CCwF1B;ADlBD;EArE4B,eAAA;CC0F3B;ADrBD;EApEyB,eAAA;CC4FxB;ADxBD;EAnE8B,eAAA;CC8F7B;AD3BD;EAlE6B,eAAA;CCgG5B;AD9BD;EAjEyB,4CAAA;CCkGxB;ADjCD;EA/DI,2BAAA;EACA,eAAA;EACA,gBAAA;CCmGH;ADtCD;EA1D4B,eAAA;CCmG3B;ADzCD;EAxDI,eAAA;EACA,gBAAA;EACA,sBAAA;CCoGH;AD9CD;EAnDI,gBAAA;CCoGH;ADjDD;EA/CI,oBAAA;EACA,kBAAA;EACA,uBAAA;EACA,aAAA;EACA,gBAAA;EACA,sBAAA;CCmGH;ADjGG;EACE,sBAAA;EACA,oCAAA;EACA,iBAAA;CCmGL;AD9DD;EA/BI,WAAA;EACA,kCAAA;EACA,mBAAA;CCgGH;AD9FC;EACE,aAAA;CCgGH;AD5FC;EAEI,yBAAA;CC6FL;AD/FC;EAKI,sBAAA;CC6FL;ADlGC;EAQI,cAAA;CC6FL;AD3FG;EACE,eAAA;CC6FL","file":"style.less","sourcesContent":[".theme(\n  @default-color: black,\n  @string-color: green,\n  @number-color: blue,\n  @boolean-color: red,\n  @null-color: #855A00,\n  @undefined-color: rgb(202, 11, 105),\n  @function-color: #FF20ED,\n  @rotate-time: 100ms,\n  @toggler-opacity: 0.6,\n  @toggler-color: #45376F,\n  @bracket-color: blue,\n  @key-color: #00008B,\n  @url-color: blue ){\n\n  font-family: monospace;\n  &, a, a:hover {\n    color: @default-color;\n    text-decoration: none;\n  }\n\n  .json-formatter-row {\n    margin-left: 1rem;\n  }\n\n  .json-formatter-children {\n    &.json-formatter-empty {\n      opacity: 0.5;\n      margin-left: 1rem;\n\n      &:after { display: none; }\n      &.json-formatter-object:after { content: \"No properties\"; }\n      &.json-formatter-array:after { content: \"[]\"; }\n    }\n  }\n\n  .json-formatter-string {\n    color: @string-color;\n    white-space: pre;\n    word-wrap: break-word;\n  }\n  .json-formatter-number { color: @number-color; }\n  .json-formatter-boolean { color: @boolean-color; }\n  .json-formatter-null { color: @null-color; }\n  .json-formatter-undefined { color: @undefined-color; }\n  .json-formatter-function { color: @function-color; }\n  .json-formatter-date { background-color: fade(@default-color, 5%); }\n  .json-formatter-url {\n    text-decoration: underline;\n    color: @url-color;\n    cursor: pointer;\n  }\n\n  .json-formatter-bracket { color: @bracket-color; }\n  .json-formatter-key {\n    color: @key-color;\n    cursor: pointer;\n    padding-right: 0.2rem;\n  }\n  .json-formatter-constructor-name {\n    cursor: pointer;\n  }\n\n  .json-formatter-toggler {\n    line-height: 1.2rem;\n    font-size: 0.7rem;\n    vertical-align: middle;\n    opacity: @toggler-opacity;\n    cursor: pointer;\n    padding-right: 0.2rem;\n\n    &:after {\n      display: inline-block;\n      transition: transform @rotate-time ease-in;\n      content: \"►\";\n    }\n  }\n\n  // Inline preview on hover (optional)\n  > a > .json-formatter-preview-text {\n    opacity: 0;\n    transition: opacity .15s ease-in;\n    font-style: italic;\n  }\n  &:hover > a > .json-formatter-preview-text {\n    opacity: 0.6;\n  }\n\n  // Open state\n  &.json-formatter-open {\n    > .json-formatter-toggler-link .json-formatter-toggler:after{\n      transform: rotate(90deg);\n    }\n    > .json-formatter-children:after {\n      display: inline-block;\n    }\n    > a > .json-formatter-preview-text {\n      display: none;\n    }\n    &.json-formatter-empty:after {\n      display: block;\n    }\n  }\n}\n\n// Default theme\n.json-formatter-row {\n  .theme();\n}\n\n// Dark theme\n.json-formatter-dark.json-formatter-row {\n  .theme(\n    @default-color: white,\n    @string-color: #31F031,\n    @number-color: #66C2FF,\n    @boolean-color: #EC4242,\n    @null-color: #EEC97D,\n    @undefined-color: rgb(239, 143, 190),\n    @function-color: #FD48CB,\n    @rotate-time: 100ms,\n    @toggler-opacity: 0.6,\n    @toggler-color: #45376F,\n    @bracket-color: #9494FF,\n    @key-color: #23A0DB,\n    @url-color: #027BFF);\n}\n",".json-formatter-row {\n  font-family: monospace;\n}\n.json-formatter-row,\n.json-formatter-row a,\n.json-formatter-row a:hover {\n  color: black;\n  text-decoration: none;\n}\n.json-formatter-row .json-formatter-row {\n  margin-left: 1rem;\n}\n.json-formatter-row .json-formatter-children.json-formatter-empty {\n  opacity: 0.5;\n  margin-left: 1rem;\n}\n.json-formatter-row .json-formatter-children.json-formatter-empty:after {\n  display: none;\n}\n.json-formatter-row .json-formatter-children.json-formatter-empty.json-formatter-object:after {\n  content: \"No properties\";\n}\n.json-formatter-row .json-formatter-children.json-formatter-empty.json-formatter-array:after {\n  content: \"[]\";\n}\n.json-formatter-row .json-formatter-string {\n  color: green;\n  white-space: pre;\n  word-wrap: break-word;\n}\n.json-formatter-row .json-formatter-number {\n  color: blue;\n}\n.json-formatter-row .json-formatter-boolean {\n  color: red;\n}\n.json-formatter-row .json-formatter-null {\n  color: #855A00;\n}\n.json-formatter-row .json-formatter-undefined {\n  color: #ca0b69;\n}\n.json-formatter-row .json-formatter-function {\n  color: #FF20ED;\n}\n.json-formatter-row .json-formatter-date {\n  background-color: rgba(0, 0, 0, 0.05);\n}\n.json-formatter-row .json-formatter-url {\n  text-decoration: underline;\n  color: blue;\n  cursor: pointer;\n}\n.json-formatter-row .json-formatter-bracket {\n  color: blue;\n}\n.json-formatter-row .json-formatter-key {\n  color: #00008B;\n  cursor: pointer;\n  padding-right: 0.2rem;\n}\n.json-formatter-row .json-formatter-constructor-name {\n  cursor: pointer;\n}\n.json-formatter-row .json-formatter-toggler {\n  line-height: 1.2rem;\n  font-size: 0.7rem;\n  vertical-align: middle;\n  opacity: 0.6;\n  cursor: pointer;\n  padding-right: 0.2rem;\n}\n.json-formatter-row .json-formatter-toggler:after {\n  display: inline-block;\n  transition: transform 100ms ease-in;\n  content: \"►\";\n}\n.json-formatter-row > a > .json-formatter-preview-text {\n  opacity: 0;\n  transition: opacity 0.15s ease-in;\n  font-style: italic;\n}\n.json-formatter-row:hover > a > .json-formatter-preview-text {\n  opacity: 0.6;\n}\n.json-formatter-row.json-formatter-open > .json-formatter-toggler-link .json-formatter-toggler:after {\n  transform: rotate(90deg);\n}\n.json-formatter-row.json-formatter-open > .json-formatter-children:after {\n  display: inline-block;\n}\n.json-formatter-row.json-formatter-open > a > .json-formatter-preview-text {\n  display: none;\n}\n.json-formatter-row.json-formatter-open.json-formatter-empty:after {\n  display: block;\n}\n.json-formatter-dark.json-formatter-row {\n  font-family: monospace;\n}\n.json-formatter-dark.json-formatter-row,\n.json-formatter-dark.json-formatter-row a,\n.json-formatter-dark.json-formatter-row a:hover {\n  color: white;\n  text-decoration: none;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-row {\n  margin-left: 1rem;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-children.json-formatter-empty {\n  opacity: 0.5;\n  margin-left: 1rem;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-children.json-formatter-empty:after {\n  display: none;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-children.json-formatter-empty.json-formatter-object:after {\n  content: \"No properties\";\n}\n.json-formatter-dark.json-formatter-row .json-formatter-children.json-formatter-empty.json-formatter-array:after {\n  content: \"[]\";\n}\n.json-formatter-dark.json-formatter-row .json-formatter-string {\n  color: #31F031;\n  white-space: pre;\n  word-wrap: break-word;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-number {\n  color: #66C2FF;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-boolean {\n  color: #EC4242;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-null {\n  color: #EEC97D;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-undefined {\n  color: #ef8fbe;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-function {\n  color: #FD48CB;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-date {\n  background-color: rgba(255, 255, 255, 0.05);\n}\n.json-formatter-dark.json-formatter-row .json-formatter-url {\n  text-decoration: underline;\n  color: #027BFF;\n  cursor: pointer;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-bracket {\n  color: #9494FF;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-key {\n  color: #23A0DB;\n  cursor: pointer;\n  padding-right: 0.2rem;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-constructor-name {\n  cursor: pointer;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-toggler {\n  line-height: 1.2rem;\n  font-size: 0.7rem;\n  vertical-align: middle;\n  opacity: 0.6;\n  cursor: pointer;\n  padding-right: 0.2rem;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-toggler:after {\n  display: inline-block;\n  transition: transform 100ms ease-in;\n  content: \"►\";\n}\n.json-formatter-dark.json-formatter-row > a > .json-formatter-preview-text {\n  opacity: 0;\n  transition: opacity 0.15s ease-in;\n  font-style: italic;\n}\n.json-formatter-dark.json-formatter-row:hover > a > .json-formatter-preview-text {\n  opacity: 0.6;\n}\n.json-formatter-dark.json-formatter-row.json-formatter-open > .json-formatter-toggler-link .json-formatter-toggler:after {\n  transform: rotate(90deg);\n}\n.json-formatter-dark.json-formatter-row.json-formatter-open > .json-formatter-children:after {\n  display: inline-block;\n}\n.json-formatter-dark.json-formatter-row.json-formatter-open > a > .json-formatter-preview-text {\n  display: none;\n}\n.json-formatter-dark.json-formatter-row.json-formatter-open.json-formatter-empty:after {\n  display: block;\n}\n"],"sourceRoot":"webpack://"}]);
-	
+
 	// exports
 
 
@@ -8792,7 +8832,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	// css base code, injected by the css-loader
 	module.exports = function() {
 		var list = [];
-	
+
 		// return the list of modules as css string
 		list.toString = function toString() {
 			var result = [];
@@ -8806,7 +8846,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			}
 			return result.join("");
 		};
-	
+
 		// import a list of modules into the list
 		list.i = function(modules, mediaQuery) {
 			if(typeof modules === "string")
@@ -8862,23 +8902,23 @@ return /******/ (function(modules) { // webpackBootstrap
 		singletonElement = null,
 		singletonCounter = 0,
 		styleElementsInsertedAtTop = [];
-	
+
 	module.exports = function(list, options) {
 		if(false) {
 			if(typeof document !== "object") throw new Error("The style-loader cannot be used in a non-browser environment");
 		}
-	
+
 		options = options || {};
 		// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
 		// tags it will allow on a page
 		if (typeof options.singleton === "undefined") options.singleton = isOldIE();
-	
+
 		// By default, add <style> tags to the bottom of <head>.
 		if (typeof options.insertAt === "undefined") options.insertAt = "bottom";
-	
+
 		var styles = listToStyles(list);
 		addStylesToDom(styles, options);
-	
+
 		return function update(newList) {
 			var mayRemove = [];
 			for(var i = 0; i < styles.length; i++) {
@@ -8901,7 +8941,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			}
 		};
 	}
-	
+
 	function addStylesToDom(styles, options) {
 		for(var i = 0; i < styles.length; i++) {
 			var item = styles[i];
@@ -8923,7 +8963,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			}
 		}
 	}
-	
+
 	function listToStyles(list) {
 		var styles = [];
 		var newStyles = {};
@@ -8941,7 +8981,7 @@ return /******/ (function(modules) { // webpackBootstrap
 		}
 		return styles;
 	}
-	
+
 	function insertStyleElement(options, styleElement) {
 		var head = getHeadElement();
 		var lastStyleElementInsertedAtTop = styleElementsInsertedAtTop[styleElementsInsertedAtTop.length - 1];
@@ -8960,7 +9000,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			throw new Error("Invalid value for parameter 'insertAt'. Must be 'top' or 'bottom'.");
 		}
 	}
-	
+
 	function removeStyleElement(styleElement) {
 		styleElement.parentNode.removeChild(styleElement);
 		var idx = styleElementsInsertedAtTop.indexOf(styleElement);
@@ -8968,24 +9008,24 @@ return /******/ (function(modules) { // webpackBootstrap
 			styleElementsInsertedAtTop.splice(idx, 1);
 		}
 	}
-	
+
 	function createStyleElement(options) {
 		var styleElement = document.createElement("style");
 		styleElement.type = "text/css";
 		insertStyleElement(options, styleElement);
 		return styleElement;
 	}
-	
+
 	function createLinkElement(options) {
 		var linkElement = document.createElement("link");
 		linkElement.rel = "stylesheet";
 		insertStyleElement(options, linkElement);
 		return linkElement;
 	}
-	
+
 	function addStyle(obj, options) {
 		var styleElement, update, remove;
-	
+
 		if (options.singleton) {
 			var styleIndex = singletonCounter++;
 			styleElement = singletonElement || (singletonElement = createStyleElement(options));
@@ -9011,9 +9051,9 @@ return /******/ (function(modules) { // webpackBootstrap
 				removeStyleElement(styleElement);
 			};
 		}
-	
+
 		update(obj);
-	
+
 		return function updateStyle(newObj) {
 			if(newObj) {
 				if(newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap)
@@ -9024,19 +9064,19 @@ return /******/ (function(modules) { // webpackBootstrap
 			}
 		};
 	}
-	
+
 	var replaceText = (function () {
 		var textStore = [];
-	
+
 		return function (index, replacement) {
 			textStore[index] = replacement;
 			return textStore.filter(Boolean).join('\n');
 		};
 	})();
-	
+
 	function applyToSingletonTag(styleElement, index, remove, obj) {
 		var css = remove ? "" : obj.css;
-	
+
 		if (styleElement.styleSheet) {
 			styleElement.styleSheet.cssText = replaceText(index, css);
 		} else {
@@ -9050,15 +9090,15 @@ return /******/ (function(modules) { // webpackBootstrap
 			}
 		}
 	}
-	
+
 	function applyToTag(styleElement, obj) {
 		var css = obj.css;
 		var media = obj.media;
-	
+
 		if(media) {
 			styleElement.setAttribute("media", media)
 		}
-	
+
 		if(styleElement.styleSheet) {
 			styleElement.styleSheet.cssText = css;
 		} else {
@@ -9068,22 +9108,22 @@ return /******/ (function(modules) { // webpackBootstrap
 			styleElement.appendChild(document.createTextNode(css));
 		}
 	}
-	
+
 	function updateLink(linkElement, obj) {
 		var css = obj.css;
 		var sourceMap = obj.sourceMap;
-	
+
 		if(sourceMap) {
             // https://developer.mozilla.org/en/docs/Web/API/WindowBase64/Base64_encoding_and_decoding
 			css += "\n/*# sourceMappingURL=data:application/json;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + " */";
 		}
-	
+
 		var blob = new Blob([css], { type: "text/css" });
-	
+
 		var oldSrc = linkElement.href;
-	
+
 		linkElement.href = URL.createObjectURL(blob);
-	
+
 		if(oldSrc)
 			URL.revokeObjectURL(oldSrc);
 	}
