@@ -157,7 +157,7 @@ h={};g()}};typeof define==="function"&&define.amd&&define("google-code-prettify"
     });
   </script>
   <style type="text/css">
-  
+
 /*!
  * Bootstrap v2.3.2
  *
@@ -2670,7 +2670,7 @@ margin-bottom: 20px;
         <div id="header">
           <div id="api-_">
             <h2 id="welcome-to-apidoc">API and SDK Documentation</h2>
-              <div class="app-desc">Version: 2.0.2</div>
+              <div class="app-desc">Version: 2.0.2-sandbox</div>
             <hr>
             <div>Move your app forward with the gpi API</div>
           </div>
@@ -2697,14 +2697,14 @@ margin-bottom: 20px;
                         <ul class="nav nav-tabs nav-tabs-examples">
                           <li class="active"><a href="#examples-CancelTransactions-cancelTransactionsPost-0-curl">Curl</a></li>
                           <li class=""><a href="#examples-CancelTransactions-cancelTransactionsPost-0-java">Java</a></li>
-                          <li class=""><a href="#examples-CancelTransactions-cancelTransactionsPost-0-android">Android</a></li>
-                          <!--<li class=""><a href="#examples-CancelTransactions-cancelTransactionsPost-0-groovy">Groovy</a></li>-->
-                          <li class=""><a href="#examples-CancelTransactions-cancelTransactionsPost-0-objc">Obj-C</a></li>
+                          <!--<li class=""><a href="#examples-CancelTransactions-cancelTransactionsPost-0-android">Android</a></li>
+                          <!<li class=""><a href="#examples-CancelTransactions-cancelTransactionsPost-0-groovy">Groovy</a></li>
+                          <li class=""><a href="#examples-CancelTransactions-cancelTransactionsPost-0-objc">Obj-C</a></li>-->
                           <li class=""><a href="#examples-CancelTransactions-cancelTransactionsPost-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-CancelTransactions-cancelTransactionsPost-0-angular">Angular</a></li>-->
+                          <!--<li class=""><a href="#examples-CancelTransactions-cancelTransactionsPost-0-angular">Angular</a></li>
                           <li class=""><a href="#examples-CancelTransactions-cancelTransactionsPost-0-csharp">C#</a></li>
                           <li class=""><a href="#examples-CancelTransactions-cancelTransactionsPost-0-php">PHP</a></li>
-                          <li class=""><a href="#examples-CancelTransactions-cancelTransactionsPost-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-CancelTransactions-cancelTransactionsPost-0-perl">Perl</a></li>-->
                           <li class=""><a href="#examples-CancelTransactions-cancelTransactionsPost-0-python">Python</a></li>
                         </ul>
 
@@ -2724,7 +2724,7 @@ import java.util.*;
 public class CancelTransactionsApiExample {
 
     public static void main(String[] args) {
-        
+
         CancelTransactionsApi apiInstance = new CancelTransactionsApi();
         String lAUApplicationID = lAUApplicationID_example; // String | ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys
         String lAUVersion = lAUVersion_example; // String | version of the LAUSigned header. Mandatory. "1.0" for this first release
@@ -2733,11 +2733,10 @@ public class CancelTransactionsApiExample {
         String lAUSigned = lAUSigned_example; // String | service specific HTTP headers
         String lAUSignature = lAUSignature_example; // String | contains the LAU signature, base64 ecoded
         Boolean signatureRequired = true; // Boolean | a field indicating that a Signature is required
-        String xApiKey = xApiKey_example; // String | an api key given to your application
-        String xRecord = xRecord_example; // String | a type of API response to get from API Sandbox
+        String xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
         Camt.a06.001.02 requestBody = ; // Camt.a06.001.02 | Cancel Transaction Request
         try {
-            camt.a06.002.02 result = apiInstance.cancelTransactionsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, signatureRequired, xApiKey, xRecord, requestBody);
+            camt.a06.002.02 result = apiInstance.cancelTransactionsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, signatureRequired, xApiKey, requestBody);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling CancelTransactionsApi#cancelTransactionsPost");
@@ -2761,11 +2760,10 @@ public class CancelTransactionsApiExample {
         String lAUSigned = lAUSigned_example; // String | service specific HTTP headers
         String lAUSignature = lAUSignature_example; // String | contains the LAU signature, base64 ecoded
         Boolean signatureRequired = true; // Boolean | a field indicating that a Signature is required
-        String xApiKey = xApiKey_example; // String | an api key given to your application
-        String xRecord = xRecord_example; // String | a type of API response to get from API Sandbox
+        String xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
         Camt.a06.001.02 requestBody = ; // Camt.a06.001.02 | Cancel Transaction Request
         try {
-            camt.a06.002.02 result = apiInstance.cancelTransactionsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, signatureRequired, xApiKey, xRecord, requestBody);
+            camt.a06.002.02 result = apiInstance.cancelTransactionsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, signatureRequired, xApiKey, requestBody);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling CancelTransactionsApi#cancelTransactionsPost");
@@ -2786,8 +2784,7 @@ String *lAURequestNonce = lAURequestNonce_example; // a random value generated b
 String *lAUSigned = lAUSigned_example; // service specific HTTP headers (default to (ApplAPIKey=yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B),(RBACRole=[FullViewer/Scope/cclabeb0]))
 String *lAUSignature = lAUSignature_example; // contains the LAU signature, base64 ecoded (default to U1khA8h9Lm1PqzB99fG6uw==)
 Boolean *signatureRequired = true; // a field indicating that a Signature is required (default to true)
-String *xApiKey = xApiKey_example; // an api key given to your application (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
-String *xRecord = xRecord_example; // a type of API response to get from API Sandbox (default to 0)
+String *xApiKey = xApiKey_example; // An API key given to your application to authenticate against the sandbox URL (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
 Camt.a06.001.02 *requestBody = ; // Cancel Transaction Request
 
 CancelTransactionsApi *apiInstance = [[CancelTransactionsApi alloc] init];
@@ -2801,7 +2798,6 @@ CancelTransactionsApi *apiInstance = [[CancelTransactionsApi alloc] init];
     lAUSignature:lAUSignature
     signatureRequired:signatureRequired
     xApiKey:xApiKey
-    xRecord:xRecord
     requestBody:requestBody
               completionHandler: ^(camt.a06.002.02 output, NSError* error) {
                             if (output) {
@@ -2833,9 +2829,7 @@ var lAUSignature = lAUSignature_example; // {String} contains the LAU signature,
 
 var signatureRequired = true; // {Boolean} a field indicating that a Signature is required
 
-var xApiKey = xApiKey_example; // {String} an api key given to your application
-
-var xRecord = xRecord_example; // {String} a type of API response to get from API Sandbox
+var xApiKey = xApiKey_example; // {String} An API key given to your application to authenticate against the sandbox URL
 
 var requestBody = ; // {Camt.a06.001.02} Cancel Transaction Request
 
@@ -2847,7 +2841,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.cancelTransactionsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, signatureRequired, xApiKey, xRecord, requestBody, callback);
+api.cancelTransactionsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, signatureRequired, xApiKey, requestBody, callback);
 </code></pre>
                             </div>
 
@@ -2867,7 +2861,7 @@ namespace Example
     {
         public void main()
         {
-            
+
             var apiInstance = new CancelTransactionsApi();
             var lAUApplicationID = lAUApplicationID_example;  // String | ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys (default to 001)
             var lAUVersion = lAUVersion_example;  // String | version of the LAUSigned header. Mandatory. "1.0" for this first release (default to 1.0)
@@ -2876,14 +2870,13 @@ namespace Example
             var lAUSigned = lAUSigned_example;  // String | service specific HTTP headers (default to (ApplAPIKey=yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B),(RBACRole=[FullViewer/Scope/cclabeb0]))
             var lAUSignature = lAUSignature_example;  // String | contains the LAU signature, base64 ecoded (default to U1khA8h9Lm1PqzB99fG6uw==)
             var signatureRequired = true;  // Boolean | a field indicating that a Signature is required (default to true)
-            var xApiKey = xApiKey_example;  // String | an api key given to your application (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
-            var xRecord = xRecord_example;  // String | a type of API response to get from API Sandbox (default to 0)
+            var xApiKey = xApiKey_example;  // String | An API key given to your application to authenticate against the sandbox URL (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
             var requestBody = new Camt.a06.001.02(); // Camt.a06.001.02 | Cancel Transaction Request
 
             try
             {
                 // Cancel Transactions
-                camt.a06.002.02 result = apiInstance.cancelTransactionsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, signatureRequired, xApiKey, xRecord, requestBody);
+                camt.a06.002.02 result = apiInstance.cancelTransactionsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, signatureRequired, xApiKey, requestBody);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2908,12 +2901,11 @@ $lAURequestNonce = lAURequestNonce_example; // String | a random value generated
 $lAUSigned = lAUSigned_example; // String | service specific HTTP headers
 $lAUSignature = lAUSignature_example; // String | contains the LAU signature, base64 ecoded
 $signatureRequired = true; // Boolean | a field indicating that a Signature is required
-$xApiKey = xApiKey_example; // String | an api key given to your application
-$xRecord = xRecord_example; // String | a type of API response to get from API Sandbox
+$xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
 $requestBody = ; // Camt.a06.001.02 | Cancel Transaction Request
 
 try {
-    $result = $api_instance->cancelTransactionsPost($lAUApplicationID, $lAUVersion, $lAUCallTime, $lAURequestNonce, $lAUSigned, $lAUSignature, $signatureRequired, $xApiKey, $xRecord, $requestBody);
+    $result = $api_instance->cancelTransactionsPost($lAUApplicationID, $lAUVersion, $lAUCallTime, $lAURequestNonce, $lAUSigned, $lAUSignature, $signatureRequired, $xApiKey, $requestBody);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CancelTransactionsApi->cancelTransactionsPost: ', $e->getMessage(), PHP_EOL;
@@ -2934,12 +2926,11 @@ my $lAURequestNonce = lAURequestNonce_example; # String | a random value generat
 my $lAUSigned = lAUSigned_example; # String | service specific HTTP headers
 my $lAUSignature = lAUSignature_example; # String | contains the LAU signature, base64 ecoded
 my $signatureRequired = true; # Boolean | a field indicating that a Signature is required
-my $xApiKey = xApiKey_example; # String | an api key given to your application
-my $xRecord = xRecord_example; # String | a type of API response to get from API Sandbox
+my $xApiKey = xApiKey_example; # String | An API key given to your application to authenticate against the sandbox URL
 my $requestBody = WWW::SwaggerClient::Object::Camt.a06.001.02->new(); # Camt.a06.001.02 | Cancel Transaction Request
 
-eval { 
-    my $result = $api_instance->cancelTransactionsPost(lAUApplicationID => $lAUApplicationID, lAUVersion => $lAUVersion, lAUCallTime => $lAUCallTime, lAURequestNonce => $lAURequestNonce, lAUSigned => $lAUSigned, lAUSignature => $lAUSignature, signatureRequired => $signatureRequired, xApiKey => $xApiKey, xRecord => $xRecord, requestBody => $requestBody);
+eval {
+    my $result = $api_instance->cancelTransactionsPost(lAUApplicationID => $lAUApplicationID, lAUVersion => $lAUVersion, lAUCallTime => $lAUCallTime, lAURequestNonce => $lAURequestNonce, lAUSigned => $lAUSigned, lAUSignature => $lAUSignature, signatureRequired => $signatureRequired, xApiKey => $xApiKey, requestBody => $requestBody);
     print Dumper($result);
 };
 if ($@) {
@@ -2963,13 +2954,12 @@ lAURequestNonce = lAURequestNonce_example # String | a random value generated by
 lAUSigned = lAUSigned_example # String | service specific HTTP headers (default to (ApplAPIKey=yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B),(RBACRole=[FullViewer/Scope/cclabeb0]))
 lAUSignature = lAUSignature_example # String | contains the LAU signature, base64 ecoded (default to U1khA8h9Lm1PqzB99fG6uw==)
 signatureRequired = true # Boolean | a field indicating that a Signature is required (default to true)
-xApiKey = xApiKey_example # String | an api key given to your application (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
-xRecord = xRecord_example # String | a type of API response to get from API Sandbox (default to 0)
+xApiKey = xApiKey_example # String | An API key given to your application to authenticate against the sandbox URL (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
 requestBody =  # Camt.a06.001.02 | Cancel Transaction Request
 
-try: 
+try:
     # Cancel Transactions
-    api_response = api_instance.cancel_transactions_post(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, signatureRequired, xApiKey, xRecord, requestBody)
+    api_response = api_instance.cancel_transactions_post(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, signatureRequired, xApiKey, requestBody)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CancelTransactionsApi->cancelTransactionsPost: %s\n" % e)</code></pre>
@@ -3158,30 +3148,7 @@ except ApiException as e:
                 </span>
 
                     <div class="inner description">
-                        an api key given to your application
-                    </div>
-            </div>
-                <div class="inner required">
-                    Required
-                </div>
-        </div>
-    </div>
-</td>
-</tr>
-
-                                  <tr><td style="width:150px;">x-record*</td>
-<td>
-
-
-    <div id="d2e199_cancelTransactionsPost_xRecord">
-        <div class="json-schema-view">
-            <div class="primitive">
-                <span class="type">
-                    String
-                </span>
-
-                    <div class="inner description">
-                        a type of API response to get from API Sandbox
+                        An API key given to your application to authenticate against the sandbox URL
                     </div>
             </div>
                 <div class="inner required">
@@ -3733,14 +3700,14 @@ $(document).ready(function() {
                         <ul class="nav nav-tabs nav-tabs-examples">
                           <li class="active"><a href="#examples-CancellationStatusConfirmations-cancellationStatusConfirmationsPost-0-curl">Curl</a></li>
                           <li class=""><a href="#examples-CancellationStatusConfirmations-cancellationStatusConfirmationsPost-0-java">Java</a></li>
-                          <li class=""><a href="#examples-CancellationStatusConfirmations-cancellationStatusConfirmationsPost-0-android">Android</a></li>
-                          <!--<li class=""><a href="#examples-CancellationStatusConfirmations-cancellationStatusConfirmationsPost-0-groovy">Groovy</a></li>-->
-                          <li class=""><a href="#examples-CancellationStatusConfirmations-cancellationStatusConfirmationsPost-0-objc">Obj-C</a></li>
+                          <!--<li class=""><a href="#examples-CancellationStatusConfirmations-cancellationStatusConfirmationsPost-0-android">Android</a></li>
+                          <!<li class=""><a href="#examples-CancellationStatusConfirmations-cancellationStatusConfirmationsPost-0-groovy">Groovy</a></li>
+                          <li class=""><a href="#examples-CancellationStatusConfirmations-cancellationStatusConfirmationsPost-0-objc">Obj-C</a></li>-->
                           <li class=""><a href="#examples-CancellationStatusConfirmations-cancellationStatusConfirmationsPost-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-CancellationStatusConfirmations-cancellationStatusConfirmationsPost-0-angular">Angular</a></li>-->
+                          <!--<li class=""><a href="#examples-CancellationStatusConfirmations-cancellationStatusConfirmationsPost-0-angular">Angular</a></li>
                           <li class=""><a href="#examples-CancellationStatusConfirmations-cancellationStatusConfirmationsPost-0-csharp">C#</a></li>
                           <li class=""><a href="#examples-CancellationStatusConfirmations-cancellationStatusConfirmationsPost-0-php">PHP</a></li>
-                          <li class=""><a href="#examples-CancellationStatusConfirmations-cancellationStatusConfirmationsPost-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-CancellationStatusConfirmations-cancellationStatusConfirmationsPost-0-perl">Perl</a></li>-->
                           <li class=""><a href="#examples-CancellationStatusConfirmations-cancellationStatusConfirmationsPost-0-python">Python</a></li>
                         </ul>
 
@@ -3760,7 +3727,7 @@ import java.util.*;
 public class CancellationStatusConfirmationsApiExample {
 
     public static void main(String[] args) {
-        
+
         CancellationStatusConfirmationsApi apiInstance = new CancellationStatusConfirmationsApi();
         String lAUApplicationID = lAUApplicationID_example; // String | ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys
         String lAUVersion = lAUVersion_example; // String | version of the LAUSigned header. Mandatory. "1.0" for this first release
@@ -3769,11 +3736,10 @@ public class CancellationStatusConfirmationsApiExample {
         String lAUSigned = lAUSigned_example; // String | service specific HTTP headers
         String lAUSignature = lAUSignature_example; // String | contains the LAU signature, base64 ecoded
         Boolean signatureRequired = true; // Boolean | a field indicating that a Signature is required
-        String xApiKey = xApiKey_example; // String | an api key given to your application
-        String xRecord = xRecord_example; // String | a type of API response to get from API Sandbox
+        String xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
         Camt.a07.001.02 requestBody = ; // Camt.a07.001.02 | Transaction Cancellation Status Request
         try {
-            camt.a07.002.02 result = apiInstance.cancellationStatusConfirmationsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, signatureRequired, xApiKey, xRecord, requestBody);
+            camt.a07.002.02 result = apiInstance.cancellationStatusConfirmationsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, signatureRequired, xApiKey, requestBody);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling CancellationStatusConfirmationsApi#cancellationStatusConfirmationsPost");
@@ -3797,11 +3763,10 @@ public class CancellationStatusConfirmationsApiExample {
         String lAUSigned = lAUSigned_example; // String | service specific HTTP headers
         String lAUSignature = lAUSignature_example; // String | contains the LAU signature, base64 ecoded
         Boolean signatureRequired = true; // Boolean | a field indicating that a Signature is required
-        String xApiKey = xApiKey_example; // String | an api key given to your application
-        String xRecord = xRecord_example; // String | a type of API response to get from API Sandbox
+        String xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
         Camt.a07.001.02 requestBody = ; // Camt.a07.001.02 | Transaction Cancellation Status Request
         try {
-            camt.a07.002.02 result = apiInstance.cancellationStatusConfirmationsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, signatureRequired, xApiKey, xRecord, requestBody);
+            camt.a07.002.02 result = apiInstance.cancellationStatusConfirmationsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, signatureRequired, xApiKey, requestBody);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling CancellationStatusConfirmationsApi#cancellationStatusConfirmationsPost");
@@ -3822,8 +3787,7 @@ String *lAURequestNonce = lAURequestNonce_example; // a random value generated b
 String *lAUSigned = lAUSigned_example; // service specific HTTP headers (default to (ApplAPIKey=yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B),(RBACRole=[FullViewer/Scope/cclabeb0]))
 String *lAUSignature = lAUSignature_example; // contains the LAU signature, base64 ecoded (default to U1khA8h9Lm1PqzB99fG6uw==)
 Boolean *signatureRequired = true; // a field indicating that a Signature is required (default to true)
-String *xApiKey = xApiKey_example; // an api key given to your application (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
-String *xRecord = xRecord_example; // a type of API response to get from API Sandbox (default to 0)
+String *xApiKey = xApiKey_example; // An API key given to your application to authenticate against the sandbox URL (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
 Camt.a07.001.02 *requestBody = ; // Transaction Cancellation Status Request
 
 CancellationStatusConfirmationsApi *apiInstance = [[CancellationStatusConfirmationsApi alloc] init];
@@ -3837,7 +3801,6 @@ CancellationStatusConfirmationsApi *apiInstance = [[CancellationStatusConfirmati
     lAUSignature:lAUSignature
     signatureRequired:signatureRequired
     xApiKey:xApiKey
-    xRecord:xRecord
     requestBody:requestBody
               completionHandler: ^(camt.a07.002.02 output, NSError* error) {
                             if (output) {
@@ -3869,9 +3832,7 @@ var lAUSignature = lAUSignature_example; // {String} contains the LAU signature,
 
 var signatureRequired = true; // {Boolean} a field indicating that a Signature is required
 
-var xApiKey = xApiKey_example; // {String} an api key given to your application
-
-var xRecord = xRecord_example; // {String} a type of API response to get from API Sandbox
+var xApiKey = xApiKey_example; // {String} An API key given to your application to authenticate against the sandbox URL
 
 var requestBody = ; // {Camt.a07.001.02} Transaction Cancellation Status Request
 
@@ -3883,7 +3844,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.cancellationStatusConfirmationsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, signatureRequired, xApiKey, xRecord, requestBody, callback);
+api.cancellationStatusConfirmationsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, signatureRequired, xApiKey, requestBody, callback);
 </code></pre>
                             </div>
 
@@ -3903,7 +3864,7 @@ namespace Example
     {
         public void main()
         {
-            
+
             var apiInstance = new CancellationStatusConfirmationsApi();
             var lAUApplicationID = lAUApplicationID_example;  // String | ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys (default to 001)
             var lAUVersion = lAUVersion_example;  // String | version of the LAUSigned header. Mandatory. "1.0" for this first release (default to 1.0)
@@ -3912,14 +3873,13 @@ namespace Example
             var lAUSigned = lAUSigned_example;  // String | service specific HTTP headers (default to (ApplAPIKey=yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B),(RBACRole=[FullViewer/Scope/cclabeb0]))
             var lAUSignature = lAUSignature_example;  // String | contains the LAU signature, base64 ecoded (default to U1khA8h9Lm1PqzB99fG6uw==)
             var signatureRequired = true;  // Boolean | a field indicating that a Signature is required (default to true)
-            var xApiKey = xApiKey_example;  // String | an api key given to your application (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
-            var xRecord = xRecord_example;  // String | a type of API response to get from API Sandbox (default to 0)
+            var xApiKey = xApiKey_example;  // String | An API key given to your application to authenticate against the sandbox URL (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
             var requestBody = new Camt.a07.001.02(); // Camt.a07.001.02 | Transaction Cancellation Status Request
 
             try
             {
                 // Cancellation Status Confirmations
-                camt.a07.002.02 result = apiInstance.cancellationStatusConfirmationsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, signatureRequired, xApiKey, xRecord, requestBody);
+                camt.a07.002.02 result = apiInstance.cancellationStatusConfirmationsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, signatureRequired, xApiKey, requestBody);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3944,12 +3904,11 @@ $lAURequestNonce = lAURequestNonce_example; // String | a random value generated
 $lAUSigned = lAUSigned_example; // String | service specific HTTP headers
 $lAUSignature = lAUSignature_example; // String | contains the LAU signature, base64 ecoded
 $signatureRequired = true; // Boolean | a field indicating that a Signature is required
-$xApiKey = xApiKey_example; // String | an api key given to your application
-$xRecord = xRecord_example; // String | a type of API response to get from API Sandbox
+$xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
 $requestBody = ; // Camt.a07.001.02 | Transaction Cancellation Status Request
 
 try {
-    $result = $api_instance->cancellationStatusConfirmationsPost($lAUApplicationID, $lAUVersion, $lAUCallTime, $lAURequestNonce, $lAUSigned, $lAUSignature, $signatureRequired, $xApiKey, $xRecord, $requestBody);
+    $result = $api_instance->cancellationStatusConfirmationsPost($lAUApplicationID, $lAUVersion, $lAUCallTime, $lAURequestNonce, $lAUSigned, $lAUSignature, $signatureRequired, $xApiKey, $requestBody);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CancellationStatusConfirmationsApi->cancellationStatusConfirmationsPost: ', $e->getMessage(), PHP_EOL;
@@ -3970,12 +3929,11 @@ my $lAURequestNonce = lAURequestNonce_example; # String | a random value generat
 my $lAUSigned = lAUSigned_example; # String | service specific HTTP headers
 my $lAUSignature = lAUSignature_example; # String | contains the LAU signature, base64 ecoded
 my $signatureRequired = true; # Boolean | a field indicating that a Signature is required
-my $xApiKey = xApiKey_example; # String | an api key given to your application
-my $xRecord = xRecord_example; # String | a type of API response to get from API Sandbox
+my $xApiKey = xApiKey_example; # String | An API key given to your application to authenticate against the sandbox URL
 my $requestBody = WWW::SwaggerClient::Object::Camt.a07.001.02->new(); # Camt.a07.001.02 | Transaction Cancellation Status Request
 
-eval { 
-    my $result = $api_instance->cancellationStatusConfirmationsPost(lAUApplicationID => $lAUApplicationID, lAUVersion => $lAUVersion, lAUCallTime => $lAUCallTime, lAURequestNonce => $lAURequestNonce, lAUSigned => $lAUSigned, lAUSignature => $lAUSignature, signatureRequired => $signatureRequired, xApiKey => $xApiKey, xRecord => $xRecord, requestBody => $requestBody);
+eval {
+    my $result = $api_instance->cancellationStatusConfirmationsPost(lAUApplicationID => $lAUApplicationID, lAUVersion => $lAUVersion, lAUCallTime => $lAUCallTime, lAURequestNonce => $lAURequestNonce, lAUSigned => $lAUSigned, lAUSignature => $lAUSignature, signatureRequired => $signatureRequired, xApiKey => $xApiKey, requestBody => $requestBody);
     print Dumper($result);
 };
 if ($@) {
@@ -3999,13 +3957,12 @@ lAURequestNonce = lAURequestNonce_example # String | a random value generated by
 lAUSigned = lAUSigned_example # String | service specific HTTP headers (default to (ApplAPIKey=yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B),(RBACRole=[FullViewer/Scope/cclabeb0]))
 lAUSignature = lAUSignature_example # String | contains the LAU signature, base64 ecoded (default to U1khA8h9Lm1PqzB99fG6uw==)
 signatureRequired = true # Boolean | a field indicating that a Signature is required (default to true)
-xApiKey = xApiKey_example # String | an api key given to your application (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
-xRecord = xRecord_example # String | a type of API response to get from API Sandbox (default to 0)
+xApiKey = xApiKey_example # String | An API key given to your application to authenticate against the sandbox URL (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
 requestBody =  # Camt.a07.001.02 | Transaction Cancellation Status Request
 
-try: 
+try:
     # Cancellation Status Confirmations
-    api_response = api_instance.cancellation_status_confirmations_post(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, signatureRequired, xApiKey, xRecord, requestBody)
+    api_response = api_instance.cancellation_status_confirmations_post(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, signatureRequired, xApiKey, requestBody)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CancellationStatusConfirmationsApi->cancellationStatusConfirmationsPost: %s\n" % e)</code></pre>
@@ -4194,30 +4151,7 @@ except ApiException as e:
                 </span>
 
                     <div class="inner description">
-                        an api key given to your application
-                    </div>
-            </div>
-                <div class="inner required">
-                    Required
-                </div>
-        </div>
-    </div>
-</td>
-</tr>
-
-                                  <tr><td style="width:150px;">x-record*</td>
-<td>
-
-
-    <div id="d2e199_cancellationStatusConfirmationsPost_xRecord">
-        <div class="json-schema-view">
-            <div class="primitive">
-                <span class="type">
-                    String
-                </span>
-
-                    <div class="inner description">
-                        a type of API response to get from API Sandbox
+                        An API key given to your application to authenticate against the sandbox URL
                     </div>
             </div>
                 <div class="inner required">
@@ -4769,14 +4703,14 @@ $(document).ready(function() {
                         <ul class="nav nav-tabs nav-tabs-examples">
                           <li class="active"><a href="#examples-GetChangedPaymentTransactions-getChangedPaymentTransactionsPost-0-curl">Curl</a></li>
                           <li class=""><a href="#examples-GetChangedPaymentTransactions-getChangedPaymentTransactionsPost-0-java">Java</a></li>
-                          <li class=""><a href="#examples-GetChangedPaymentTransactions-getChangedPaymentTransactionsPost-0-android">Android</a></li>
-                          <!--<li class=""><a href="#examples-GetChangedPaymentTransactions-getChangedPaymentTransactionsPost-0-groovy">Groovy</a></li>-->
-                          <li class=""><a href="#examples-GetChangedPaymentTransactions-getChangedPaymentTransactionsPost-0-objc">Obj-C</a></li>
+                          <!--<li class=""><a href="#examples-GetChangedPaymentTransactions-getChangedPaymentTransactionsPost-0-android">Android</a></li>
+                          <!<li class=""><a href="#examples-GetChangedPaymentTransactions-getChangedPaymentTransactionsPost-0-groovy">Groovy</a></li>
+                          <li class=""><a href="#examples-GetChangedPaymentTransactions-getChangedPaymentTransactionsPost-0-objc">Obj-C</a></li> -->
                           <li class=""><a href="#examples-GetChangedPaymentTransactions-getChangedPaymentTransactionsPost-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-GetChangedPaymentTransactions-getChangedPaymentTransactionsPost-0-angular">Angular</a></li>-->
+                          <!--<li class=""><a href="#examples-GetChangedPaymentTransactions-getChangedPaymentTransactionsPost-0-angular">Angular</a></li>
                           <li class=""><a href="#examples-GetChangedPaymentTransactions-getChangedPaymentTransactionsPost-0-csharp">C#</a></li>
                           <li class=""><a href="#examples-GetChangedPaymentTransactions-getChangedPaymentTransactionsPost-0-php">PHP</a></li>
-                          <li class=""><a href="#examples-GetChangedPaymentTransactions-getChangedPaymentTransactionsPost-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-GetChangedPaymentTransactions-getChangedPaymentTransactionsPost-0-perl">Perl</a></li>-->
                           <li class=""><a href="#examples-GetChangedPaymentTransactions-getChangedPaymentTransactionsPost-0-python">Python</a></li>
                         </ul>
 
@@ -4796,7 +4730,7 @@ import java.util.*;
 public class GetChangedPaymentTransactionsApiExample {
 
     public static void main(String[] args) {
-        
+
         GetChangedPaymentTransactionsApi apiInstance = new GetChangedPaymentTransactionsApi();
         String lAUApplicationID = lAUApplicationID_example; // String | ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys
         String lAUVersion = lAUVersion_example; // String | version of the LAUSigned header. Mandatory. "1.0" for this first release
@@ -4804,11 +4738,10 @@ public class GetChangedPaymentTransactionsApiExample {
         String lAURequestNonce = lAURequestNonce_example; // String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response
         String lAUSigned = lAUSigned_example; // String | service specific HTTP headers
         String lAUSignature = lAUSignature_example; // String | contains the LAU signature, base64 ecoded
-        String xApiKey = xApiKey_example; // String | an api key given to your application
-        String xRecord = xRecord_example; // String | a type of API response to get from API Sandbox
+        String xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
         Camt.a04.001.03 requestBody = ; // Camt.a04.001.03 | Last Changed Payment Transactions Request
         try {
-            camt.a04.002.03 result = apiInstance.getChangedPaymentTransactionsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, xApiKey, xRecord, requestBody);
+            camt.a04.002.03 result = apiInstance.getChangedPaymentTransactionsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, xApiKey, requestBody);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling GetChangedPaymentTransactionsApi#getChangedPaymentTransactionsPost");
@@ -4831,11 +4764,10 @@ public class GetChangedPaymentTransactionsApiExample {
         String lAURequestNonce = lAURequestNonce_example; // String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response
         String lAUSigned = lAUSigned_example; // String | service specific HTTP headers
         String lAUSignature = lAUSignature_example; // String | contains the LAU signature, base64 ecoded
-        String xApiKey = xApiKey_example; // String | an api key given to your application
-        String xRecord = xRecord_example; // String | a type of API response to get from API Sandbox
+        String xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
         Camt.a04.001.03 requestBody = ; // Camt.a04.001.03 | Last Changed Payment Transactions Request
         try {
-            camt.a04.002.03 result = apiInstance.getChangedPaymentTransactionsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, xApiKey, xRecord, requestBody);
+            camt.a04.002.03 result = apiInstance.getChangedPaymentTransactionsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, xApiKey, requestBody);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling GetChangedPaymentTransactionsApi#getChangedPaymentTransactionsPost");
@@ -4855,8 +4787,7 @@ String *lAUCallTime = lAUCallTime_example; // timestamp in UTC of the API call i
 String *lAURequestNonce = lAURequestNonce_example; // a random value generated by the client. Provided with the request and copied by the gpi Connector on the response (default to e802ab96-bb3a-4965-9139-5214b9f0f074)
 String *lAUSigned = lAUSigned_example; // service specific HTTP headers (default to (ApplAPIKey=yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B),(RBACRole=[FullViewer/Scope/cclabeb0]))
 String *lAUSignature = lAUSignature_example; // contains the LAU signature, base64 ecoded (default to U1khA8h9Lm1PqzB99fG6uw==)
-String *xApiKey = xApiKey_example; // an api key given to your application (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
-String *xRecord = xRecord_example; // a type of API response to get from API Sandbox (default to 0)
+String *xApiKey = xApiKey_example; // An API key given to your application to authenticate against the sandbox URL (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
 Camt.a04.001.03 *requestBody = ; // Last Changed Payment Transactions Request
 
 GetChangedPaymentTransactionsApi *apiInstance = [[GetChangedPaymentTransactionsApi alloc] init];
@@ -4869,7 +4800,6 @@ GetChangedPaymentTransactionsApi *apiInstance = [[GetChangedPaymentTransactionsA
     lAUSigned:lAUSigned
     lAUSignature:lAUSignature
     xApiKey:xApiKey
-    xRecord:xRecord
     requestBody:requestBody
               completionHandler: ^(camt.a04.002.03 output, NSError* error) {
                             if (output) {
@@ -4899,9 +4829,7 @@ var lAUSigned = lAUSigned_example; // {String} service specific HTTP headers
 
 var lAUSignature = lAUSignature_example; // {String} contains the LAU signature, base64 ecoded
 
-var xApiKey = xApiKey_example; // {String} an api key given to your application
-
-var xRecord = xRecord_example; // {String} a type of API response to get from API Sandbox
+var xApiKey = xApiKey_example; // {String} An API key given to your application to authenticate against the sandbox URL
 
 var requestBody = ; // {Camt.a04.001.03} Last Changed Payment Transactions Request
 
@@ -4913,7 +4841,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.getChangedPaymentTransactionsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, xApiKey, xRecord, requestBody, callback);
+api.getChangedPaymentTransactionsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, xApiKey, requestBody, callback);
 </code></pre>
                             </div>
 
@@ -4933,7 +4861,7 @@ namespace Example
     {
         public void main()
         {
-            
+
             var apiInstance = new GetChangedPaymentTransactionsApi();
             var lAUApplicationID = lAUApplicationID_example;  // String | ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys (default to 001)
             var lAUVersion = lAUVersion_example;  // String | version of the LAUSigned header. Mandatory. "1.0" for this first release (default to 1.0)
@@ -4941,14 +4869,13 @@ namespace Example
             var lAURequestNonce = lAURequestNonce_example;  // String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response (default to e802ab96-bb3a-4965-9139-5214b9f0f074)
             var lAUSigned = lAUSigned_example;  // String | service specific HTTP headers (default to (ApplAPIKey=yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B),(RBACRole=[FullViewer/Scope/cclabeb0]))
             var lAUSignature = lAUSignature_example;  // String | contains the LAU signature, base64 ecoded (default to U1khA8h9Lm1PqzB99fG6uw==)
-            var xApiKey = xApiKey_example;  // String | an api key given to your application (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
-            var xRecord = xRecord_example;  // String | a type of API response to get from API Sandbox (default to 0)
+            var xApiKey = xApiKey_example;  // String | An API key given to your application to authenticate against the sandbox URL (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
             var requestBody = new Camt.a04.001.03(); // Camt.a04.001.03 | Last Changed Payment Transactions Request
 
             try
             {
                 // Get Changed Payment Transactions
-                camt.a04.002.03 result = apiInstance.getChangedPaymentTransactionsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, xApiKey, xRecord, requestBody);
+                camt.a04.002.03 result = apiInstance.getChangedPaymentTransactionsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, xApiKey, requestBody);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4972,12 +4899,11 @@ $lAUCallTime = lAUCallTime_example; // String | timestamp in UTC of the API call
 $lAURequestNonce = lAURequestNonce_example; // String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response
 $lAUSigned = lAUSigned_example; // String | service specific HTTP headers
 $lAUSignature = lAUSignature_example; // String | contains the LAU signature, base64 ecoded
-$xApiKey = xApiKey_example; // String | an api key given to your application
-$xRecord = xRecord_example; // String | a type of API response to get from API Sandbox
+$xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
 $requestBody = ; // Camt.a04.001.03 | Last Changed Payment Transactions Request
 
 try {
-    $result = $api_instance->getChangedPaymentTransactionsPost($lAUApplicationID, $lAUVersion, $lAUCallTime, $lAURequestNonce, $lAUSigned, $lAUSignature, $xApiKey, $xRecord, $requestBody);
+    $result = $api_instance->getChangedPaymentTransactionsPost($lAUApplicationID, $lAUVersion, $lAUCallTime, $lAURequestNonce, $lAUSigned, $lAUSignature, $xApiKey, $requestBody);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GetChangedPaymentTransactionsApi->getChangedPaymentTransactionsPost: ', $e->getMessage(), PHP_EOL;
@@ -4997,12 +4923,11 @@ my $lAUCallTime = lAUCallTime_example; # String | timestamp in UTC of the API ca
 my $lAURequestNonce = lAURequestNonce_example; # String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response
 my $lAUSigned = lAUSigned_example; # String | service specific HTTP headers
 my $lAUSignature = lAUSignature_example; # String | contains the LAU signature, base64 ecoded
-my $xApiKey = xApiKey_example; # String | an api key given to your application
-my $xRecord = xRecord_example; # String | a type of API response to get from API Sandbox
+my $xApiKey = xApiKey_example; # String | An API key given to your application to authenticate against the sandbox URL
 my $requestBody = WWW::SwaggerClient::Object::Camt.a04.001.03->new(); # Camt.a04.001.03 | Last Changed Payment Transactions Request
 
-eval { 
-    my $result = $api_instance->getChangedPaymentTransactionsPost(lAUApplicationID => $lAUApplicationID, lAUVersion => $lAUVersion, lAUCallTime => $lAUCallTime, lAURequestNonce => $lAURequestNonce, lAUSigned => $lAUSigned, lAUSignature => $lAUSignature, xApiKey => $xApiKey, xRecord => $xRecord, requestBody => $requestBody);
+eval {
+    my $result = $api_instance->getChangedPaymentTransactionsPost(lAUApplicationID => $lAUApplicationID, lAUVersion => $lAUVersion, lAUCallTime => $lAUCallTime, lAURequestNonce => $lAURequestNonce, lAUSigned => $lAUSigned, lAUSignature => $lAUSignature, xApiKey => $xApiKey, requestBody => $requestBody);
     print Dumper($result);
 };
 if ($@) {
@@ -5025,13 +4950,12 @@ lAUCallTime = lAUCallTime_example # String | timestamp in UTC of the API call in
 lAURequestNonce = lAURequestNonce_example # String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response (default to e802ab96-bb3a-4965-9139-5214b9f0f074)
 lAUSigned = lAUSigned_example # String | service specific HTTP headers (default to (ApplAPIKey=yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B),(RBACRole=[FullViewer/Scope/cclabeb0]))
 lAUSignature = lAUSignature_example # String | contains the LAU signature, base64 ecoded (default to U1khA8h9Lm1PqzB99fG6uw==)
-xApiKey = xApiKey_example # String | an api key given to your application (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
-xRecord = xRecord_example # String | a type of API response to get from API Sandbox (default to 0)
+xApiKey = xApiKey_example # String | An API key given to your application to authenticate against the sandbox URL (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
 requestBody =  # Camt.a04.001.03 | Last Changed Payment Transactions Request
 
-try: 
+try:
     # Get Changed Payment Transactions
-    api_response = api_instance.get_changed_payment_transactions_post(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, xApiKey, xRecord, requestBody)
+    api_response = api_instance.get_changed_payment_transactions_post(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, xApiKey, requestBody)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling GetChangedPaymentTransactionsApi->getChangedPaymentTransactionsPost: %s\n" % e)</code></pre>
@@ -5197,30 +5121,7 @@ except ApiException as e:
                 </span>
 
                     <div class="inner description">
-                        an api key given to your application
-                    </div>
-            </div>
-                <div class="inner required">
-                    Required
-                </div>
-        </div>
-    </div>
-</td>
-</tr>
-
-                                  <tr><td style="width:150px;">x-record*</td>
-<td>
-
-
-    <div id="d2e199_getChangedPaymentTransactionsPost_xRecord">
-        <div class="json-schema-view">
-            <div class="primitive">
-                <span class="type">
-                    String
-                </span>
-
-                    <div class="inner description">
-                        a type of API response to get from API Sandbox
+                        An API key given to your application to authenticate against the sandbox URL
                     </div>
             </div>
                 <div class="inner required">
@@ -5772,14 +5673,14 @@ $(document).ready(function() {
                         <ul class="nav nav-tabs nav-tabs-examples">
                           <li class="active"><a href="#examples-GetInvalidEvents-getInvalidEventsPost-0-curl">Curl</a></li>
                           <li class=""><a href="#examples-GetInvalidEvents-getInvalidEventsPost-0-java">Java</a></li>
-                          <li class=""><a href="#examples-GetInvalidEvents-getInvalidEventsPost-0-android">Android</a></li>
-                          <!--<li class=""><a href="#examples-GetInvalidEvents-getInvalidEventsPost-0-groovy">Groovy</a></li>-->
-                          <li class=""><a href="#examples-GetInvalidEvents-getInvalidEventsPost-0-objc">Obj-C</a></li>
+                          <!--<li class=""><a href="#examples-GetInvalidEvents-getInvalidEventsPost-0-android">Android</a></li>
+                          <!<li class=""><a href="#examples-GetInvalidEvents-getInvalidEventsPost-0-groovy">Groovy</a></li>
+                          <li class=""><a href="#examples-GetInvalidEvents-getInvalidEventsPost-0-objc">Obj-C</a></li>-->
                           <li class=""><a href="#examples-GetInvalidEvents-getInvalidEventsPost-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-GetInvalidEvents-getInvalidEventsPost-0-angular">Angular</a></li>-->
+                          <!--<li class=""><a href="#examples-GetInvalidEvents-getInvalidEventsPost-0-angular">Angular</a></li>
                           <li class=""><a href="#examples-GetInvalidEvents-getInvalidEventsPost-0-csharp">C#</a></li>
                           <li class=""><a href="#examples-GetInvalidEvents-getInvalidEventsPost-0-php">PHP</a></li>
-                          <li class=""><a href="#examples-GetInvalidEvents-getInvalidEventsPost-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-GetInvalidEvents-getInvalidEventsPost-0-perl">Perl</a></li>-->
                           <li class=""><a href="#examples-GetInvalidEvents-getInvalidEventsPost-0-python">Python</a></li>
                         </ul>
 
@@ -5799,7 +5700,7 @@ import java.util.*;
 public class GetInvalidEventsApiExample {
 
     public static void main(String[] args) {
-        
+
         GetInvalidEventsApi apiInstance = new GetInvalidEventsApi();
         String lAUApplicationID = lAUApplicationID_example; // String | ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys
         String lAUVersion = lAUVersion_example; // String | version of the LAUSigned header. Mandatory. "1.0" for this first release
@@ -5807,11 +5708,10 @@ public class GetInvalidEventsApiExample {
         String lAURequestNonce = lAURequestNonce_example; // String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response
         String lAUSigned = lAUSigned_example; // String | service specific HTTP headers
         String lAUSignature = lAUSignature_example; // String | contains the LAU signature, base64 ecoded
-        String xApiKey = xApiKey_example; // String | an api key given to your application
-        String xRecord = xRecord_example; // String | a type of API response to get from API Sandbox
+        String xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
         Camt.a05.001.03 requestBody = ; // Camt.a05.001.03 | Payment Event Request
         try {
-            camt.a05.002.03 result = apiInstance.getInvalidEventsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, xApiKey, xRecord, requestBody);
+            camt.a05.002.03 result = apiInstance.getInvalidEventsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, xApiKey, requestBody);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling GetInvalidEventsApi#getInvalidEventsPost");
@@ -5834,11 +5734,10 @@ public class GetInvalidEventsApiExample {
         String lAURequestNonce = lAURequestNonce_example; // String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response
         String lAUSigned = lAUSigned_example; // String | service specific HTTP headers
         String lAUSignature = lAUSignature_example; // String | contains the LAU signature, base64 ecoded
-        String xApiKey = xApiKey_example; // String | an api key given to your application
-        String xRecord = xRecord_example; // String | a type of API response to get from API Sandbox
+        String xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
         Camt.a05.001.03 requestBody = ; // Camt.a05.001.03 | Payment Event Request
         try {
-            camt.a05.002.03 result = apiInstance.getInvalidEventsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, xApiKey, xRecord, requestBody);
+            camt.a05.002.03 result = apiInstance.getInvalidEventsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, xApiKey, requestBody);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling GetInvalidEventsApi#getInvalidEventsPost");
@@ -5858,8 +5757,7 @@ String *lAUCallTime = lAUCallTime_example; // timestamp in UTC of the API call i
 String *lAURequestNonce = lAURequestNonce_example; // a random value generated by the client. Provided with the request and copied by the gpi Connector on the response (default to e802ab96-bb3a-4965-9139-5214b9f0f074)
 String *lAUSigned = lAUSigned_example; // service specific HTTP headers (default to (ApplAPIKey=yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B),(RBACRole=[FullViewer/Scope/cclabeb0]))
 String *lAUSignature = lAUSignature_example; // contains the LAU signature, base64 ecoded (default to U1khA8h9Lm1PqzB99fG6uw==)
-String *xApiKey = xApiKey_example; // an api key given to your application (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
-String *xRecord = xRecord_example; // a type of API response to get from API Sandbox (default to 0)
+String *xApiKey = xApiKey_example; // An API key given to your application to authenticate against the sandbox URL (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
 Camt.a05.001.03 *requestBody = ; // Payment Event Request
 
 GetInvalidEventsApi *apiInstance = [[GetInvalidEventsApi alloc] init];
@@ -5872,7 +5770,6 @@ GetInvalidEventsApi *apiInstance = [[GetInvalidEventsApi alloc] init];
     lAUSigned:lAUSigned
     lAUSignature:lAUSignature
     xApiKey:xApiKey
-    xRecord:xRecord
     requestBody:requestBody
               completionHandler: ^(camt.a05.002.03 output, NSError* error) {
                             if (output) {
@@ -5902,9 +5799,7 @@ var lAUSigned = lAUSigned_example; // {String} service specific HTTP headers
 
 var lAUSignature = lAUSignature_example; // {String} contains the LAU signature, base64 ecoded
 
-var xApiKey = xApiKey_example; // {String} an api key given to your application
-
-var xRecord = xRecord_example; // {String} a type of API response to get from API Sandbox
+var xApiKey = xApiKey_example; // {String} An API key given to your application to authenticate against the sandbox URL
 
 var requestBody = ; // {Camt.a05.001.03} Payment Event Request
 
@@ -5916,7 +5811,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.getInvalidEventsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, xApiKey, xRecord, requestBody, callback);
+api.getInvalidEventsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, xApiKey, requestBody, callback);
 </code></pre>
                             </div>
 
@@ -5936,7 +5831,7 @@ namespace Example
     {
         public void main()
         {
-            
+
             var apiInstance = new GetInvalidEventsApi();
             var lAUApplicationID = lAUApplicationID_example;  // String | ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys (default to 001)
             var lAUVersion = lAUVersion_example;  // String | version of the LAUSigned header. Mandatory. "1.0" for this first release (default to 1.0)
@@ -5944,14 +5839,13 @@ namespace Example
             var lAURequestNonce = lAURequestNonce_example;  // String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response (default to e802ab96-bb3a-4965-9139-5214b9f0f074)
             var lAUSigned = lAUSigned_example;  // String | service specific HTTP headers (default to (ApplAPIKey=yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B),(RBACRole=[FullViewer/Scope/cclabeb0]))
             var lAUSignature = lAUSignature_example;  // String | contains the LAU signature, base64 ecoded (default to U1khA8h9Lm1PqzB99fG6uw==)
-            var xApiKey = xApiKey_example;  // String | an api key given to your application (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
-            var xRecord = xRecord_example;  // String | a type of API response to get from API Sandbox (default to 0)
+            var xApiKey = xApiKey_example;  // String | An API key given to your application to authenticate against the sandbox URL (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
             var requestBody = new Camt.a05.001.03(); // Camt.a05.001.03 | Payment Event Request
 
             try
             {
                 // Get Invalid Events
-                camt.a05.002.03 result = apiInstance.getInvalidEventsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, xApiKey, xRecord, requestBody);
+                camt.a05.002.03 result = apiInstance.getInvalidEventsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, xApiKey, requestBody);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -5975,12 +5869,11 @@ $lAUCallTime = lAUCallTime_example; // String | timestamp in UTC of the API call
 $lAURequestNonce = lAURequestNonce_example; // String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response
 $lAUSigned = lAUSigned_example; // String | service specific HTTP headers
 $lAUSignature = lAUSignature_example; // String | contains the LAU signature, base64 ecoded
-$xApiKey = xApiKey_example; // String | an api key given to your application
-$xRecord = xRecord_example; // String | a type of API response to get from API Sandbox
+$xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
 $requestBody = ; // Camt.a05.001.03 | Payment Event Request
 
 try {
-    $result = $api_instance->getInvalidEventsPost($lAUApplicationID, $lAUVersion, $lAUCallTime, $lAURequestNonce, $lAUSigned, $lAUSignature, $xApiKey, $xRecord, $requestBody);
+    $result = $api_instance->getInvalidEventsPost($lAUApplicationID, $lAUVersion, $lAUCallTime, $lAURequestNonce, $lAUSigned, $lAUSignature, $xApiKey, $requestBody);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GetInvalidEventsApi->getInvalidEventsPost: ', $e->getMessage(), PHP_EOL;
@@ -6000,12 +5893,11 @@ my $lAUCallTime = lAUCallTime_example; # String | timestamp in UTC of the API ca
 my $lAURequestNonce = lAURequestNonce_example; # String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response
 my $lAUSigned = lAUSigned_example; # String | service specific HTTP headers
 my $lAUSignature = lAUSignature_example; # String | contains the LAU signature, base64 ecoded
-my $xApiKey = xApiKey_example; # String | an api key given to your application
-my $xRecord = xRecord_example; # String | a type of API response to get from API Sandbox
+my $xApiKey = xApiKey_example; # String | An API key given to your application to authenticate against the sandbox URL
 my $requestBody = WWW::SwaggerClient::Object::Camt.a05.001.03->new(); # Camt.a05.001.03 | Payment Event Request
 
-eval { 
-    my $result = $api_instance->getInvalidEventsPost(lAUApplicationID => $lAUApplicationID, lAUVersion => $lAUVersion, lAUCallTime => $lAUCallTime, lAURequestNonce => $lAURequestNonce, lAUSigned => $lAUSigned, lAUSignature => $lAUSignature, xApiKey => $xApiKey, xRecord => $xRecord, requestBody => $requestBody);
+eval {
+    my $result = $api_instance->getInvalidEventsPost(lAUApplicationID => $lAUApplicationID, lAUVersion => $lAUVersion, lAUCallTime => $lAUCallTime, lAURequestNonce => $lAURequestNonce, lAUSigned => $lAUSigned, lAUSignature => $lAUSignature, xApiKey => $xApiKey, requestBody => $requestBody);
     print Dumper($result);
 };
 if ($@) {
@@ -6028,13 +5920,12 @@ lAUCallTime = lAUCallTime_example # String | timestamp in UTC of the API call in
 lAURequestNonce = lAURequestNonce_example # String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response (default to e802ab96-bb3a-4965-9139-5214b9f0f074)
 lAUSigned = lAUSigned_example # String | service specific HTTP headers (default to (ApplAPIKey=yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B),(RBACRole=[FullViewer/Scope/cclabeb0]))
 lAUSignature = lAUSignature_example # String | contains the LAU signature, base64 ecoded (default to U1khA8h9Lm1PqzB99fG6uw==)
-xApiKey = xApiKey_example # String | an api key given to your application (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
-xRecord = xRecord_example # String | a type of API response to get from API Sandbox (default to 0)
+xApiKey = xApiKey_example # String | An API key given to your application to authenticate against the sandbox URL (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
 requestBody =  # Camt.a05.001.03 | Payment Event Request
 
-try: 
+try:
     # Get Invalid Events
-    api_response = api_instance.get_invalid_events_post(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, xApiKey, xRecord, requestBody)
+    api_response = api_instance.get_invalid_events_post(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, xApiKey, requestBody)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling GetInvalidEventsApi->getInvalidEventsPost: %s\n" % e)</code></pre>
@@ -6200,30 +6091,7 @@ except ApiException as e:
                 </span>
 
                     <div class="inner description">
-                        an api key given to your application
-                    </div>
-            </div>
-                <div class="inner required">
-                    Required
-                </div>
-        </div>
-    </div>
-</td>
-</tr>
-
-                                  <tr><td style="width:150px;">x-record*</td>
-<td>
-
-
-    <div id="d2e199_getInvalidEventsPost_xRecord">
-        <div class="json-schema-view">
-            <div class="primitive">
-                <span class="type">
-                    String
-                </span>
-
-                    <div class="inner description">
-                        a type of API response to get from API Sandbox
+                        An API key given to your application to authenticate against the sandbox URL
                     </div>
             </div>
                 <div class="inner required">
@@ -6775,14 +6643,14 @@ $(document).ready(function() {
                         <ul class="nav nav-tabs nav-tabs-examples">
                           <li class="active"><a href="#examples-GetPaymentTransactionDetails-getPaymentTransactionDetailsPost-0-curl">Curl</a></li>
                           <li class=""><a href="#examples-GetPaymentTransactionDetails-getPaymentTransactionDetailsPost-0-java">Java</a></li>
-                          <li class=""><a href="#examples-GetPaymentTransactionDetails-getPaymentTransactionDetailsPost-0-android">Android</a></li>
-                          <!--<li class=""><a href="#examples-GetPaymentTransactionDetails-getPaymentTransactionDetailsPost-0-groovy">Groovy</a></li>-->
-                          <li class=""><a href="#examples-GetPaymentTransactionDetails-getPaymentTransactionDetailsPost-0-objc">Obj-C</a></li>
+                          <!--<li class=""><a href="#examples-GetPaymentTransactionDetails-getPaymentTransactionDetailsPost-0-android">Android</a></li>
+                          <!<li class=""><a href="#examples-GetPaymentTransactionDetails-getPaymentTransactionDetailsPost-0-groovy">Groovy</a></li>
+                          <li class=""><a href="#examples-GetPaymentTransactionDetails-getPaymentTransactionDetailsPost-0-objc">Obj-C</a></li>-->
                           <li class=""><a href="#examples-GetPaymentTransactionDetails-getPaymentTransactionDetailsPost-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-GetPaymentTransactionDetails-getPaymentTransactionDetailsPost-0-angular">Angular</a></li>-->
+                          <!--<li class=""><a href="#examples-GetPaymentTransactionDetails-getPaymentTransactionDetailsPost-0-angular">Angular</a></li>
                           <li class=""><a href="#examples-GetPaymentTransactionDetails-getPaymentTransactionDetailsPost-0-csharp">C#</a></li>
                           <li class=""><a href="#examples-GetPaymentTransactionDetails-getPaymentTransactionDetailsPost-0-php">PHP</a></li>
-                          <li class=""><a href="#examples-GetPaymentTransactionDetails-getPaymentTransactionDetailsPost-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-GetPaymentTransactionDetails-getPaymentTransactionDetailsPost-0-perl">Perl</a></li>-->
                           <li class=""><a href="#examples-GetPaymentTransactionDetails-getPaymentTransactionDetailsPost-0-python">Python</a></li>
                         </ul>
 
@@ -6802,7 +6670,7 @@ import java.util.*;
 public class GetPaymentTransactionDetailsApiExample {
 
     public static void main(String[] args) {
-        
+
         GetPaymentTransactionDetailsApi apiInstance = new GetPaymentTransactionDetailsApi();
         String lAUApplicationID = lAUApplicationID_example; // String | ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys
         String lAUVersion = lAUVersion_example; // String | version of the LAUSigned header. Mandatory. "1.0" for this first release
@@ -6810,11 +6678,10 @@ public class GetPaymentTransactionDetailsApiExample {
         String lAURequestNonce = lAURequestNonce_example; // String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response
         String lAUSigned = lAUSigned_example; // String | service specific HTTP headers
         String lAUSignature = lAUSignature_example; // String | contains the LAU signature, base64 ecoded
-        String xApiKey = xApiKey_example; // String | an api key given to your application
-        String xRecord = xRecord_example; // String | a type of API response to get from API Sandbox
+        String xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
         Camt.a02.001.03 requestBody = ; // Camt.a02.001.03 | Payment Transaction Request
         try {
-            camt.a02.002.03 result = apiInstance.getPaymentTransactionDetailsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, xApiKey, xRecord, requestBody);
+            camt.a02.002.03 result = apiInstance.getPaymentTransactionDetailsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, xApiKey, requestBody);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling GetPaymentTransactionDetailsApi#getPaymentTransactionDetailsPost");
@@ -6837,11 +6704,10 @@ public class GetPaymentTransactionDetailsApiExample {
         String lAURequestNonce = lAURequestNonce_example; // String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response
         String lAUSigned = lAUSigned_example; // String | service specific HTTP headers
         String lAUSignature = lAUSignature_example; // String | contains the LAU signature, base64 ecoded
-        String xApiKey = xApiKey_example; // String | an api key given to your application
-        String xRecord = xRecord_example; // String | a type of API response to get from API Sandbox
+        String xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
         Camt.a02.001.03 requestBody = ; // Camt.a02.001.03 | Payment Transaction Request
         try {
-            camt.a02.002.03 result = apiInstance.getPaymentTransactionDetailsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, xApiKey, xRecord, requestBody);
+            camt.a02.002.03 result = apiInstance.getPaymentTransactionDetailsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, xApiKey, requestBody);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling GetPaymentTransactionDetailsApi#getPaymentTransactionDetailsPost");
@@ -6861,8 +6727,7 @@ String *lAUCallTime = lAUCallTime_example; // timestamp in UTC of the API call i
 String *lAURequestNonce = lAURequestNonce_example; // a random value generated by the client. Provided with the request and copied by the gpi Connector on the response (default to e802ab96-bb3a-4965-9139-5214b9f0f074)
 String *lAUSigned = lAUSigned_example; // service specific HTTP headers (default to (ApplAPIKey=yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B),(RBACRole=[FullViewer/Scope/cclabeb0]))
 String *lAUSignature = lAUSignature_example; // contains the LAU signature, base64 ecoded (default to U1khA8h9Lm1PqzB99fG6uw==)
-String *xApiKey = xApiKey_example; // an api key given to your application (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
-String *xRecord = xRecord_example; // a type of API response to get from API Sandbox (default to 0)
+String *xApiKey = xApiKey_example; // An API key given to your application to authenticate against the sandbox URL (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
 Camt.a02.001.03 *requestBody = ; // Payment Transaction Request
 
 GetPaymentTransactionDetailsApi *apiInstance = [[GetPaymentTransactionDetailsApi alloc] init];
@@ -6875,7 +6740,6 @@ GetPaymentTransactionDetailsApi *apiInstance = [[GetPaymentTransactionDetailsApi
     lAUSigned:lAUSigned
     lAUSignature:lAUSignature
     xApiKey:xApiKey
-    xRecord:xRecord
     requestBody:requestBody
               completionHandler: ^(camt.a02.002.03 output, NSError* error) {
                             if (output) {
@@ -6905,9 +6769,7 @@ var lAUSigned = lAUSigned_example; // {String} service specific HTTP headers
 
 var lAUSignature = lAUSignature_example; // {String} contains the LAU signature, base64 ecoded
 
-var xApiKey = xApiKey_example; // {String} an api key given to your application
-
-var xRecord = xRecord_example; // {String} a type of API response to get from API Sandbox
+var xApiKey = xApiKey_example; // {String} An API key given to your application to authenticate against the sandbox URL
 
 var requestBody = ; // {Camt.a02.001.03} Payment Transaction Request
 
@@ -6919,7 +6781,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.getPaymentTransactionDetailsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, xApiKey, xRecord, requestBody, callback);
+api.getPaymentTransactionDetailsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, xApiKey, requestBody, callback);
 </code></pre>
                             </div>
 
@@ -6939,7 +6801,7 @@ namespace Example
     {
         public void main()
         {
-            
+
             var apiInstance = new GetPaymentTransactionDetailsApi();
             var lAUApplicationID = lAUApplicationID_example;  // String | ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys (default to 001)
             var lAUVersion = lAUVersion_example;  // String | version of the LAUSigned header. Mandatory. "1.0" for this first release (default to 1.0)
@@ -6947,14 +6809,13 @@ namespace Example
             var lAURequestNonce = lAURequestNonce_example;  // String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response (default to e802ab96-bb3a-4965-9139-5214b9f0f074)
             var lAUSigned = lAUSigned_example;  // String | service specific HTTP headers (default to (ApplAPIKey=yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B),(RBACRole=[FullViewer/Scope/cclabeb0]))
             var lAUSignature = lAUSignature_example;  // String | contains the LAU signature, base64 ecoded (default to U1khA8h9Lm1PqzB99fG6uw==)
-            var xApiKey = xApiKey_example;  // String | an api key given to your application (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
-            var xRecord = xRecord_example;  // String | a type of API response to get from API Sandbox (default to 0)
+            var xApiKey = xApiKey_example;  // String | An API key given to your application to authenticate against the sandbox URL (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
             var requestBody = new Camt.a02.001.03(); // Camt.a02.001.03 | Payment Transaction Request
 
             try
             {
                 // Get Payment Transaction Details
-                camt.a02.002.03 result = apiInstance.getPaymentTransactionDetailsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, xApiKey, xRecord, requestBody);
+                camt.a02.002.03 result = apiInstance.getPaymentTransactionDetailsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, xApiKey, requestBody);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -6978,12 +6839,11 @@ $lAUCallTime = lAUCallTime_example; // String | timestamp in UTC of the API call
 $lAURequestNonce = lAURequestNonce_example; // String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response
 $lAUSigned = lAUSigned_example; // String | service specific HTTP headers
 $lAUSignature = lAUSignature_example; // String | contains the LAU signature, base64 ecoded
-$xApiKey = xApiKey_example; // String | an api key given to your application
-$xRecord = xRecord_example; // String | a type of API response to get from API Sandbox
+$xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
 $requestBody = ; // Camt.a02.001.03 | Payment Transaction Request
 
 try {
-    $result = $api_instance->getPaymentTransactionDetailsPost($lAUApplicationID, $lAUVersion, $lAUCallTime, $lAURequestNonce, $lAUSigned, $lAUSignature, $xApiKey, $xRecord, $requestBody);
+    $result = $api_instance->getPaymentTransactionDetailsPost($lAUApplicationID, $lAUVersion, $lAUCallTime, $lAURequestNonce, $lAUSigned, $lAUSignature, $xApiKey, $requestBody);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GetPaymentTransactionDetailsApi->getPaymentTransactionDetailsPost: ', $e->getMessage(), PHP_EOL;
@@ -7003,12 +6863,11 @@ my $lAUCallTime = lAUCallTime_example; # String | timestamp in UTC of the API ca
 my $lAURequestNonce = lAURequestNonce_example; # String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response
 my $lAUSigned = lAUSigned_example; # String | service specific HTTP headers
 my $lAUSignature = lAUSignature_example; # String | contains the LAU signature, base64 ecoded
-my $xApiKey = xApiKey_example; # String | an api key given to your application
-my $xRecord = xRecord_example; # String | a type of API response to get from API Sandbox
+my $xApiKey = xApiKey_example; # String | An API key given to your application to authenticate against the sandbox URL
 my $requestBody = WWW::SwaggerClient::Object::Camt.a02.001.03->new(); # Camt.a02.001.03 | Payment Transaction Request
 
-eval { 
-    my $result = $api_instance->getPaymentTransactionDetailsPost(lAUApplicationID => $lAUApplicationID, lAUVersion => $lAUVersion, lAUCallTime => $lAUCallTime, lAURequestNonce => $lAURequestNonce, lAUSigned => $lAUSigned, lAUSignature => $lAUSignature, xApiKey => $xApiKey, xRecord => $xRecord, requestBody => $requestBody);
+eval {
+    my $result = $api_instance->getPaymentTransactionDetailsPost(lAUApplicationID => $lAUApplicationID, lAUVersion => $lAUVersion, lAUCallTime => $lAUCallTime, lAURequestNonce => $lAURequestNonce, lAUSigned => $lAUSigned, lAUSignature => $lAUSignature, xApiKey => $xApiKey, requestBody => $requestBody);
     print Dumper($result);
 };
 if ($@) {
@@ -7031,13 +6890,12 @@ lAUCallTime = lAUCallTime_example # String | timestamp in UTC of the API call in
 lAURequestNonce = lAURequestNonce_example # String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response (default to e802ab96-bb3a-4965-9139-5214b9f0f074)
 lAUSigned = lAUSigned_example # String | service specific HTTP headers (default to (ApplAPIKey=yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B),(RBACRole=[FullViewer/Scope/cclabeb0]))
 lAUSignature = lAUSignature_example # String | contains the LAU signature, base64 ecoded (default to U1khA8h9Lm1PqzB99fG6uw==)
-xApiKey = xApiKey_example # String | an api key given to your application (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
-xRecord = xRecord_example # String | a type of API response to get from API Sandbox (default to 0)
+xApiKey = xApiKey_example # String | An API key given to your application to authenticate against the sandbox URL (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
 requestBody =  # Camt.a02.001.03 | Payment Transaction Request
 
-try: 
+try:
     # Get Payment Transaction Details
-    api_response = api_instance.get_payment_transaction_details_post(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, xApiKey, xRecord, requestBody)
+    api_response = api_instance.get_payment_transaction_details_post(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, xApiKey, requestBody)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling GetPaymentTransactionDetailsApi->getPaymentTransactionDetailsPost: %s\n" % e)</code></pre>
@@ -7203,30 +7061,7 @@ except ApiException as e:
                 </span>
 
                     <div class="inner description">
-                        an api key given to your application
-                    </div>
-            </div>
-                <div class="inner required">
-                    Required
-                </div>
-        </div>
-    </div>
-</td>
-</tr>
-
-                                  <tr><td style="width:150px;">x-record*</td>
-<td>
-
-
-    <div id="d2e199_getPaymentTransactionDetailsPost_xRecord">
-        <div class="json-schema-view">
-            <div class="primitive">
-                <span class="type">
-                    String
-                </span>
-
-                    <div class="inner description">
-                        a type of API response to get from API Sandbox
+                        An API key given to your application to authenticate against the sandbox URL
                     </div>
             </div>
                 <div class="inner required">
@@ -7821,14 +7656,14 @@ $(document).ready(function() {
                         <ul class="nav nav-tabs nav-tabs-examples">
                           <li class="active"><a href="#examples-GetPaymentTransactions-getPaymentTransactionsPost-0-curl">Curl</a></li>
                           <li class=""><a href="#examples-GetPaymentTransactions-getPaymentTransactionsPost-0-java">Java</a></li>
-                          <li class=""><a href="#examples-GetPaymentTransactions-getPaymentTransactionsPost-0-android">Android</a></li>
-                          <!--<li class=""><a href="#examples-GetPaymentTransactions-getPaymentTransactionsPost-0-groovy">Groovy</a></li>-->
-                          <li class=""><a href="#examples-GetPaymentTransactions-getPaymentTransactionsPost-0-objc">Obj-C</a></li>
+                          <!--<li class=""><a href="#examples-GetPaymentTransactions-getPaymentTransactionsPost-0-android">Android</a></li>
+                          <!<li class=""><a href="#examples-GetPaymentTransactions-getPaymentTransactionsPost-0-groovy">Groovy</a></li>
+                          <li class=""><a href="#examples-GetPaymentTransactions-getPaymentTransactionsPost-0-objc">Obj-C</a></li>-->
                           <li class=""><a href="#examples-GetPaymentTransactions-getPaymentTransactionsPost-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-GetPaymentTransactions-getPaymentTransactionsPost-0-angular">Angular</a></li>-->
+                          <!--<li class=""><a href="#examples-GetPaymentTransactions-getPaymentTransactionsPost-0-angular">Angular</a></li>
                           <li class=""><a href="#examples-GetPaymentTransactions-getPaymentTransactionsPost-0-csharp">C#</a></li>
                           <li class=""><a href="#examples-GetPaymentTransactions-getPaymentTransactionsPost-0-php">PHP</a></li>
-                          <li class=""><a href="#examples-GetPaymentTransactions-getPaymentTransactionsPost-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-GetPaymentTransactions-getPaymentTransactionsPost-0-perl">Perl</a></li>-->
                           <li class=""><a href="#examples-GetPaymentTransactions-getPaymentTransactionsPost-0-python">Python</a></li>
                         </ul>
 
@@ -7848,7 +7683,7 @@ import java.util.*;
 public class GetPaymentTransactionsApiExample {
 
     public static void main(String[] args) {
-        
+
         GetPaymentTransactionsApi apiInstance = new GetPaymentTransactionsApi();
         String lAUApplicationID = lAUApplicationID_example; // String | ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys
         String lAUVersion = lAUVersion_example; // String | version of the LAUSigned header. Mandatory. "1.0" for this first release
@@ -7856,11 +7691,10 @@ public class GetPaymentTransactionsApiExample {
         String lAURequestNonce = lAURequestNonce_example; // String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response
         String lAUSigned = lAUSigned_example; // String | service specific HTTP headers
         String lAUSignature = lAUSignature_example; // String | contains the LAU signature, base64 ecoded
-        String xApiKey = xApiKey_example; // String | an api key given to your application
-        String xRecord = xRecord_example; // String | a type of API response to get from API Sandbox
+        String xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
         Camt.a03.001.03 requestBody = ; // Camt.a03.001.03 | Payment Transactions Request
         try {
-            camt.a03.002.03 result = apiInstance.getPaymentTransactionsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, xApiKey, xRecord, requestBody);
+            camt.a03.002.03 result = apiInstance.getPaymentTransactionsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, xApiKey, requestBody);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling GetPaymentTransactionsApi#getPaymentTransactionsPost");
@@ -7883,11 +7717,10 @@ public class GetPaymentTransactionsApiExample {
         String lAURequestNonce = lAURequestNonce_example; // String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response
         String lAUSigned = lAUSigned_example; // String | service specific HTTP headers
         String lAUSignature = lAUSignature_example; // String | contains the LAU signature, base64 ecoded
-        String xApiKey = xApiKey_example; // String | an api key given to your application
-        String xRecord = xRecord_example; // String | a type of API response to get from API Sandbox
+        String xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
         Camt.a03.001.03 requestBody = ; // Camt.a03.001.03 | Payment Transactions Request
         try {
-            camt.a03.002.03 result = apiInstance.getPaymentTransactionsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, xApiKey, xRecord, requestBody);
+            camt.a03.002.03 result = apiInstance.getPaymentTransactionsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, xApiKey, requestBody);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling GetPaymentTransactionsApi#getPaymentTransactionsPost");
@@ -7907,8 +7740,7 @@ String *lAUCallTime = lAUCallTime_example; // timestamp in UTC of the API call i
 String *lAURequestNonce = lAURequestNonce_example; // a random value generated by the client. Provided with the request and copied by the gpi Connector on the response (default to e802ab96-bb3a-4965-9139-5214b9f0f074)
 String *lAUSigned = lAUSigned_example; // service specific HTTP headers (default to (ApplAPIKey=yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B),(RBACRole=[FullViewer/Scope/cclabeb0]))
 String *lAUSignature = lAUSignature_example; // contains the LAU signature, base64 ecoded (default to U1khA8h9Lm1PqzB99fG6uw==)
-String *xApiKey = xApiKey_example; // an api key given to your application (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
-String *xRecord = xRecord_example; // a type of API response to get from API Sandbox (default to 0)
+String *xApiKey = xApiKey_example; // An API key given to your application to authenticate against the sandbox URL (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
 Camt.a03.001.03 *requestBody = ; // Payment Transactions Request
 
 GetPaymentTransactionsApi *apiInstance = [[GetPaymentTransactionsApi alloc] init];
@@ -7921,7 +7753,6 @@ GetPaymentTransactionsApi *apiInstance = [[GetPaymentTransactionsApi alloc] init
     lAUSigned:lAUSigned
     lAUSignature:lAUSignature
     xApiKey:xApiKey
-    xRecord:xRecord
     requestBody:requestBody
               completionHandler: ^(camt.a03.002.03 output, NSError* error) {
                             if (output) {
@@ -7951,9 +7782,7 @@ var lAUSigned = lAUSigned_example; // {String} service specific HTTP headers
 
 var lAUSignature = lAUSignature_example; // {String} contains the LAU signature, base64 ecoded
 
-var xApiKey = xApiKey_example; // {String} an api key given to your application
-
-var xRecord = xRecord_example; // {String} a type of API response to get from API Sandbox
+var xApiKey = xApiKey_example; // {String} An API key given to your application to authenticate against the sandbox URL
 
 var requestBody = ; // {Camt.a03.001.03} Payment Transactions Request
 
@@ -7965,7 +7794,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.getPaymentTransactionsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, xApiKey, xRecord, requestBody, callback);
+api.getPaymentTransactionsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, xApiKey, requestBody, callback);
 </code></pre>
                             </div>
 
@@ -7985,7 +7814,7 @@ namespace Example
     {
         public void main()
         {
-            
+
             var apiInstance = new GetPaymentTransactionsApi();
             var lAUApplicationID = lAUApplicationID_example;  // String | ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys (default to 001)
             var lAUVersion = lAUVersion_example;  // String | version of the LAUSigned header. Mandatory. "1.0" for this first release (default to 1.0)
@@ -7993,14 +7822,13 @@ namespace Example
             var lAURequestNonce = lAURequestNonce_example;  // String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response (default to e802ab96-bb3a-4965-9139-5214b9f0f074)
             var lAUSigned = lAUSigned_example;  // String | service specific HTTP headers (default to (ApplAPIKey=yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B),(RBACRole=[FullViewer/Scope/cclabeb0]))
             var lAUSignature = lAUSignature_example;  // String | contains the LAU signature, base64 ecoded (default to U1khA8h9Lm1PqzB99fG6uw==)
-            var xApiKey = xApiKey_example;  // String | an api key given to your application (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
-            var xRecord = xRecord_example;  // String | a type of API response to get from API Sandbox (default to 0)
+            var xApiKey = xApiKey_example;  // String | An API key given to your application to authenticate against the sandbox URL (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
             var requestBody = new Camt.a03.001.03(); // Camt.a03.001.03 | Payment Transactions Request
 
             try
             {
                 // Get Payment Transactions
-                camt.a03.002.03 result = apiInstance.getPaymentTransactionsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, xApiKey, xRecord, requestBody);
+                camt.a03.002.03 result = apiInstance.getPaymentTransactionsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, xApiKey, requestBody);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -8024,12 +7852,11 @@ $lAUCallTime = lAUCallTime_example; // String | timestamp in UTC of the API call
 $lAURequestNonce = lAURequestNonce_example; // String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response
 $lAUSigned = lAUSigned_example; // String | service specific HTTP headers
 $lAUSignature = lAUSignature_example; // String | contains the LAU signature, base64 ecoded
-$xApiKey = xApiKey_example; // String | an api key given to your application
-$xRecord = xRecord_example; // String | a type of API response to get from API Sandbox
+$xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
 $requestBody = ; // Camt.a03.001.03 | Payment Transactions Request
 
 try {
-    $result = $api_instance->getPaymentTransactionsPost($lAUApplicationID, $lAUVersion, $lAUCallTime, $lAURequestNonce, $lAUSigned, $lAUSignature, $xApiKey, $xRecord, $requestBody);
+    $result = $api_instance->getPaymentTransactionsPost($lAUApplicationID, $lAUVersion, $lAUCallTime, $lAURequestNonce, $lAUSigned, $lAUSignature, $xApiKey, $requestBody);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GetPaymentTransactionsApi->getPaymentTransactionsPost: ', $e->getMessage(), PHP_EOL;
@@ -8049,12 +7876,11 @@ my $lAUCallTime = lAUCallTime_example; # String | timestamp in UTC of the API ca
 my $lAURequestNonce = lAURequestNonce_example; # String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response
 my $lAUSigned = lAUSigned_example; # String | service specific HTTP headers
 my $lAUSignature = lAUSignature_example; # String | contains the LAU signature, base64 ecoded
-my $xApiKey = xApiKey_example; # String | an api key given to your application
-my $xRecord = xRecord_example; # String | a type of API response to get from API Sandbox
+my $xApiKey = xApiKey_example; # String | An API key given to your application to authenticate against the sandbox URL
 my $requestBody = WWW::SwaggerClient::Object::Camt.a03.001.03->new(); # Camt.a03.001.03 | Payment Transactions Request
 
-eval { 
-    my $result = $api_instance->getPaymentTransactionsPost(lAUApplicationID => $lAUApplicationID, lAUVersion => $lAUVersion, lAUCallTime => $lAUCallTime, lAURequestNonce => $lAURequestNonce, lAUSigned => $lAUSigned, lAUSignature => $lAUSignature, xApiKey => $xApiKey, xRecord => $xRecord, requestBody => $requestBody);
+eval {
+    my $result = $api_instance->getPaymentTransactionsPost(lAUApplicationID => $lAUApplicationID, lAUVersion => $lAUVersion, lAUCallTime => $lAUCallTime, lAURequestNonce => $lAURequestNonce, lAUSigned => $lAUSigned, lAUSignature => $lAUSignature, xApiKey => $xApiKey, requestBody => $requestBody);
     print Dumper($result);
 };
 if ($@) {
@@ -8077,13 +7903,12 @@ lAUCallTime = lAUCallTime_example # String | timestamp in UTC of the API call in
 lAURequestNonce = lAURequestNonce_example # String | a random value generated by the client. Provided with the request and copied by the gpi Connector on the response (default to e802ab96-bb3a-4965-9139-5214b9f0f074)
 lAUSigned = lAUSigned_example # String | service specific HTTP headers (default to (ApplAPIKey=yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B),(RBACRole=[FullViewer/Scope/cclabeb0]))
 lAUSignature = lAUSignature_example # String | contains the LAU signature, base64 ecoded (default to U1khA8h9Lm1PqzB99fG6uw==)
-xApiKey = xApiKey_example # String | an api key given to your application (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
-xRecord = xRecord_example # String | a type of API response to get from API Sandbox (default to 0)
+xApiKey = xApiKey_example # String | An API key given to your application to authenticate against the sandbox URL (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
 requestBody =  # Camt.a03.001.03 | Payment Transactions Request
 
-try: 
+try:
     # Get Payment Transactions
-    api_response = api_instance.get_payment_transactions_post(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, xApiKey, xRecord, requestBody)
+    api_response = api_instance.get_payment_transactions_post(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, xApiKey, requestBody)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling GetPaymentTransactionsApi->getPaymentTransactionsPost: %s\n" % e)</code></pre>
@@ -8249,30 +8074,7 @@ except ApiException as e:
                 </span>
 
                     <div class="inner description">
-                        an api key given to your application
-                    </div>
-            </div>
-                <div class="inner required">
-                    Required
-                </div>
-        </div>
-    </div>
-</td>
-</tr>
-
-                                  <tr><td style="width:150px;">x-record*</td>
-<td>
-
-
-    <div id="d2e199_getPaymentTransactionsPost_xRecord">
-        <div class="json-schema-view">
-            <div class="primitive">
-                <span class="type">
-                    String
-                </span>
-
-                    <div class="inner description">
-                        a type of API response to get from API Sandbox
+                        An API key given to your application to authenticate against the sandbox URL
                     </div>
             </div>
                 <div class="inner required">
@@ -8867,14 +8669,14 @@ $(document).ready(function() {
                         <ul class="nav nav-tabs nav-tabs-examples">
                           <li class="active"><a href="#examples-StatusConfirmations-statusConfirmationsPost-0-curl">Curl</a></li>
                           <li class=""><a href="#examples-StatusConfirmations-statusConfirmationsPost-0-java">Java</a></li>
-                          <li class=""><a href="#examples-StatusConfirmations-statusConfirmationsPost-0-android">Android</a></li>
-                          <!--<li class=""><a href="#examples-StatusConfirmations-statusConfirmationsPost-0-groovy">Groovy</a></li>-->
-                          <li class=""><a href="#examples-StatusConfirmations-statusConfirmationsPost-0-objc">Obj-C</a></li>
+                          <!--<li class=""><a href="#examples-StatusConfirmations-statusConfirmationsPost-0-android">Android</a></li>
+                          <!<li class=""><a href="#examples-StatusConfirmations-statusConfirmationsPost-0-groovy">Groovy</a></li>
+                          <li class=""><a href="#examples-StatusConfirmations-statusConfirmationsPost-0-objc">Obj-C</a></li>-->
                           <li class=""><a href="#examples-StatusConfirmations-statusConfirmationsPost-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-StatusConfirmations-statusConfirmationsPost-0-angular">Angular</a></li>-->
+                          <!--<li class=""><a href="#examples-StatusConfirmations-statusConfirmationsPost-0-angular">Angular</a></li>
                           <li class=""><a href="#examples-StatusConfirmations-statusConfirmationsPost-0-csharp">C#</a></li>
                           <li class=""><a href="#examples-StatusConfirmations-statusConfirmationsPost-0-php">PHP</a></li>
-                          <li class=""><a href="#examples-StatusConfirmations-statusConfirmationsPost-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-StatusConfirmations-statusConfirmationsPost-0-perl">Perl</a></li>-->
                           <li class=""><a href="#examples-StatusConfirmations-statusConfirmationsPost-0-python">Python</a></li>
                         </ul>
 
@@ -8894,7 +8696,7 @@ import java.util.*;
 public class StatusConfirmationsApiExample {
 
     public static void main(String[] args) {
-        
+
         StatusConfirmationsApi apiInstance = new StatusConfirmationsApi();
         String lAUApplicationID = lAUApplicationID_example; // String | ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys
         String lAUVersion = lAUVersion_example; // String | version of the LAUSigned header. Mandatory. "1.0" for this first release
@@ -8903,11 +8705,10 @@ public class StatusConfirmationsApiExample {
         String lAUSigned = lAUSigned_example; // String | service specific HTTP headers
         String lAUSignature = lAUSignature_example; // String | contains the LAU signature, base64 encoded
         Boolean signatureRequired = true; // Boolean | a field indicating that a Signature is required
-        String xApiKey = xApiKey_example; // String | an api key given to your application
-        String xRecord = xRecord_example; // String | a type of API response to get from API Sandbox
+        String xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
         Camt.a01.001.03 requestBody = ; // Camt.a01.001.03 | Status Confirmation Request
         try {
-            camt.a01.002.02 result = apiInstance.statusConfirmationsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, signatureRequired, xApiKey, xRecord, requestBody);
+            camt.a01.002.02 result = apiInstance.statusConfirmationsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, signatureRequired, xApiKey, requestBody);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling StatusConfirmationsApi#statusConfirmationsPost");
@@ -8931,11 +8732,10 @@ public class StatusConfirmationsApiExample {
         String lAUSigned = lAUSigned_example; // String | service specific HTTP headers
         String lAUSignature = lAUSignature_example; // String | contains the LAU signature, base64 encoded
         Boolean signatureRequired = true; // Boolean | a field indicating that a Signature is required
-        String xApiKey = xApiKey_example; // String | an api key given to your application
-        String xRecord = xRecord_example; // String | a type of API response to get from API Sandbox
+        String xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
         Camt.a01.001.03 requestBody = ; // Camt.a01.001.03 | Status Confirmation Request
         try {
-            camt.a01.002.02 result = apiInstance.statusConfirmationsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, signatureRequired, xApiKey, xRecord, requestBody);
+            camt.a01.002.02 result = apiInstance.statusConfirmationsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, signatureRequired, xApiKey, requestBody);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling StatusConfirmationsApi#statusConfirmationsPost");
@@ -8956,8 +8756,7 @@ String *lAURequestNonce = lAURequestNonce_example; // a random value generated b
 String *lAUSigned = lAUSigned_example; // service specific HTTP headers (default to (ApplAPIKey=yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B),(RBACRole=[Update/Scope/cclabeb0]))
 String *lAUSignature = lAUSignature_example; // contains the LAU signature, base64 encoded (default to U1khA8h9Lm1PqzB99fG6uw==)
 Boolean *signatureRequired = true; // a field indicating that a Signature is required (default to true)
-String *xApiKey = xApiKey_example; // an api key given to your application (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
-String *xRecord = xRecord_example; // a type of API response to get from API Sandbox (default to 0)
+String *xApiKey = xApiKey_example; // An API key given to your application to authenticate against the sandbox URL (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
 Camt.a01.001.03 *requestBody = ; // Status Confirmation Request
 
 StatusConfirmationsApi *apiInstance = [[StatusConfirmationsApi alloc] init];
@@ -8971,7 +8770,6 @@ StatusConfirmationsApi *apiInstance = [[StatusConfirmationsApi alloc] init];
     lAUSignature:lAUSignature
     signatureRequired:signatureRequired
     xApiKey:xApiKey
-    xRecord:xRecord
     requestBody:requestBody
               completionHandler: ^(camt.a01.002.02 output, NSError* error) {
                             if (output) {
@@ -9003,9 +8801,7 @@ var lAUSignature = lAUSignature_example; // {String} contains the LAU signature,
 
 var signatureRequired = true; // {Boolean} a field indicating that a Signature is required
 
-var xApiKey = xApiKey_example; // {String} an api key given to your application
-
-var xRecord = xRecord_example; // {String} a type of API response to get from API Sandbox
+var xApiKey = xApiKey_example; // {String} An API key given to your application to authenticate against the sandbox URL
 
 var requestBody = ; // {Camt.a01.001.03} Status Confirmation Request
 
@@ -9017,7 +8813,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.statusConfirmationsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, signatureRequired, xApiKey, xRecord, requestBody, callback);
+api.statusConfirmationsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, signatureRequired, xApiKey, requestBody, callback);
 </code></pre>
                             </div>
 
@@ -9037,7 +8833,7 @@ namespace Example
     {
         public void main()
         {
-            
+
             var apiInstance = new StatusConfirmationsApi();
             var lAUApplicationID = lAUApplicationID_example;  // String | ID that identifies the application generationg the API and used by the gpi Connector to retrieve the related LAU keys (default to 001)
             var lAUVersion = lAUVersion_example;  // String | version of the LAUSigned header. Mandatory. "1.0" for this first release (default to 1.0)
@@ -9046,14 +8842,13 @@ namespace Example
             var lAUSigned = lAUSigned_example;  // String | service specific HTTP headers (default to (ApplAPIKey=yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B),(RBACRole=[Update/Scope/cclabeb0]))
             var lAUSignature = lAUSignature_example;  // String | contains the LAU signature, base64 encoded (default to U1khA8h9Lm1PqzB99fG6uw==)
             var signatureRequired = true;  // Boolean | a field indicating that a Signature is required (default to true)
-            var xApiKey = xApiKey_example;  // String | an api key given to your application (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
-            var xRecord = xRecord_example;  // String | a type of API response to get from API Sandbox (default to 0)
+            var xApiKey = xApiKey_example;  // String | An API key given to your application to authenticate against the sandbox URL (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
             var requestBody = new Camt.a01.001.03(); // Camt.a01.001.03 | Status Confirmation Request
 
             try
             {
                 // Status Confirmations
-                camt.a01.002.02 result = apiInstance.statusConfirmationsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, signatureRequired, xApiKey, xRecord, requestBody);
+                camt.a01.002.02 result = apiInstance.statusConfirmationsPost(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, signatureRequired, xApiKey, requestBody);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -9078,12 +8873,11 @@ $lAURequestNonce = lAURequestNonce_example; // String | a random value generated
 $lAUSigned = lAUSigned_example; // String | service specific HTTP headers
 $lAUSignature = lAUSignature_example; // String | contains the LAU signature, base64 encoded
 $signatureRequired = true; // Boolean | a field indicating that a Signature is required
-$xApiKey = xApiKey_example; // String | an api key given to your application
-$xRecord = xRecord_example; // String | a type of API response to get from API Sandbox
+$xApiKey = xApiKey_example; // String | An API key given to your application to authenticate against the sandbox URL
 $requestBody = ; // Camt.a01.001.03 | Status Confirmation Request
 
 try {
-    $result = $api_instance->statusConfirmationsPost($lAUApplicationID, $lAUVersion, $lAUCallTime, $lAURequestNonce, $lAUSigned, $lAUSignature, $signatureRequired, $xApiKey, $xRecord, $requestBody);
+    $result = $api_instance->statusConfirmationsPost($lAUApplicationID, $lAUVersion, $lAUCallTime, $lAURequestNonce, $lAUSigned, $lAUSignature, $signatureRequired, $xApiKey, $requestBody);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StatusConfirmationsApi->statusConfirmationsPost: ', $e->getMessage(), PHP_EOL;
@@ -9104,12 +8898,11 @@ my $lAURequestNonce = lAURequestNonce_example; # String | a random value generat
 my $lAUSigned = lAUSigned_example; # String | service specific HTTP headers
 my $lAUSignature = lAUSignature_example; # String | contains the LAU signature, base64 encoded
 my $signatureRequired = true; # Boolean | a field indicating that a Signature is required
-my $xApiKey = xApiKey_example; # String | an api key given to your application
-my $xRecord = xRecord_example; # String | a type of API response to get from API Sandbox
+my $xApiKey = xApiKey_example; # String | An API key given to your application to authenticate against the sandbox URL
 my $requestBody = WWW::SwaggerClient::Object::Camt.a01.001.03->new(); # Camt.a01.001.03 | Status Confirmation Request
 
-eval { 
-    my $result = $api_instance->statusConfirmationsPost(lAUApplicationID => $lAUApplicationID, lAUVersion => $lAUVersion, lAUCallTime => $lAUCallTime, lAURequestNonce => $lAURequestNonce, lAUSigned => $lAUSigned, lAUSignature => $lAUSignature, signatureRequired => $signatureRequired, xApiKey => $xApiKey, xRecord => $xRecord, requestBody => $requestBody);
+eval {
+    my $result = $api_instance->statusConfirmationsPost(lAUApplicationID => $lAUApplicationID, lAUVersion => $lAUVersion, lAUCallTime => $lAUCallTime, lAURequestNonce => $lAURequestNonce, lAUSigned => $lAUSigned, lAUSignature => $lAUSignature, signatureRequired => $signatureRequired, xApiKey => $xApiKey, requestBody => $requestBody);
     print Dumper($result);
 };
 if ($@) {
@@ -9133,13 +8926,12 @@ lAURequestNonce = lAURequestNonce_example # String | a random value generated by
 lAUSigned = lAUSigned_example # String | service specific HTTP headers (default to (ApplAPIKey=yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B),(RBACRole=[Update/Scope/cclabeb0]))
 lAUSignature = lAUSignature_example # String | contains the LAU signature, base64 encoded (default to U1khA8h9Lm1PqzB99fG6uw==)
 signatureRequired = true # Boolean | a field indicating that a Signature is required (default to true)
-xApiKey = xApiKey_example # String | an api key given to your application (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
-xRecord = xRecord_example # String | a type of API response to get from API Sandbox (default to 0)
+xApiKey = xApiKey_example # String | An API key given to your application to authenticate against the sandbox URL (default to yVGhKiV5z1ZGdaqFXoZ8AiSA9n5CrY6B)
 requestBody =  # Camt.a01.001.03 | Status Confirmation Request
 
-try: 
+try:
     # Status Confirmations
-    api_response = api_instance.status_confirmations_post(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, signatureRequired, xApiKey, xRecord, requestBody)
+    api_response = api_instance.status_confirmations_post(lAUApplicationID, lAUVersion, lAUCallTime, lAURequestNonce, lAUSigned, lAUSignature, signatureRequired, xApiKey, requestBody)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling StatusConfirmationsApi->statusConfirmationsPost: %s\n" % e)</code></pre>
@@ -9328,30 +9120,7 @@ except ApiException as e:
                 </span>
 
                     <div class="inner description">
-                        an api key given to your application
-                    </div>
-            </div>
-                <div class="inner required">
-                    Required
-                </div>
-        </div>
-    </div>
-</td>
-</tr>
-
-                                  <tr><td style="width:150px;">x-record*</td>
-<td>
-
-
-    <div id="d2e199_statusConfirmationsPost_xRecord">
-        <div class="json-schema-view">
-            <div class="primitive">
-                <span class="type">
-                    String
-                </span>
-
-                    <div class="inner description">
-                        a type of API response to get from API Sandbox
+                        An API key given to your application to authenticate against the sandbox URL
                     </div>
             </div>
                 <div class="inner required">
@@ -9929,8 +9698,8 @@ $(document).ready(function() {
           <div id="footer">
             <div id="api-_footer">
               <p>Suggestions, contact, support and error reporting;
-                  <div class="app-desc">Information URL: <a href="https://www.swift.com">https://www.swift.com</a></div>
-                  <div class="app-desc">Contact Info: <a href="Li.JIE@swift.com">Li.JIE@swift.com</a></div>
+                  <div class="app-desc">Information URL: <a href="https://developer.swift.com">https://developer.swift.com</a></div>
+                  <div class="app-desc">Contact Info: <a href="developer-support@swift.com">developer-support@swift.com</a></div>
               </p>
                 <div class="license-info">All rights reserved</div>
                 <div class="license-url">http://apache.org/licenses/LICENSE-2.0.html</div>
@@ -9938,7 +9707,7 @@ $(document).ready(function() {
           </div>
           <div id="generator">
             <div class="content">
-              Generated 2018-10-09T14:34:23.144Z
+              Generated 2018-10-16T11:10:52.768Z
             </div>
           </div>
       </div>
@@ -10443,7 +10212,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
-	
+
 	// load the styles
 	var content = __webpack_require__(3);
 	if(typeof content === 'string') content = [[module.id, content, '']];
@@ -10470,11 +10239,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports = module.exports = __webpack_require__(4)();
 	// imports
-	
-	
+
+
 	// module
 	exports.push([module.id, ".json-formatter-row {\n  font-family: monospace;\n}\n.json-formatter-row,\n.json-formatter-row a,\n.json-formatter-row a:hover {\n  color: black;\n  text-decoration: none;\n}\n.json-formatter-row .json-formatter-row {\n  margin-left: 1rem;\n}\n.json-formatter-row .json-formatter-children.json-formatter-empty {\n  opacity: 0.5;\n  margin-left: 1rem;\n}\n.json-formatter-row .json-formatter-children.json-formatter-empty:after {\n  display: none;\n}\n.json-formatter-row .json-formatter-children.json-formatter-empty.json-formatter-object:after {\n  content: \"No properties\";\n}\n.json-formatter-row .json-formatter-children.json-formatter-empty.json-formatter-array:after {\n  content: \"[]\";\n}\n.json-formatter-row .json-formatter-string {\n  color: green;\n  white-space: pre;\n  word-wrap: break-word;\n}\n.json-formatter-row .json-formatter-number {\n  color: blue;\n}\n.json-formatter-row .json-formatter-boolean {\n  color: red;\n}\n.json-formatter-row .json-formatter-null {\n  color: #855A00;\n}\n.json-formatter-row .json-formatter-undefined {\n  color: #ca0b69;\n}\n.json-formatter-row .json-formatter-function {\n  color: #FF20ED;\n}\n.json-formatter-row .json-formatter-date {\n  background-color: rgba(0, 0, 0, 0.05);\n}\n.json-formatter-row .json-formatter-url {\n  text-decoration: underline;\n  color: blue;\n  cursor: pointer;\n}\n.json-formatter-row .json-formatter-bracket {\n  color: blue;\n}\n.json-formatter-row .json-formatter-key {\n  color: #00008B;\n  cursor: pointer;\n  padding-right: 0.2rem;\n}\n.json-formatter-row .json-formatter-constructor-name {\n  cursor: pointer;\n}\n.json-formatter-row .json-formatter-toggler {\n  line-height: 1.2rem;\n  font-size: 0.7rem;\n  vertical-align: middle;\n  opacity: 0.6;\n  cursor: pointer;\n  padding-right: 0.2rem;\n}\n.json-formatter-row .json-formatter-toggler:after {\n  display: inline-block;\n  transition: transform 100ms ease-in;\n  content: \"\\25BA\";\n}\n.json-formatter-row > a > .json-formatter-preview-text {\n  opacity: 0;\n  transition: opacity 0.15s ease-in;\n  font-style: italic;\n}\n.json-formatter-row:hover > a > .json-formatter-preview-text {\n  opacity: 0.6;\n}\n.json-formatter-row.json-formatter-open > .json-formatter-toggler-link .json-formatter-toggler:after {\n  transform: rotate(90deg);\n}\n.json-formatter-row.json-formatter-open > .json-formatter-children:after {\n  display: inline-block;\n}\n.json-formatter-row.json-formatter-open > a > .json-formatter-preview-text {\n  display: none;\n}\n.json-formatter-row.json-formatter-open.json-formatter-empty:after {\n  display: block;\n}\n.json-formatter-dark.json-formatter-row {\n  font-family: monospace;\n}\n.json-formatter-dark.json-formatter-row,\n.json-formatter-dark.json-formatter-row a,\n.json-formatter-dark.json-formatter-row a:hover {\n  color: white;\n  text-decoration: none;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-row {\n  margin-left: 1rem;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-children.json-formatter-empty {\n  opacity: 0.5;\n  margin-left: 1rem;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-children.json-formatter-empty:after {\n  display: none;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-children.json-formatter-empty.json-formatter-object:after {\n  content: \"No properties\";\n}\n.json-formatter-dark.json-formatter-row .json-formatter-children.json-formatter-empty.json-formatter-array:after {\n  content: \"[]\";\n}\n.json-formatter-dark.json-formatter-row .json-formatter-string {\n  color: #31F031;\n  white-space: pre;\n  word-wrap: break-word;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-number {\n  color: #66C2FF;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-boolean {\n  color: #EC4242;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-null {\n  color: #EEC97D;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-undefined {\n  color: #ef8fbe;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-function {\n  color: #FD48CB;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-date {\n  background-color: rgba(255, 255, 255, 0.05);\n}\n.json-formatter-dark.json-formatter-row .json-formatter-url {\n  text-decoration: underline;\n  color: #027BFF;\n  cursor: pointer;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-bracket {\n  color: #9494FF;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-key {\n  color: #23A0DB;\n  cursor: pointer;\n  padding-right: 0.2rem;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-constructor-name {\n  cursor: pointer;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-toggler {\n  line-height: 1.2rem;\n  font-size: 0.7rem;\n  vertical-align: middle;\n  opacity: 0.6;\n  cursor: pointer;\n  padding-right: 0.2rem;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-toggler:after {\n  display: inline-block;\n  transition: transform 100ms ease-in;\n  content: \"\\25BA\";\n}\n.json-formatter-dark.json-formatter-row > a > .json-formatter-preview-text {\n  opacity: 0;\n  transition: opacity 0.15s ease-in;\n  font-style: italic;\n}\n.json-formatter-dark.json-formatter-row:hover > a > .json-formatter-preview-text {\n  opacity: 0.6;\n}\n.json-formatter-dark.json-formatter-row.json-formatter-open > .json-formatter-toggler-link .json-formatter-toggler:after {\n  transform: rotate(90deg);\n}\n.json-formatter-dark.json-formatter-row.json-formatter-open > .json-formatter-children:after {\n  display: inline-block;\n}\n.json-formatter-dark.json-formatter-row.json-formatter-open > a > .json-formatter-preview-text {\n  display: none;\n}\n.json-formatter-dark.json-formatter-row.json-formatter-open.json-formatter-empty:after {\n  display: block;\n}\n", "", {"version":3,"sources":["/./src/style.less","/./src/style.less"],"names":[],"mappings":"AA0GA;EA3FE,uBAAA;CCbD;ADcC;;;EACE,aAAA;EACA,sBAAA;CCVH;ADkGD;EApFI,kBAAA;CCXH;ADeG;EACE,aAAA;EACA,kBAAA;CCbL;ADeK;EAAU,cAAA;CCZf;ADaK;EAAgC,yBAAA;CCVrC;ADWK;EAA+B,cAAA;CCRpC;ADkFD;EArEI,aAAA;EACA,iBAAA;EACA,sBAAA;CCVH;AD6ED;EAjE2B,YAAA;CCT1B;AD0ED;EAhE4B,WAAA;CCP3B;ADuED;EA/DyB,eAAA;CCLxB;ADoED;EA9D8B,eAAA;CCH7B;ADiED;EA7D6B,eAAA;CCD5B;AD8DD;EA5DyB,sCAAA;CCCxB;AD2DD;EA1DI,2BAAA;EACA,YAAA;EACA,gBAAA;CCEH;ADsDD;EArD4B,YAAA;CCE3B;ADmDD;EAnDI,eAAA;EACA,gBAAA;EACA,sBAAA;CCGH;AD8CD;EA9CI,gBAAA;CCGH;AD2CD;EA1CI,oBAAA;EACA,kBAAA;EACA,uBAAA;EACA,aAAA;EACA,gBAAA;EACA,sBAAA;CCEH;ADAG;EACE,sBAAA;EACA,oCAAA;EACA,iBAAA;CCEL;AD8BD;EA1BI,WAAA;EACA,kCAAA;EACA,mBAAA;CCDH;ADGC;EACE,aAAA;CCDH;ADKC;EAEI,yBAAA;CCJL;ADEC;EAKI,sBAAA;CCJL;ADDC;EAQI,cAAA;CCJL;ADMG;EACE,eAAA;CCJL;ADeD;EAhGE,uBAAA;CCoFD;ADnFC;;;EACE,aAAA;EACA,sBAAA;CCuFH;ADMD;EAzFI,kBAAA;CCsFH;ADlFG;EACE,aAAA;EACA,kBAAA;CCoFL;ADlFK;EAAU,cAAA;CCqFf;ADpFK;EAAgC,yBAAA;CCuFrC;ADtFK;EAA+B,cAAA;CCyFpC;ADVD;EA1EI,eAAA;EACA,iBAAA;EACA,sBAAA;CCuFH;ADfD;EAtE2B,eAAA;CCwF1B;ADlBD;EArE4B,eAAA;CC0F3B;ADrBD;EApEyB,eAAA;CC4FxB;ADxBD;EAnE8B,eAAA;CC8F7B;AD3BD;EAlE6B,eAAA;CCgG5B;AD9BD;EAjEyB,4CAAA;CCkGxB;ADjCD;EA/DI,2BAAA;EACA,eAAA;EACA,gBAAA;CCmGH;ADtCD;EA1D4B,eAAA;CCmG3B;ADzCD;EAxDI,eAAA;EACA,gBAAA;EACA,sBAAA;CCoGH;AD9CD;EAnDI,gBAAA;CCoGH;ADjDD;EA/CI,oBAAA;EACA,kBAAA;EACA,uBAAA;EACA,aAAA;EACA,gBAAA;EACA,sBAAA;CCmGH;ADjGG;EACE,sBAAA;EACA,oCAAA;EACA,iBAAA;CCmGL;AD9DD;EA/BI,WAAA;EACA,kCAAA;EACA,mBAAA;CCgGH;AD9FC;EACE,aAAA;CCgGH;AD5FC;EAEI,yBAAA;CC6FL;AD/FC;EAKI,sBAAA;CC6FL;ADlGC;EAQI,cAAA;CC6FL;AD3FG;EACE,eAAA;CC6FL","file":"style.less","sourcesContent":[".theme(\n  @default-color: black,\n  @string-color: green,\n  @number-color: blue,\n  @boolean-color: red,\n  @null-color: #855A00,\n  @undefined-color: rgb(202, 11, 105),\n  @function-color: #FF20ED,\n  @rotate-time: 100ms,\n  @toggler-opacity: 0.6,\n  @toggler-color: #45376F,\n  @bracket-color: blue,\n  @key-color: #00008B,\n  @url-color: blue ){\n\n  font-family: monospace;\n  &, a, a:hover {\n    color: @default-color;\n    text-decoration: none;\n  }\n\n  .json-formatter-row {\n    margin-left: 1rem;\n  }\n\n  .json-formatter-children {\n    &.json-formatter-empty {\n      opacity: 0.5;\n      margin-left: 1rem;\n\n      &:after { display: none; }\n      &.json-formatter-object:after { content: \"No properties\"; }\n      &.json-formatter-array:after { content: \"[]\"; }\n    }\n  }\n\n  .json-formatter-string {\n    color: @string-color;\n    white-space: pre;\n    word-wrap: break-word;\n  }\n  .json-formatter-number { color: @number-color; }\n  .json-formatter-boolean { color: @boolean-color; }\n  .json-formatter-null { color: @null-color; }\n  .json-formatter-undefined { color: @undefined-color; }\n  .json-formatter-function { color: @function-color; }\n  .json-formatter-date { background-color: fade(@default-color, 5%); }\n  .json-formatter-url {\n    text-decoration: underline;\n    color: @url-color;\n    cursor: pointer;\n  }\n\n  .json-formatter-bracket { color: @bracket-color; }\n  .json-formatter-key {\n    color: @key-color;\n    cursor: pointer;\n    padding-right: 0.2rem;\n  }\n  .json-formatter-constructor-name {\n    cursor: pointer;\n  }\n\n  .json-formatter-toggler {\n    line-height: 1.2rem;\n    font-size: 0.7rem;\n    vertical-align: middle;\n    opacity: @toggler-opacity;\n    cursor: pointer;\n    padding-right: 0.2rem;\n\n    &:after {\n      display: inline-block;\n      transition: transform @rotate-time ease-in;\n      content: \"►\";\n    }\n  }\n\n  // Inline preview on hover (optional)\n  > a > .json-formatter-preview-text {\n    opacity: 0;\n    transition: opacity .15s ease-in;\n    font-style: italic;\n  }\n  &:hover > a > .json-formatter-preview-text {\n    opacity: 0.6;\n  }\n\n  // Open state\n  &.json-formatter-open {\n    > .json-formatter-toggler-link .json-formatter-toggler:after{\n      transform: rotate(90deg);\n    }\n    > .json-formatter-children:after {\n      display: inline-block;\n    }\n    > a > .json-formatter-preview-text {\n      display: none;\n    }\n    &.json-formatter-empty:after {\n      display: block;\n    }\n  }\n}\n\n// Default theme\n.json-formatter-row {\n  .theme();\n}\n\n// Dark theme\n.json-formatter-dark.json-formatter-row {\n  .theme(\n    @default-color: white,\n    @string-color: #31F031,\n    @number-color: #66C2FF,\n    @boolean-color: #EC4242,\n    @null-color: #EEC97D,\n    @undefined-color: rgb(239, 143, 190),\n    @function-color: #FD48CB,\n    @rotate-time: 100ms,\n    @toggler-opacity: 0.6,\n    @toggler-color: #45376F,\n    @bracket-color: #9494FF,\n    @key-color: #23A0DB,\n    @url-color: #027BFF);\n}\n",".json-formatter-row {\n  font-family: monospace;\n}\n.json-formatter-row,\n.json-formatter-row a,\n.json-formatter-row a:hover {\n  color: black;\n  text-decoration: none;\n}\n.json-formatter-row .json-formatter-row {\n  margin-left: 1rem;\n}\n.json-formatter-row .json-formatter-children.json-formatter-empty {\n  opacity: 0.5;\n  margin-left: 1rem;\n}\n.json-formatter-row .json-formatter-children.json-formatter-empty:after {\n  display: none;\n}\n.json-formatter-row .json-formatter-children.json-formatter-empty.json-formatter-object:after {\n  content: \"No properties\";\n}\n.json-formatter-row .json-formatter-children.json-formatter-empty.json-formatter-array:after {\n  content: \"[]\";\n}\n.json-formatter-row .json-formatter-string {\n  color: green;\n  white-space: pre;\n  word-wrap: break-word;\n}\n.json-formatter-row .json-formatter-number {\n  color: blue;\n}\n.json-formatter-row .json-formatter-boolean {\n  color: red;\n}\n.json-formatter-row .json-formatter-null {\n  color: #855A00;\n}\n.json-formatter-row .json-formatter-undefined {\n  color: #ca0b69;\n}\n.json-formatter-row .json-formatter-function {\n  color: #FF20ED;\n}\n.json-formatter-row .json-formatter-date {\n  background-color: rgba(0, 0, 0, 0.05);\n}\n.json-formatter-row .json-formatter-url {\n  text-decoration: underline;\n  color: blue;\n  cursor: pointer;\n}\n.json-formatter-row .json-formatter-bracket {\n  color: blue;\n}\n.json-formatter-row .json-formatter-key {\n  color: #00008B;\n  cursor: pointer;\n  padding-right: 0.2rem;\n}\n.json-formatter-row .json-formatter-constructor-name {\n  cursor: pointer;\n}\n.json-formatter-row .json-formatter-toggler {\n  line-height: 1.2rem;\n  font-size: 0.7rem;\n  vertical-align: middle;\n  opacity: 0.6;\n  cursor: pointer;\n  padding-right: 0.2rem;\n}\n.json-formatter-row .json-formatter-toggler:after {\n  display: inline-block;\n  transition: transform 100ms ease-in;\n  content: \"►\";\n}\n.json-formatter-row > a > .json-formatter-preview-text {\n  opacity: 0;\n  transition: opacity 0.15s ease-in;\n  font-style: italic;\n}\n.json-formatter-row:hover > a > .json-formatter-preview-text {\n  opacity: 0.6;\n}\n.json-formatter-row.json-formatter-open > .json-formatter-toggler-link .json-formatter-toggler:after {\n  transform: rotate(90deg);\n}\n.json-formatter-row.json-formatter-open > .json-formatter-children:after {\n  display: inline-block;\n}\n.json-formatter-row.json-formatter-open > a > .json-formatter-preview-text {\n  display: none;\n}\n.json-formatter-row.json-formatter-open.json-formatter-empty:after {\n  display: block;\n}\n.json-formatter-dark.json-formatter-row {\n  font-family: monospace;\n}\n.json-formatter-dark.json-formatter-row,\n.json-formatter-dark.json-formatter-row a,\n.json-formatter-dark.json-formatter-row a:hover {\n  color: white;\n  text-decoration: none;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-row {\n  margin-left: 1rem;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-children.json-formatter-empty {\n  opacity: 0.5;\n  margin-left: 1rem;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-children.json-formatter-empty:after {\n  display: none;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-children.json-formatter-empty.json-formatter-object:after {\n  content: \"No properties\";\n}\n.json-formatter-dark.json-formatter-row .json-formatter-children.json-formatter-empty.json-formatter-array:after {\n  content: \"[]\";\n}\n.json-formatter-dark.json-formatter-row .json-formatter-string {\n  color: #31F031;\n  white-space: pre;\n  word-wrap: break-word;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-number {\n  color: #66C2FF;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-boolean {\n  color: #EC4242;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-null {\n  color: #EEC97D;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-undefined {\n  color: #ef8fbe;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-function {\n  color: #FD48CB;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-date {\n  background-color: rgba(255, 255, 255, 0.05);\n}\n.json-formatter-dark.json-formatter-row .json-formatter-url {\n  text-decoration: underline;\n  color: #027BFF;\n  cursor: pointer;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-bracket {\n  color: #9494FF;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-key {\n  color: #23A0DB;\n  cursor: pointer;\n  padding-right: 0.2rem;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-constructor-name {\n  cursor: pointer;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-toggler {\n  line-height: 1.2rem;\n  font-size: 0.7rem;\n  vertical-align: middle;\n  opacity: 0.6;\n  cursor: pointer;\n  padding-right: 0.2rem;\n}\n.json-formatter-dark.json-formatter-row .json-formatter-toggler:after {\n  display: inline-block;\n  transition: transform 100ms ease-in;\n  content: \"►\";\n}\n.json-formatter-dark.json-formatter-row > a > .json-formatter-preview-text {\n  opacity: 0;\n  transition: opacity 0.15s ease-in;\n  font-style: italic;\n}\n.json-formatter-dark.json-formatter-row:hover > a > .json-formatter-preview-text {\n  opacity: 0.6;\n}\n.json-formatter-dark.json-formatter-row.json-formatter-open > .json-formatter-toggler-link .json-formatter-toggler:after {\n  transform: rotate(90deg);\n}\n.json-formatter-dark.json-formatter-row.json-formatter-open > .json-formatter-children:after {\n  display: inline-block;\n}\n.json-formatter-dark.json-formatter-row.json-formatter-open > a > .json-formatter-preview-text {\n  display: none;\n}\n.json-formatter-dark.json-formatter-row.json-formatter-open.json-formatter-empty:after {\n  display: block;\n}\n"],"sourceRoot":"webpack://"}]);
-	
+
 	// exports
 
 
@@ -10489,7 +10258,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	// css base code, injected by the css-loader
 	module.exports = function() {
 		var list = [];
-	
+
 		// return the list of modules as css string
 		list.toString = function toString() {
 			var result = [];
@@ -10503,7 +10272,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			}
 			return result.join("");
 		};
-	
+
 		// import a list of modules into the list
 		list.i = function(modules, mediaQuery) {
 			if(typeof modules === "string")
@@ -10559,23 +10328,23 @@ return /******/ (function(modules) { // webpackBootstrap
 		singletonElement = null,
 		singletonCounter = 0,
 		styleElementsInsertedAtTop = [];
-	
+
 	module.exports = function(list, options) {
 		if(false) {
 			if(typeof document !== "object") throw new Error("The style-loader cannot be used in a non-browser environment");
 		}
-	
+
 		options = options || {};
 		// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
 		// tags it will allow on a page
 		if (typeof options.singleton === "undefined") options.singleton = isOldIE();
-	
+
 		// By default, add <style> tags to the bottom of <head>.
 		if (typeof options.insertAt === "undefined") options.insertAt = "bottom";
-	
+
 		var styles = listToStyles(list);
 		addStylesToDom(styles, options);
-	
+
 		return function update(newList) {
 			var mayRemove = [];
 			for(var i = 0; i < styles.length; i++) {
@@ -10598,7 +10367,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			}
 		};
 	}
-	
+
 	function addStylesToDom(styles, options) {
 		for(var i = 0; i < styles.length; i++) {
 			var item = styles[i];
@@ -10620,7 +10389,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			}
 		}
 	}
-	
+
 	function listToStyles(list) {
 		var styles = [];
 		var newStyles = {};
@@ -10638,7 +10407,7 @@ return /******/ (function(modules) { // webpackBootstrap
 		}
 		return styles;
 	}
-	
+
 	function insertStyleElement(options, styleElement) {
 		var head = getHeadElement();
 		var lastStyleElementInsertedAtTop = styleElementsInsertedAtTop[styleElementsInsertedAtTop.length - 1];
@@ -10657,7 +10426,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			throw new Error("Invalid value for parameter 'insertAt'. Must be 'top' or 'bottom'.");
 		}
 	}
-	
+
 	function removeStyleElement(styleElement) {
 		styleElement.parentNode.removeChild(styleElement);
 		var idx = styleElementsInsertedAtTop.indexOf(styleElement);
@@ -10665,24 +10434,24 @@ return /******/ (function(modules) { // webpackBootstrap
 			styleElementsInsertedAtTop.splice(idx, 1);
 		}
 	}
-	
+
 	function createStyleElement(options) {
 		var styleElement = document.createElement("style");
 		styleElement.type = "text/css";
 		insertStyleElement(options, styleElement);
 		return styleElement;
 	}
-	
+
 	function createLinkElement(options) {
 		var linkElement = document.createElement("link");
 		linkElement.rel = "stylesheet";
 		insertStyleElement(options, linkElement);
 		return linkElement;
 	}
-	
+
 	function addStyle(obj, options) {
 		var styleElement, update, remove;
-	
+
 		if (options.singleton) {
 			var styleIndex = singletonCounter++;
 			styleElement = singletonElement || (singletonElement = createStyleElement(options));
@@ -10708,9 +10477,9 @@ return /******/ (function(modules) { // webpackBootstrap
 				removeStyleElement(styleElement);
 			};
 		}
-	
+
 		update(obj);
-	
+
 		return function updateStyle(newObj) {
 			if(newObj) {
 				if(newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap)
@@ -10721,19 +10490,19 @@ return /******/ (function(modules) { // webpackBootstrap
 			}
 		};
 	}
-	
+
 	var replaceText = (function () {
 		var textStore = [];
-	
+
 		return function (index, replacement) {
 			textStore[index] = replacement;
 			return textStore.filter(Boolean).join('\n');
 		};
 	})();
-	
+
 	function applyToSingletonTag(styleElement, index, remove, obj) {
 		var css = remove ? "" : obj.css;
-	
+
 		if (styleElement.styleSheet) {
 			styleElement.styleSheet.cssText = replaceText(index, css);
 		} else {
@@ -10747,15 +10516,15 @@ return /******/ (function(modules) { // webpackBootstrap
 			}
 		}
 	}
-	
+
 	function applyToTag(styleElement, obj) {
 		var css = obj.css;
 		var media = obj.media;
-	
+
 		if(media) {
 			styleElement.setAttribute("media", media)
 		}
-	
+
 		if(styleElement.styleSheet) {
 			styleElement.styleSheet.cssText = css;
 		} else {
@@ -10765,22 +10534,22 @@ return /******/ (function(modules) { // webpackBootstrap
 			styleElement.appendChild(document.createTextNode(css));
 		}
 	}
-	
+
 	function updateLink(linkElement, obj) {
 		var css = obj.css;
 		var sourceMap = obj.sourceMap;
-	
+
 		if(sourceMap) {
             // https://developer.mozilla.org/en/docs/Web/API/WindowBase64/Base64_encoding_and_decoding
 			css += "\n/*# sourceMappingURL=data:application/json;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + " */";
 		}
-	
+
 		var blob = new Blob([css], { type: "text/css" });
-	
+
 		var oldSrc = linkElement.href;
-	
+
 		linkElement.href = URL.createObjectURL(blob);
-	
+
 		if(oldSrc)
 			URL.revokeObjectURL(oldSrc);
 	}
